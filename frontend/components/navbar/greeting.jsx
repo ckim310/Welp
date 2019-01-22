@@ -18,8 +18,11 @@ class Greeting extends React.Component {
         <Link className="btn" to="/login">Log in</Link>
       </div>
     )
+
     return(
-      {display}
+      <>
+        {display}
+      </>
     )
   }
 }

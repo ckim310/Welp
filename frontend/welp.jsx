@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import configureStore from './store/store';
 
+import { login } from './actions/session_actions';
+
 const Root = ({ store }) => {
   return (
     <div>
@@ -17,5 +19,11 @@ const Root = ({ store }) => {
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   const store = configureStore();
+
+  // window.store = store
+  // window.dispatch = store.dispatch;
+  // window.getState = store.getState;
+  // window.login = login;
+
   ReactDOM.render(<Root store={store} />, root)
 });
