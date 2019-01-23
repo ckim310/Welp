@@ -26,9 +26,23 @@
    vertical-align: baseline;
  }
 
+ .nav-bar {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+ .write-review:hover {
+   border-bottom-color: pink;
+   font-size: 20px;
+ }
+
  .greeting {
     display: flex;
-    float: right;
+    /* float: right; */
  }
 
  .btn {
@@ -63,6 +77,19 @@
    flex-direction: column;
  }
 
- .session-form-login-data {
+ .session-form-signup {
+    display: block;
+    width: 465px;
+    padding: 30px;
+    box-sizing: border-box;
+    justify-content: center;
+ }
 
+ .signup-name {
+   display: flex;
+   flex-direction: row;
+ }
+
+ .signup-name li {
+   list-style: none;
  }
