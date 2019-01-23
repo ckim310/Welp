@@ -26,6 +26,10 @@
    vertical-align: baseline;
  }
 
+ .homepage-logo {
+   text-decoration: none;
+ }
+
  .nav-bar {
    display: flex;
    justify-content: space-between;
@@ -50,6 +54,17 @@
    border: 1px solid black;
    border-radius: 5px;
    transition: 0.5s;
+   margin: 2px;
+   box-sizing: border-box;
+ }
+
+ input {
+   border: 1px solid #999;
+   border-radius: 3px;
+   line-height: 30px;
+   font-size: 14px;
+   width: 100%;
+   margin: 0 9px 9px 0;
  }
 
  .login {
@@ -70,26 +85,115 @@
    background-color: white;
    height: 30px;
    line-height: 30px;
+   width: 93px;
+   margin: 5px 5px 9px 0;
+   font-size: 14px;
  }
 
- .session-form {
+ /* .session-form {
+   display: flex;
+   flex-direction: column;
+ } */
+
+ .container-main {
    display: flex;
    flex-direction: column;
  }
 
- .session-form-signup {
-    display: block;
+ .header-wrapper {
+   background-color: #d32323;
+   height: 64px;
+ }
+
+ .header {
+   background-color: #d32323;
+   text-align: center;
+   vertical-align: center;
+   margin: 14px 0;
+   box-sizing: border-box;
+ }
+
+ .header a {
+   background-color: #d32323;
+   font-family: 'Dosis', sans-serif;
+   color: black;
+ }
+ 
+ .signup-wrapper {
+   display: flex;
+   justify-content: center;
+ }
+
+ .session-form-wrapper {
+    display: flex;
     width: 465px;
     padding: 30px;
     box-sizing: border-box;
     justify-content: center;
  }
 
+ .session-form-signup {
+   width: 300px;
+   text-align: center;
+ }
+
+ .session-form-header {
+   color: #d32323;
+ }
+
+ .session-form-divider {
+   color: #666;
+ }
+
+ fieldset {
+   margin: 24px 0;
+   border-top: 1px solid #ccc;
+ }
+
+ .divider {
+   width: 20;
+   padding: 0 15px;
+
+ }
+
  .signup-name {
    display: flex;
    flex-direction: row;
+   font-size: 14px;
  }
 
  .signup-name li {
    list-style: none;
+ }
+
+ .form-submit {
+   background-color: #d32323;
+   color: white;
+   font-weight: 700;
+   line-height: 21px;
+   height: 43px;
+ }
+
+ .form-submit-link {
+   color: #999;
+   font-size: 12px;
+   text-align: right;
+ }
+
+ .session-form-extra {
+   text-align: left;
+ }
+
+ .fineprint {
+   font-size: 12px;
+   color: rgb(109, 109, 109);
+   margin-bottom: 12px;
+ }
+
+ .signup-fineprint {
+   text-align: left;
+ }
+
+ .session-form-img {
+   margin-top: 30px;
  }
