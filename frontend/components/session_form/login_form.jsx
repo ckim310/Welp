@@ -5,7 +5,6 @@ class LoginForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
       email: "",
       password: "",
     };
@@ -37,13 +36,6 @@ class LoginForm extends React.Component {
           <p className="session-form-login-data">
 
             <input
-              type="text"
-              value={this.state.username}
-              onChange={this.handleInput('username')}
-              placeholder="Username"
-              required="required" />
-
-            <input
               type="email"
               value={this.state.email}
               onChange={this.handleInput('email')}
@@ -58,10 +50,13 @@ class LoginForm extends React.Component {
               required="required" />
           </p>
 
-          <input type="submit" value="Log In" />
+          <div>
+            <input type="submit" value="Log In" />
+            <Link to="signup">Sign Up</Link>
+          </div>
 
         </form>
-        <ul>
+        <ul className="form-group">
           {errors}
         </ul>
       </div>
