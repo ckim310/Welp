@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter, Route } from 'react-router-dom';
-import GreetingContainer from './navbar/greeting_container';
+import NavBarContainer from './nav_bar/nav_bar_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute } from '../util/route_util';
@@ -11,7 +11,7 @@ export default () => {
       <div className="app-main">
         <header>
           <h1>Welp</h1>
-          <GreetingContainer />
+          <Route exact path="/" component={NavBarContainer} />
         </header>
 
         <AuthRoute path="/login" component={LoginFormContainer} />
