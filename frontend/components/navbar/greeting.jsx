@@ -8,14 +8,14 @@ class Greeting extends React.Component {
 
   render() {
     const display = this.props.currentUser ? (
-      <div>
-        <p>Hello, {this.props.currentUser.first_name}</p>
+      <div className="greeting">
+        <p>Hello, {this.props.currentUser.first_name} </p>
         <button onClick={this.props.logout}>Log out</button>
       </div>
     ) : (
-      <div>
-        <Link className="btn" to="/signup">Sign Up</Link>
-        <Link className="btn" to="/login">Log in</Link>
+      <div className="greeting">
+        <Link className="btn login" to="/login">Log in</Link>
+        <Link className="btn signup" to="/signup">Sign Up</Link>
       </div>
     )
 

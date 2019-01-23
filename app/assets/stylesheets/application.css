@@ -13,3 +13,56 @@
  *= require_tree .
  *= require_self
  */
+
+ html, body, div, span, h1, h2, h3, h4, h5, h6, p,
+ a, img, strong, ol, ul, li, fieldset, form, label, caption,
+ article, aside, canvas, details, figure, figcaption, 
+ footer, header, nav, section {
+   background-color: white;
+   font-family: sans-serif;
+   margin: inherit;
+   padding: 0;
+   border: 0;
+   vertical-align: baseline;
+ }
+
+ .greeting {
+    display: flex;
+    float: right;
+ }
+
+ .btn {
+   padding: 10px;
+   border: 1px solid black;
+   border-radius: 5px;
+   transition: 0.5s;
+ }
+
+ .login {
+   border: none;
+ }
+
+ .signup {
+   background-color: transparent;
+   transition: 1.3s;
+ }
+
+ .signup:hover {
+   background-color: white;
+   color: grey;
+ }
+
+ select {
+   background-color: white;
+   height: 30px;
+   line-height: 30px;
+ }
+
+ .session-form {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .session-form-login-data {
+
+ }

@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      lastName: "",
+      first_name: "",
+      last_name: "",
       zipcode: "",
       username: "",
       email: "",
-      birthdayMonth: "",
-      birthdayDay: "",
-      birthdayYear: "",
+      birthday_month: "",
+      birthday_day: "",
+      birthday_year: "",
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,11 +31,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const h2 = (this.props.formType === 'login') ? (
-      <h2>Login</h2>
-    ) : (
-      <h2>Sign Up</h2>
-    )
 
     const errors = this.props.errors.map((err, idx) => {
       return <li key={idx}>{err}</li>
@@ -43,19 +38,20 @@ class SessionForm extends React.Component {
 
     return (
       <div className="session-form">
+        <h2>Sign Up</h2>
         <form onSubmit={this.handleSubmit}>
           <p className="session-form-login-data">
             <input
               type="text"
-              value={this.state.firstName}
-              onChange={this.handleInput('firstName')}
+              value={this.state.first_name}
+              onChange={this.handleInput('first_name')}
               placeholder="First Name"
               required="required"/>
 
             <input
               type="text"
-              value={this.state.lastName}
-              onChange={this.handleInput('lastName')}
+              value={this.state.last_name}
+              onChange={this.handleInput('last_name')}
               placeholder="Last Name"
               required="required"/>
 
@@ -93,10 +89,9 @@ class SessionForm extends React.Component {
           <p className="session-form-birthday">
             <strong>Birthday</strong>
             <br/>
-            <br/>
             
-            <select name="bday-month" form="bday-m-form">
-              <option value>Month</option>
+            <select name="bday-month" form="bday-m-form" onChange={this.handleInput('birthday_month')}>
+              <option value selected disabled>Month</option>
               <option value='1'>Jan</option>
               <option value='2'>Feb</option>
               <option value='3'>Mar</option>
@@ -111,8 +106,8 @@ class SessionForm extends React.Component {
               <option value='12'>Dec</option>
             </select>
 
-            <select name="bday-day" form="bday-d-form">
-              <option value>Day</option>
+            <select name="bday-day" form="bday-d-form" onChange={this.handleInput('birthday_day')}>
+              <option value selected disabled>Day</option>
               <option value='1'>1</option>
               <option value='2'>2</option>
               <option value='3'>3</option>
@@ -146,8 +141,8 @@ class SessionForm extends React.Component {
               <option value='31'>31</option>
             </select>
 
-            <select name="bday-year" form="bday-y-form">
-              <option value>Year</option>
+            <select name="bday-year" form="bday-y-form" onChange={this.handleInput('birthday_year')}>
+              <option value selected disabled>Year</option>
               <option value='2019'>2019</option>
               <option value='2018'>2018</option>
               <option value='2017'>2017</option>
@@ -231,7 +226,10 @@ class SessionForm extends React.Component {
             </select>
           </p>
 
-          <input type="submit" value={this.props.formType}/>
+          <div className="form-group">
+            <input type="submit" value="Sign Up"/>
+            <Link to="/login">Log In</Link>
+          </div>
 
         </form>
         <ul>
@@ -242,4 +240,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default SignupForm;
