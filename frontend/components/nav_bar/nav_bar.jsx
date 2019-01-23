@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Greeting extends React.Component {
+class NavBar extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -20,11 +20,14 @@ class Greeting extends React.Component {
     )
 
     return(
-      <>
+      <div className="nav-bar">
+        <div className="write-review">
+          <a href="#">Write a review</a>
+        </div>
         {display}
-      </>
+      </div>
     )
   }
 }
 
-export default Greeting;
+export default NavBar;

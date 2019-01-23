@@ -37,23 +37,31 @@ class SignupForm extends React.Component {
     });
 
     return (
-      <div className="session-form">
-        <h2>Sign Up</h2>
+      <div className="session-form-signup">
+        <h3>Sign Up for Welp</h3>
+        <br />
+        <strong>Where you can get help in times of welp</strong>
         <form onSubmit={this.handleSubmit}>
-          <p className="session-form-login-data">
-            <input
-              type="text"
-              value={this.state.first_name}
-              onChange={this.handleInput('first_name')}
-              placeholder="First Name"
-              required="required"/>
-
-            <input
-              type="text"
-              value={this.state.last_name}
-              onChange={this.handleInput('last_name')}
-              placeholder="Last Name"
-              required="required"/>
+          <div className="session-form-signup-data">
+            <ul className="signup-name">
+              <li className="signup-name first">
+                <input
+                  type="text"
+                  value={this.state.first_name}
+                  onChange={this.handleInput('first_name')}
+                  placeholder="First Name"
+                  required="required"/>
+              </li>
+              
+              <li className="signup-name last">
+                <input
+                  type="text"
+                  value={this.state.last_name}
+                  onChange={this.handleInput('last_name')}
+                  placeholder="Last Name"
+                  required="required"/>
+              </li>
+            </ul>
 
             <input
               type="text"
@@ -75,7 +83,7 @@ class SignupForm extends React.Component {
               onChange={this.handleInput('password')}
               placeholder="Password"
               required="required"/>
-          </p>
+          </div>
 
           <label>
             <input
