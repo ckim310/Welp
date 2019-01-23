@@ -50,9 +50,11 @@ class SignupForm extends React.Component {
               <br/>
               <p className="fineprint">By continuing, you agree to Welp's Terms of Service
               and acknowledge Welp's Privacy Policy.</p>
+
               <fieldset className="session-form-divider">
                 <legend className="divider">OR</legend>
               </fieldset>
+
               <form onSubmit={this.handleSubmit}>
                 <div className="session-form-signup-data">
                   <ul className="signup-name">
@@ -90,7 +92,7 @@ class SignupForm extends React.Component {
                     required="required"/>
 
                   <input
-                  
+
                     type="password"
                     value={this.state.password}
                     onChange={this.handleInput('password')}
@@ -260,9 +262,9 @@ class SignupForm extends React.Component {
                     Already a Welper? <Link to="/login">Log In</Link>
                   </p>
                 </div>
-
               </form>
-              <ul>
+
+              <ul className="form-group">
                 {errors}
               </ul>
             </div>
