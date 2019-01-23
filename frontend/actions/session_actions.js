@@ -26,10 +26,12 @@ const receiveSessionErrors = (errors) => {
 
 export const login = (user) => {
   return dispatch => {
-    return SessionAPIUtil.login(user).then((user) =>
-      dispatch(receiveCurrentUser(user)),
-      (errors) => dispatch(receiveSessionErrors(errors)) 
-    );
+    return SessionAPIUtil.login(user).then((user) => {
+      return dispatch(receiveCurrentUser(user.user));
+    },
+    (errors) => {
+      return dispatch(receiveSessionErrors(errors));
+    });
   };
 };
 
