@@ -123,7 +123,7 @@
    color: black;
  }
  
- .signup-wrapper {
+ .session-wrapper {
    display: flex;
    justify-content: center;
  }
@@ -136,13 +136,14 @@
     justify-content: center;
  }
 
- .session-form-signup {
+ .session-form {
    width: 300px;
    text-align: center;
  }
 
  .session-form-header {
    color: #d32323;
+   margin-bottom: 10px;
  }
 
  .session-form-divider {
@@ -201,5 +202,5 @@
  }
 
  .session-form-img {
-   margin-top: 30px;
+   margin-top: 50px;
  }

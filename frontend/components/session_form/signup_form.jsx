@@ -40,13 +40,13 @@ class SignupForm extends React.Component {
     return (
       <div className="container-main">
         <HeaderForm />
-        <div className="signup-wrapper">
+        <div className="session-wrapper">
           <div className="session-form-wrapper">
 
-            <div className="session-form-signup">
+            <div className="session-form signup">
               <h2 className="session-form-header">Sign Up for Welp</h2>
-              <br />
               <strong>Where you can get help in times of welp</strong>
+              <br/>
               <br/>
               <p className="fineprint">By continuing, you agree to Welp's Terms of Service
               and acknowledge Welp's Privacy Policy.</p>
