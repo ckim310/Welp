@@ -8,8 +8,8 @@ const HomeTop = (props) => {
   return (
     <div className="home-inner">
       <div className="home-inner-logo">
-        <h1 className="homepage-logo">
-          <Link to="/">welp</Link>
+        <h1 className="home-logo">
+          <Link to="/">welp<i class="fab fa-yelp"></i></Link>
         </h1>
       </div>
 
