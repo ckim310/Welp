@@ -158,8 +158,19 @@
  }
 
  .greeting {
-    display: flex;
+   display: flex;
+  }
+  
+ .greeting-notif-wrapper {
+   display: flex;
+   align-self: center;
  }
+
+ .greeting-notif-wrapper a {
+   color: white;
+   margin: 5px;
+ }
+
 
  .btn {
    padding: 10px;

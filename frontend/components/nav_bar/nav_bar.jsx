@@ -9,7 +9,22 @@ class NavBar extends React.Component {
   render() {
     const display = this.props.currentUser ? (
       <div className="greeting">
-        <div className="greeting-user">Hello, {this.props.currentUser.first_name} </div>
+        <div className="greeting-notif-wrapper">
+          <div className="message-icon">
+            <a href="#">
+              <i class="fas fa-comment-alt"></i>
+            </a>
+          </div>
+
+          <div className="bell-icon">
+            <a href="#">
+              <i class="fas fa-bell"></i>
+            </a>
+          </div>
+
+          <div className="greeting-user">Hello, {this.props.currentUser.first_name} </div>
+        </div>
+
         <button onClick={this.props.logout} className="btn logout">Log out</button>
       </div>
     ) : (
