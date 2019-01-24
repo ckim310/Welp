@@ -28,7 +28,7 @@ class SearchForm extends React.Component {
       <div className="search-form-wrapper">
         <form className="search-form" onClick={this.handleSubmit}>
           <ul className="search-fields">
-            <li className="li-search find">
+            <div className="div-search find">
               <label className="search-items">
                 <div className="search-contents">
                   <div className="search-find">
@@ -42,9 +42,11 @@ class SearchForm extends React.Component {
                   </div>
                 </div>
               </label>
-            </li>
+            </div>
 
-            <li className="li-search near">
+            <div className="vl"></div>
+
+            <div className="div-search near">
               <label className="search-items">
                 <div className="search-contents">
                   <div className="search-near">
@@ -58,7 +60,7 @@ class SearchForm extends React.Component {
                   </div>
                 </div>
               </label>
-            </li>
+            </div>
           </ul>
 
           <div className="search-submit">
