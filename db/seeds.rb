@@ -8,12 +8,12 @@
 User.destroy_all
 
 User.create!(
-  first_name: 'Christine',
-  last_name: 'Kim',
+  first_name: 'Demo',
+  last_name: 'User',
   zipcode: 12345,
-  email: 'ckim@email.com',
+  email: 'demo@email.com',
   birthday_month: 1,
-  birthday_day: 22,
+  birthday_day: 23,
   birthday_year: 2019,
   password: 'password'
 )

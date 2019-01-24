@@ -10,6 +10,7 @@ class LoginForm extends React.Component {
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   componentWillUnmount() {
@@ -26,6 +27,12 @@ class LoginForm extends React.Component {
     return (e) => {
       this.setState({ [field]: e.target.value });
     };
+  }
+
+  demoLogin(e) {
+    e.preventDefault();
+    const user = { email: "demo@email.com", password: "password" };
+    this.props.demoLogin(user);
   }
 
   render() {
@@ -50,6 +57,10 @@ class LoginForm extends React.Component {
               <br/>
               <p className="fineprint">By logging in, you agree with Welp's Terms of Service
               and Privacy Policy</p>
+
+              <div className="demo-login">
+                <button className="btn-demo-login" onClick={this.demoLogin}>Demo Log In</button>
+              </div>
 
               <fieldset className="session-form-divider">
                 <legend className="divider">OR</legend>
