@@ -13,19 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
- html, body, div, span, h1, h2, h3, h4, h5, h6, p,
- a, img, strong, ol, ul, li, fieldset, form, label, caption,
- article, aside, canvas, details, figure, figcaption, 
- footer, header, nav, section {
-   background-color: white;
-   font-family: sans-serif;
-   margin: inherit;
-   padding: 0;
-   border: 0;
-   vertical-align: baseline;
-   background-color: inherit;
- }
+  body {
+    font-family: sans-serif;
+  }
 
  .home-main-container {
    background-image: url(https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
@@ -33,10 +23,14 @@
    background-repeat: no-repeat;
    background-size: cover;
    background-position: 50%;
+   display: flex;
+   flex-direction: column;
  }
 
- .homepage-logo {
+ .homepage-logo a {
    text-decoration: none;
+   color: black;
+   font-family: 'Dosis', sans-serif;
  }
 
  .nav-bar {
@@ -48,13 +42,27 @@
    vertical-align: baseline;
    padding-top: 30px;
    color: white;
+   margin: auto 0;
  }
 
- .write-review {
-   /* vertical-align: middle; */
+ .nav-bar-link {
    color: white;
+   padding: 9px 12px 8px;
+ }
+
+ .home-inner {
+   margin: auto;
+   flex-direction: column;
+ }
+
+ .search-form {
+   display: flex;
  }
  
+ li {
+   list-style: none;
+ }
+
  a {
    text-decoration: none;
  }
@@ -62,10 +70,9 @@
  a.btn {
    color: white;
  }
- 
- .write-review:hover {
-   border-bottom: 2px solid pink;
-   /* font-size: 20px; */
+
+ .link:hover {
+   border-bottom: 2px solid white;
  }
 
  .greeting {
@@ -224,6 +231,7 @@
    font-size: 12px;
    color: rgb(109, 109, 109);
    margin-bottom: 12px;
+   line-height: 1.5em;
  }
 
  .signup-fineprint {
