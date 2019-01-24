@@ -6,6 +6,7 @@
   background-position: 50%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .home-logo {
@@ -56,4 +57,31 @@ i.fa-yelp {
 
 .search-links a span:hover {
   border-bottom: 1px solid white;
+}
+
+.home-inner-cred-wrapper {
+  position: absolute;
+  bottom: 35px;
+  right: 46%;
+  color: white;
+  font-size: 14px;
+}
+
+.credit-links a {
+  font-weight: 700;
+  color: white;
+  align-self: center;
+}
+
+.description {
+  margin-bottom: 4px;
+}
+
+.credit {
+  display: flex;
+  justify-content: center;
+}
+
+.credit p {
+  margin-right: 3px;
 }

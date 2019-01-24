@@ -46,7 +46,23 @@ const HomeTop = (props) => {
               Delivery
             </span>
           </a>
+        </div>
+      </div>
 
+      <div className="home-inner-cred-wrapper">
+        <div className="credit-links">
+          <div className="description">
+            <a className="photo-description" href="#">
+              <p className="credit-text">Photo description</p>
+            </a>
+          </div>
+
+          <div className="credit">
+            <p className="credit-text">Photo by</p>
+            <a className="photo-by" href="#">
+              <p className="photographer-name">Name</p>
+            </a>
+          </div>
         </div>
       </div>
 
