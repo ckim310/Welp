@@ -14,7 +14,7 @@ class NavBar extends React.Component {
       </div>
     ) : (
       <div className="greeting">
-        <Link className="btn login" to="/login">Log in</Link>
+        <Link className="nav-bar-link" id="login" to="/login">Log in</Link>
         <Link className="btn signup" to="/signup">Sign Up</Link>
       </div>
     )
@@ -22,7 +22,7 @@ class NavBar extends React.Component {
     return(
       <div className="nav-bar">
         <div className="nav-bar-links">
-          <a href="#" className="write-review">Write a review</a>
+          <a href="#" className="nav-bar-link" id="write-review">Write a review</a>
         </div>
         {display}
       </div>
