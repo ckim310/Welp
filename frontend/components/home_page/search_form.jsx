@@ -13,7 +13,7 @@ class SearchForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    // need to add in where to go after search submit!
   }
 
   handleInput(field) {
@@ -28,26 +28,42 @@ class SearchForm extends React.Component {
       <div className="search-form-wrapper">
         <form className="search-form" onClick={this.handleSubmit}>
           <ul className="search-fields">
-            <li className="search find">
-              <input
-                type="text"
-                value={this.state.find}
-                onChange={this.handleInput('find')}
-                placeholder="burgers, barbers, spas, handymen..."/>
+            <li className="li-search find">
+              <label className="search-items">
+                <div className="search-contents">
+                  <div className="search-find">
+                    <span>Find</span>
+                    <input
+                      type="text"
+                      className="find"
+                      value={this.state.find}
+                      onChange={this.handleInput('find')}
+                      placeholder="burgers, barbers, spas, handymen..."/>
+                  </div>
+                </div>
+              </label>
             </li>
 
-            <li className="search near">
-              <input
-                type="text"
-                value={this.state.near}
-                onChange={this.handleInput('near')}
-                placeholder="New York, NY"/>
+            <li className="li-search near">
+              <label className="search-items">
+                <div className="search-contents">
+                  <div className="search-near">
+                    <span>Near</span>
+                    <input
+                      type="text"
+                      className="near"
+                      value={this.state.near}
+                      onChange={this.handleInput('near')}
+                      placeholder="address, neighborhood, city, or zip"/>
+                  </div>
+                </div>
+              </label>
             </li>
           </ul>
 
           <div className="search-submit">
-            <button className="btn" id="search-submit">
-              <i className="fas fa-search"></i>
+            <button className="btn search-submit">
+              <i className="fas fa-search fa-2x"></i>
             </button>
           </div>
         </form>

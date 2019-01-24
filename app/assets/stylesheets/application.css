@@ -17,9 +17,23 @@
     font-family: sans-serif;
   }
 
+  h2 {
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  strong {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  input {
+    font-size: inherit;
+  }
+
  .home-main-container {
    background-image: url(https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
-   height: 500px;
+   height: 600px;
    background-repeat: no-repeat;
    background-size: cover;
    background-position: 50%;
@@ -35,14 +49,13 @@
 
  .nav-bar {
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    background-color: transparent;
    align-content: center;
    height: 36px;
    vertical-align: baseline;
    padding-top: 30px;
    color: white;
-   margin: auto 0;
  }
 
  .nav-bar-link {
@@ -57,8 +70,64 @@
 
  .search-form {
    display: flex;
+   min-width: 100%;
+   border-radius: 3px;
+   background-color: white;
+ }
+
+ .search-fields {
+   display: flex;
+   align-items: center;
  }
  
+ .li-search {
+  padding: 10px;
+  box-sizing: border-box;
+ }
+
+ .search-contents {
+   display: flex;
+   height: auto;
+   vertical-align: middle;
+   margin: auto 0;
+ }
+
+ .search-contents span {
+   color: #666;
+   margin-right: 12px;
+   font-weight: bold;
+   font-size: large;
+ }
+
+ input.find {
+   width: 300px;
+   margin: 0;
+   font-size: inherit;
+ }
+
+ input.near {
+   width: 270px;
+   margin: 0;
+   font-size: inherit;
+ }
+
+ label input {
+   border-style: none;
+ }
+
+ label span {
+   background-color: white;
+ }
+
+ .search-submit {
+   background-color: #d32323;
+   border-radius: 0 3px 3px 0;
+ }
+
+ button.search-submit {
+   border-style: none;
+ }
+
  li {
    list-style: none;
  }
@@ -113,6 +182,8 @@
  .signup {
    background-color: transparent;
    transition: 1.3s;
+   border: 1px solid white;
+   border-radius: 4px;
  }
 
  .signup:hover {
@@ -147,15 +218,34 @@
    box-sizing: border-box;
  }
 
- .header a {
-   background-color: #d32323;
+ .home-logo {
+    margin: 10% 0;
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+ .logo a {
    font-family: 'Dosis', sans-serif;
    color: black;
+   font-weight: bold;
+   font-size: 30px;
+ }
+
+ .home-logo a {
+   font-family: 'Dosis', sans-serif;
+   color: black;
+   font-weight: bold;
+   font-size: 50px;
+ }
+ 
+ i.fa-yelp {
+   /* color: #d32323; */
  }
 
  .session-wrapper {
    display: flex;
    justify-content: center;
+   margin-top: 30px;
  }
 
  .session-form-wrapper {
@@ -170,11 +260,12 @@
  .session-form {
    width: 300px;
    text-align: center;
+   margin: auto;
  }
 
  div.login {
    position: relative;
-   top: 80px;
+   top: 35px;
  }
 
  .session-form-header {
