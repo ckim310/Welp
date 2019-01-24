@@ -21,22 +21,30 @@ const HomeTop = (props) => {
         <div className="search-links">
           <a className="restaurant" href="#">
             <i class="fas fa-utensils"></i>
-            Restaurants
+            <span className="link-text">
+              Restaurants
+            </span>
           </a>
 
           <a className="nightlife" href="#">
             <i class="fas fa-cocktail"></i>
-            Nightlife
+            <span className="link-text">
+              Nightlife
+            </span>
           </a>
 
           <a className="home-service" href="#">
             <i class="fas fa-tools"></i>
-            Home Services
+            <span className="link-text">
+              Home Services
+            </span>
           </a>
 
           <a className="delivery" href="#">
             <i class="fas fa-truck"></i>
-            Delivery
+            <span className="link-text">
+              Delivery
+            </span>
           </a>
 
         </div>

@@ -1,0 +1,37 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent;
+  align-content: center;
+  height: 36px;
+  vertical-align: baseline;
+  padding-top: 30px;
+  color: white;
+}
+
+.nav-bar-links {
+  display: flex;
+}
+
+.nav-bar-link {
+  color: white;
+  padding: 9px 12px 8px;
+}
+
+.nav-bar-link:hover {
+  border-bottom: 2px solid white;
+}
+
+.greeting {
+  display: flex;
+}
+
+.greeting-notif-wrapper {
+  display: flex;
+  align-self: center;
+}
+
+.greeting-notif-wrapper a {
+  color: white;
+  margin: 5px;
+}
