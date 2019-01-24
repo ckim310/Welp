@@ -21,8 +21,8 @@ class NavBar extends React.Component {
 
     return(
       <div className="nav-bar">
-        <div className="write-review">
-          <a href="#">Write a review</a>
+        <div className="nav-bar-links">
+          <a href="#" className="write-review">Write a review</a>
         </div>
         {display}
       </div>
