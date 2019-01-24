@@ -4,14 +4,14 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute } from '../util/route_util';
+import HomePage from './home_page/home_page';
 
 export default () => {
   return (
     <HashRouter>
       <div className="app-main">
         <header>
-          {/* <h1 className="homepage-logo"><Link to="/">Welp</Link></h1> */}
-          <Route exact path="/" component={NavBarContainer} />
+          <Route exact path="/" component={HomePage} />
         </header>
 
         <AuthRoute path="/login" component={LoginFormContainer} />

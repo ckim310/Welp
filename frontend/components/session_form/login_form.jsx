@@ -12,6 +12,10 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.clearSessionErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
@@ -33,12 +37,16 @@ class LoginForm extends React.Component {
     return (
       <div className="container-main">
         <HeaderForm />
+        
         <div className="session-wrapper">
+  
           <div className="session-form-wrapper">
+            <ul className="form-group-errors">
+              {errors}
+            </ul>
             <div className="session-form login">
               <h2 className="session-form-header">Log In to Welp</h2>
               <strong>New to Yelp? <Link to="/signup">Sign up</Link></strong>
-              <br/>
               <br/>
               <p className="fineprint">By logging in, you agree with Welp's Terms of Service
               and Privacy Policy</p>
@@ -73,9 +81,6 @@ class LoginForm extends React.Component {
                 </div>
               </form>
 
-              <ul className="form-group">
-                {errors}
-              </ul>
             </div>
 
           </div>

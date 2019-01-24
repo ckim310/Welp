@@ -18,6 +18,10 @@ class SignupForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.clearSessionErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
@@ -41,6 +45,10 @@ class SignupForm extends React.Component {
         <HeaderForm />
         <div className="session-wrapper">
           <div className="session-form-wrapper">
+          
+            <ul className="form-group-errors">
+              {errors}
+            </ul>
 
             <div className="session-form signup">
               <h2 className="session-form-header">Sign Up for Welp</h2>
@@ -256,9 +264,6 @@ class SignupForm extends React.Component {
                 </div>
               </form>
 
-              <ul className="form-group">
-                {errors}
-              </ul>
             </div>
           </div>
 

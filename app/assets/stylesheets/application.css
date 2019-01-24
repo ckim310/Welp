@@ -26,6 +26,12 @@
    vertical-align: baseline;
  }
 
+ .home-main-container {
+   background-image: url(https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+   height: 500px;
+   background-repeat: repeat-x;
+ }
+
  .homepage-logo {
    text-decoration: none;
  }
@@ -122,7 +128,7 @@
    font-family: 'Dosis', sans-serif;
    color: black;
  }
- 
+
  .session-wrapper {
    display: flex;
    justify-content: center;
@@ -134,11 +140,17 @@
     padding: 30px;
     box-sizing: border-box;
     justify-content: center;
+    flex-direction: column;
  }
 
  .session-form {
    width: 300px;
    text-align: center;
+ }
+
+ div.login {
+   position: relative;
+   top: 80px;
  }
 
  .session-form-header {
