@@ -9,7 +9,6 @@ class SignupForm extends React.Component {
       first_name: "",
       last_name: "",
       zipcode: "",
-      username: "",
       email: "",
       birthday_month: "",
       birthday_day: "",
@@ -76,13 +75,6 @@ class SignupForm extends React.Component {
                         required="required"/>
                     </li>
                   </ul>
-
-                  <input
-                    type="text"
-                    value={this.state.username}
-                    onChange={this.handleInput('username')}
-                    placeholder="Username"
-                    required="required"/>
 
                   <input
                     type="email"
