@@ -18,7 +18,6 @@ a.btn {
   line-height: 18px;
   font-size: 14px;
   width: 100%;
-  margin: 0 9px 9px 0;
   box-sizing: border-box;
   padding: 5px 9px;
 }
@@ -80,15 +79,24 @@ select {
   font-size: 14px;
 }
 
-.session-wrapper {
+.session-container {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  height: 771px;
+}
+
+.session-wrapper {
+  min-height: 720px;
+  display: flex;
+  justify-content: center;
+  padding: 15px 15px 36px;
+  margin: 0 15px;
+  width: 100%;
+  position: relative;
 }
 
 .session-form-wrapper {
-  display: flex;
-  width: 465px;
+  width: 435px;
   padding: 30px;
   box-sizing: border-box;
   justify-content: center;
@@ -96,14 +104,18 @@ select {
 }
 
 .session-form {
-  width: 300px;
+  width: 100%;
   text-align: center;
   margin: auto;
+  position: relative;
+  bottom: 0;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 div.login {
   position: relative;
-  top: 35px;
+  top: 20%;
 }
 
 .session-form-header {
@@ -140,8 +152,15 @@ legend.divider {
 
 .signup-name li {
   list-style: none;
-  padding: 0 3px;
   box-sizing: border-box;
+}
+
+li.first {
+  padding-right: 3px;
+}
+
+li.last {
+  padding-left: 3px;
 }
 
 .form-submit {
@@ -175,4 +194,6 @@ legend.divider {
 
 .session-form-img {
   margin-top: 50px;
+  position: relative;
+  top: 10%;
 }

@@ -40,8 +40,8 @@
   margin-bottom: 6px;
 }
 
-.footer-content-item a{
-  color: #0073bb;
+.footer-content-item i {
+  color: #d32323;
 }
 
 .footer-content select {
@@ -52,4 +52,9 @@
   color: #0073bb;
   height: 20px;
   background-color: transparent;
+}
+
+.footer-img {
+  position: relative;
+  left: 15%;
 }

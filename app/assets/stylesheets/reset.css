@@ -24,8 +24,13 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+/* added reset styling for body and a tags */
 body {
 	min-width: 1020px;
+}
+
+a {
+	color: #0073bb;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 

@@ -7,6 +7,7 @@ const Footer = props => {
       <div className="footer-main">
 
         <div className="footer-main-content">
+
           <div className="footer-section">
             <div className="footer-content">
               <h3 className="footer-content-header">About</h3>
@@ -18,7 +19,7 @@ const Footer = props => {
                   <a href="https://github.com/ckim310/Welp">Welp Github Page</a>
                 </li>
                 <li className="footer-content-item">
-                  <a href="#">Other</a>
+                  <a href="#">Back to Welp<i className="fab fa-yelp"></i></a>
                 </li>
               </ul>
             </div>
@@ -84,8 +85,12 @@ const Footer = props => {
 
             </div>
           </div>
+
         </div>
 
+        <div className="footer-img">
+          <img src="./footer_cityscape.png" alt="footer_cityscape"/>
+        </div>
       </div>
 
     </div>
