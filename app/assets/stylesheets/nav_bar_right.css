@@ -25,7 +25,6 @@
 .dropdown-content-container {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
   min-width: 75px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -59,12 +58,30 @@
   font-size: 14px;
 }
 
+.dropdown-arrow::after {
+  position: relative;
+  content: " ";
+  left: 96px;
+  bottom: 37px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #f1f1f1;
+}
+
+.dropdown-arrow {
+  height: 0;
+}
+
 .dropdown-content {
   color: #0073bb;
   margin-top: 10px;
   padding: 12px;
   display: flex;
   flex-direction: column;
+  background-color: #f1f1f1;
+  border-radius: 2px;
 }
 
 .dropdown-user-container {
