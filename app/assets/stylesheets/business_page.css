@@ -6,3 +6,11 @@
 .title-claim i {
   color: #0073bb;
 }
+
+.star-avg-rating i {
+  border-radius: 5px;
+  background-color: #d32323;
+  color: white;
+  padding: 5px;
+  margin: 2px;
+}
