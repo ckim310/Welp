@@ -88,8 +88,10 @@ const Footer = props => {
 
         </div>
 
-        <div className="footer-img">
-          <img src="./footer_cityscape.png" alt="footer_cityscape"/>
+        <div className="footer-img-container">
+          <div className="footer-img">
+            <img src="./footer_cityscape.png" alt="footer_cityscape"/>
+          </div>
         </div>
       </div>
 

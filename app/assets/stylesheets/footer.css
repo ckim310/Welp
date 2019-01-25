@@ -3,6 +3,9 @@
   min-width: 1020px;
   height: 372px;
   background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer-container {
@@ -19,6 +22,7 @@
 
 .footer-main-content {
   margin: 0 -15px;
+  display: flex;
 }
 
 .footer-section {
@@ -53,7 +57,16 @@
   background-color: transparent;
 }
 
-.footer-img {
-  position: relative;
-  left: 15%;
+.footer-content select:hover {
+  cursor: pointer;
+}
+
+.footer-img-container {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-main-content a:hover {
+  border-bottom: 1px solid #0073bb;
 }
