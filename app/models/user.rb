@@ -19,7 +19,7 @@
 class User < ApplicationRecord
   validates :first_name, :last_name, :zipcode, :email, :birthday_month, :birthday_day, :birthday_year, :password_digest, presence: true
   validates :session_token, presence: true, uniqueness: true
-  validates :zipcode, length: { minimum: 5 }
+  validates :zipcode, length: { is: 5 }
   validates :password, length: { minimum: 6, allow_nil: true }
 
   has_one_attached :photo

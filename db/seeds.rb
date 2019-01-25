@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
+Business.destroy_all
 
 User.create!(
   first_name: 'Demo',
@@ -16,4 +17,13 @@ User.create!(
   birthday_day: 23,
   birthday_year: 2019,
   password: 'password'
+)
+
+Business.create!(
+  name: "Gong Cha",
+  zipcode: 10018,
+  address: "75 W 38th St, New York",
+  phone_number: "212-398-2716",
+  longitude: 40.752310,
+  latitude: -73.985630,
 )
