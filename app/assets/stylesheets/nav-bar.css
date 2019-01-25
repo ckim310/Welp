@@ -49,6 +49,16 @@
   border-radius: 2px;
 }
 
+.dropdown-logout-container {
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.dropdown-logout {
+  margin-right: 50%;
+  padding-top: 10px;
+}
+
 .dropdown-logout:hover {
   border-bottom: 1px solid #0073bb;
 }
@@ -60,10 +70,49 @@
 .user-dropdown {
   position: relative;
   display: inline-block;
+  font-size: 14px;
 }
 
 .dropdown-content {
   color: #0073bb;
   margin-top: 10px;
   padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-user-container {
+  display: flex;
+}
+
+.user-pic {
+  margin: 2px;
+}
+
+.user-pic i {
+  background-color: #0073bb;
+  padding: 2px;
+}
+
+.user-name {
+  display: flex;
+  font-weight: 700;
+}
+
+.user-name_first {
+  margin-right: 4px;
+}
+
+.nav-bar-right {
+  align-self: center;
+}
+
+.nav-bar-right button {
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+}
+
+.nav-bar-right i {
+  color: white;
 }
