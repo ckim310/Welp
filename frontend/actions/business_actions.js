@@ -1,7 +1,7 @@
 import * as BusinessAPIUtil from '../util/business_api_util';
 
 export const RECEIVE_BUSINESSES = "RECEIVE_BUSINESSES";
-// export const RECEIVE_BUSINESS = "RECEIVE_BUSINESS";
+export const RECEIVE_BUSINESS = "RECEIVE_BUSINESS";
 
 const receiveBusinesses = businesses => {
   return {
@@ -10,12 +10,12 @@ const receiveBusinesses = businesses => {
   };
 };
 
-// const receiveBusiness = business => {
-//   return {
-//     type: RECEIVE_BUSINESS,
-//     business,
-//   };
-// };
+const receiveBusiness = business => {
+  return {
+    type: RECEIVE_BUSINESS,
+    business,
+  };
+};
 
 export const fetchBusinesses = () => {
   return dispatch => {
@@ -25,10 +25,10 @@ export const fetchBusinesses = () => {
   };
 };
 
-// export const fetchBusiness = id => {
-//   return dispatch => {
-//     return BusinessAPIUtil.fetchBusiness(id).then(business => {
-//       return dispatch(receiveBusiness(business));
-//     });
-//   };
-// };
+export const fetchBusiness = id => {
+  return dispatch => {
+    return BusinessAPIUtil.fetchBusiness(id).then(business => {
+      return dispatch(receiveBusiness(business));
+    });
+  };
+};

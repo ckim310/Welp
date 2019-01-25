@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const BusinessIndexItem = ({ business, idx }) => (
+const BusinessIndexItem = ({ business, idx }) => {
+  return (
   <li className="business-index-item">
     <div className="business-index-content-container">
-      <h3 className="business-name">{idx}. {business.name}</h3>
+        <h3 className="business-name">{idx}. <Link to={`/businesses/${business.id}`}>{business.name}</Link></h3>
 
       <div className="business-detail">
         <div className="business-phone-num">
@@ -17,6 +19,7 @@ const BusinessIndexItem = ({ business, idx }) => (
 
     </div>
   </li>
-)
+  )
+}
 
 export default BusinessIndexItem;

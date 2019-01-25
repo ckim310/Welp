@@ -1,5 +1,8 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import BusinessIndexItem from './business_index_item';
+import SearchNavBar from '../nav_bar/search_nav_bar';
+import BusinessPage from '../business_page/business_page';
 
 class BusinessIndex extends React.Component {
   constructor(props) {
@@ -17,6 +20,11 @@ class BusinessIndex extends React.Component {
 
     return (
       <div className="businesses-list-container">
+        <SearchNavBar />
+        <Route
+          path="/businesses/:businessId"
+          component={BusinessPage}
+        />
         <ul className="businesses-list">
           {businessesLi}
         </ul>
