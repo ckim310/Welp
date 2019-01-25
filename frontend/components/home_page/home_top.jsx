@@ -26,12 +26,12 @@ const HomeTop = (props) => {
             </span>
           </a>
 
-          <a className="nightlife" href="#">
-            <i className="fas fa-cocktail"></i>
+          <Link to="/businesses" className="desserts" href="#">
+            <i className="fas fa-cookie-bite"></i>
             <span className="link-text">
-              Nightlife
+              Desserts
             </span>
-          </a>
+          </Link>
 
           <a className="home-service" href="#">
             <i className="fas fa-tools"></i>
