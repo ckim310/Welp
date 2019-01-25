@@ -12,13 +12,13 @@ class NavBar extends React.Component {
         <div className="greeting-notif-wrapper">
           <div className="message-icon">
             <a href="#">
-              <i class="fas fa-comment-alt"></i>
+              <i className="fas fa-comment-alt"></i>
             </a>
           </div>
 
           <div className="bell-icon">
             <a href="#">
-              <i class="fas fa-bell"></i>
+              <i className="fas fa-bell"></i>
             </a>
           </div>
 
@@ -38,8 +38,8 @@ class NavBar extends React.Component {
       <div className="nav-bar">
         <div className="nav-bar-links">
           <a href="#" className="nav-bar-link" id="write-review">Write a review</a>
-          <a href="https://github.com/ckim310" className="nav-bar-link" id="github">Github <i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/christine-kim-46857544/" className="nav-bar-link" id="linkedin">LinkedIn <i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/ckim310" className="nav-bar-link" id="github">Github <i className="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/christine-kim-46857544/" className="nav-bar-link" id="linkedin">LinkedIn <i className="fab fa-linkedin"></i></a>
         </div>
         {display}
       </div>

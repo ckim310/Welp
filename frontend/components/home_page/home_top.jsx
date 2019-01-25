@@ -9,7 +9,7 @@ const HomeTop = (props) => {
     <div className="home-inner">
       <div className="home-inner-logo">
         <h1 className="home-logo">
-          <Link to="/">welp<i class="fab fa-yelp"></i></Link>
+          <Link to="/">welp<i className="fab fa-yelp"></i></Link>
         </h1>
       </div>
 
@@ -20,28 +20,28 @@ const HomeTop = (props) => {
       <div className="home-inner-links-wrapper">
         <div className="search-links">
           <a className="restaurant" href="#">
-            <i class="fas fa-utensils"></i>
+            <i className="fas fa-utensils"></i>
             <span className="link-text">
               Restaurants
             </span>
           </a>
 
           <a className="nightlife" href="#">
-            <i class="fas fa-cocktail"></i>
+            <i className="fas fa-cocktail"></i>
             <span className="link-text">
               Nightlife
             </span>
           </a>
 
           <a className="home-service" href="#">
-            <i class="fas fa-tools"></i>
+            <i className="fas fa-tools"></i>
             <span className="link-text">
               Home Services
             </span>
           </a>
 
           <a className="delivery" href="#">
-            <i class="fas fa-truck"></i>
+            <i className="fas fa-truck"></i>
             <span className="link-text">
               Delivery
             </span>
