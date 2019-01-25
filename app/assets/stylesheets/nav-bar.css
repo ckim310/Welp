@@ -36,7 +36,7 @@
   margin: 5px;
 }
 
-.dropdown-content {
+.dropdown-content-container {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -49,6 +49,10 @@
   border-radius: 2px;
 }
 
+.dropdown-logout:hover {
+  border-bottom: 1px solid #0073bb;
+}
+
 .show {
   display: block;
 }
@@ -58,7 +62,7 @@
   display: inline-block;
 }
 
-.dropdown-logout {
+.dropdown-content {
   color: #0073bb;
   margin-top: 10px;
   padding: 12px;
