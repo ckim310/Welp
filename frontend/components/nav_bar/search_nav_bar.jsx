@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBarRight from './nav_bar_right';
+import NavBarRightContainer from './nav_bar_right_container';
 
 const SearchNavBar = props => {
 
   return (
     <div className="search-nav-bar-container">
-      <NavBarRight />
+      <NavBarRightContainer />
     </div>
   );
 };
