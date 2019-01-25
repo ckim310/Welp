@@ -96,7 +96,7 @@ select {
 }
 
 .session-form-wrapper {
-  width: 435px;
+  width: 436px;
   padding: 30px;
   box-sizing: border-box;
   justify-content: center;
@@ -196,4 +196,5 @@ li.last {
   margin-top: 50px;
   position: relative;
   top: 10%;
+  margin-left: 5%;
 }

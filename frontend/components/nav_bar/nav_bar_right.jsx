@@ -31,11 +31,13 @@ class NavBarRight extends React.Component {
           </div>
   
           <div className="user-dropdown">
-            <button onClick={this.dropdownHandler}>
+            <button className="btn-user-dropdown" onClick={this.dropdownHandler}>
               {userPic}
             </button>
             <div id="dropdown" className="dropdown-content-container">
               <div className="dropdown-content">
+                <div className="dropdown-arrow">
+                </div>
                 <div className="dropdown-user-container">
                   <div className="user-pic">{userPic}</div>
   
