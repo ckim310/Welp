@@ -21,17 +21,3 @@
 .nav-bar-link:hover {
   border-bottom: 2px solid white;
 }
-
-.greeting {
-  display: flex;
-}
-
-.greeting-notif-wrapper {
-  display: flex;
-  align-self: center;
-}
-
-.greeting-notif-wrapper a {
-  color: white;
-  margin: 5px;
-}

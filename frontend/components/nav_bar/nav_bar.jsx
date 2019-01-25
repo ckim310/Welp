@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavBarRight from './nav_bar_right';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -7,33 +8,7 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const display = this.props.currentUser ? (
-      <div className="greeting">
-        <div className="greeting-notif-wrapper">
-          <div className="message-icon">
-            <a href="#">
-              <i className="fas fa-comment-alt"></i>
-            </a>
-          </div>
-
-          <div className="bell-icon">
-            <a href="#">
-              <i className="fas fa-bell"></i>
-            </a>
-          </div>
-
-          <div className="greeting-user">Hello, {this.props.currentUser.first_name} </div>
-        </div>
-
-        <button onClick={this.props.logout} className="btn logout">Log out</button>
-      </div>
-    ) : (
-      <div className="greeting">
-        <Link className="nav-bar-link" id="login" to="/login">Log in</Link>
-        <Link className="btn signup" to="/signup">Sign Up</Link>
-      </div>
-    )
-
+    
     return(
       <div className="nav-bar">
         <div className="nav-bar-links">
@@ -41,7 +16,9 @@ class NavBar extends React.Component {
           <a href="https://github.com/ckim310" className="nav-bar-link" id="github">Github <i className="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/christine-kim-46857544/" className="nav-bar-link" id="linkedin">LinkedIn <i className="fab fa-linkedin"></i></a>
         </div>
-        {display}
+
+        <NavBarRight logout={this.props.logout} currentUser={this.props.currentUser}/>
+        
       </div>
     )
   }

@@ -7,7 +7,7 @@ import BrowseCategory from './browse_category';
 const HomePage = (props) => {
 
   return (
-    <div className="home-main-container">
+    <div className="home-main-container overlay">
       <NavBar />
 
       <HomeTop />
