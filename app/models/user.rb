@@ -22,6 +22,8 @@ class User < ApplicationRecord
   validates :zipcode, length: { minimum: 5 }
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  has_one_attached :photo
+
   attr_reader :password
   after_initialize :ensure_session_token
 

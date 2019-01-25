@@ -5,8 +5,8 @@ const HeaderForm = (props) => {
 
   return (
     <div className="header-wrapper">
-      <h1 className="header">
-        <Link to="/">welp</Link>
+      <h1 className="header logo">
+        <Link to="/">welp<i className="fab fa-yelp"></i></Link>
       </h1>
     </div>  
   )

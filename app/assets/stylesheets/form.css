@@ -1,0 +1,199 @@
+a.btn {
+  color: white;
+}
+
+.btn {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin: 2px;
+  box-sizing: border-box;
+  align-self: center;
+}
+
+.session-form-wrapper input {
+  border: 1px solid #999;
+  border-radius: 3px;
+  line-height: 18px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 9px;
+}
+
+div input {
+  margin: 0;
+  margin-bottom: 9px;
+  padding: 5px 9px;
+  box-sizing: border-box;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-wrapper {
+  background-color: #d32323;
+  height: 64px;
+}
+
+.header {
+  background-color: #d32323;
+  text-align: center;
+  vertical-align: center;
+  margin: 14px 0;
+  box-sizing: border-box;
+}
+
+.logo a {
+  font-family: 'Dosis', sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.login {
+  border: none;
+}
+
+.signup {
+  background-color: transparent;
+  transition: 1.3s;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.signup:hover {
+  background-color: white;
+  color: grey;
+}
+
+select {
+  background-color: white;
+  height: 30px;
+  line-height: 30px;
+  width: 93px;
+  margin: 5px 5px 9px 0;
+  font-size: 14px;
+}
+
+.session-container {
+  display: flex;
+  justify-content: center;
+  height: 771px;
+}
+
+.session-wrapper {
+  min-height: 720px;
+  display: flex;
+  justify-content: center;
+  padding: 15px 15px 36px;
+  margin: 0 15px;
+  width: 100%;
+  position: relative;
+}
+
+.session-form-wrapper {
+  width: 435px;
+  padding: 30px;
+  box-sizing: border-box;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.session-form {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  bottom: 0;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+div.login {
+  position: relative;
+  top: 20%;
+}
+
+.session-form-header {
+  color: #d32323;
+  margin-bottom: 10px;
+}
+
+.btn-demo-login {
+  background-color: #235789;
+  height: 43px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  width: 100%;
+}
+
+fieldset.session-form-divider {
+  color: #666;
+  margin: 24px 0;
+  border-top: 1px solid #ccc;
+}
+
+legend.divider {
+  width: 20;
+  padding: 0 15px;
+}
+
+.signup-name {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+
+.signup-name li {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+li.first {
+  padding-right: 3px;
+}
+
+li.last {
+  padding-left: 3px;
+}
+
+.form-submit {
+  background-color: #d32323;
+  color: white;
+  font-weight: 700;
+  line-height: 21px;
+  height: 43px;
+}
+
+.form-submit-link {
+  color: #999;
+  font-size: 12px;
+  text-align: right;
+}
+
+.session-form-extra {
+  text-align: left;
+}
+
+.fineprint {
+  font-size: 12px;
+  color: rgb(109, 109, 109);
+  margin-bottom: 12px;
+  line-height: 1.5em;
+}
+
+.signup-fineprint {
+  text-align: left;
+}
+
+.session-form-img {
+  margin-top: 50px;
+  position: relative;
+  top: 10%;
+}

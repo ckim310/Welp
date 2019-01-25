@@ -1,0 +1,87 @@
+.home-main-container {
+  background-image: url(https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.home-logo {
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.home-logo a {
+  font-family: 'Dosis', sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+i.fa-yelp {
+  /* color: #d32323; */
+}
+
+.homepage-logo a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Dosis', sans-serif;
+}
+
+ .home-inner {
+  padding-top: 80px;
+  flex-direction: column;
+}
+
+.home-inner-search-wrapper {
+  margin: 5% auto 0;
+  width: fit-content;
+}
+
+.search-links {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: 15px auto;
+}
+
+.search-links a {
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.search-links a span:hover {
+  border-bottom: 1px solid white;
+}
+
+.home-inner-cred-wrapper {
+  position: absolute;
+  bottom: 35px;
+  right: 46%;
+  color: white;
+  font-size: 14px;
+}
+
+.credit-links a {
+  font-weight: 700;
+  color: white;
+  align-self: center;
+}
+
+.description {
+  margin-bottom: 4px;
+}
+
+.credit {
+  display: flex;
+  justify-content: center;
+}
+
+.credit p {
+  margin-right: 3px;
+}
