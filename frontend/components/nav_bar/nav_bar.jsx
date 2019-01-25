@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBarRight from './nav_bar_right';
+import NavBarRightContainer from './nav_bar_right_container';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class NavBar extends React.Component {
           <a href="https://www.linkedin.com/in/christine-kim-46857544/" className="nav-bar-link" id="linkedin">LinkedIn <i className="fab fa-linkedin"></i></a>
         </div>
 
-        <NavBarRight logout={this.props.logout} currentUser={this.props.currentUser}/>
+        <NavBarRightContainer />
         
       </div>
     )

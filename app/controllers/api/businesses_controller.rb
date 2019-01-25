@@ -1,9 +1,9 @@
-class BusinessesController < ApplicationController
+class Api::BusinessesController < ApplicationController
   def create
     @business = Business.new(business_params)
 
     if @business.save
-      render "/api/businesses/show"
+      render :show
     else
       render json: @business.errors.full_messages, status: 422
     end
@@ -13,7 +13,7 @@ class BusinessesController < ApplicationController
     @business = Business.find(params[:id])
 
     if @business
-      render "api/businesses/show"
+      render :show
     else
       render json: ['No existing business']
     end
@@ -27,4 +27,5 @@ class BusinessesController < ApplicationController
   def business_params
     params.require(:business).permit(:name, :address, :zipcode, :phone_number, :latitude, :longitude)
   end
+
 end

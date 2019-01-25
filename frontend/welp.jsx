@@ -4,7 +4,9 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import configureStore from './store/store';
 
-import { login } from './actions/session_actions';
+// // for TESTING only
+// import { login } from './actions/session_actions';
+// import { fetchBusinesses } from './actions/business_actions';
 
 const Root = ({ store }) => {
   return (
@@ -32,10 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
+  // // for TESTING ONLY
   // window.store = store
   // window.dispatch = store.dispatch;
   // window.getState = store.getState;
-  // window.login = login;
+  // window.fetchBusinesses = fetchBusinesses;
 
   ReactDOM.render(<Root store={store} />, root)
 });
