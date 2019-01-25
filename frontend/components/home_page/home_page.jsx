@@ -12,8 +12,6 @@ const HomePage = (props) => {
 
       <HomeTop />
 
-      <BrowseCategory />
-
     </div>
   )
 }
