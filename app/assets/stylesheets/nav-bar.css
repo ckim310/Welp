@@ -35,3 +35,31 @@
   color: white;
   margin: 5px;
 }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 75px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color: black;
+  right: 0;
+  border-radius: 2px;
+}
+
+.show {
+  display: block;
+}
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-logout {
+  color: #0073bb;
+  margin-top: 10px;
+  padding: 12px;
+}

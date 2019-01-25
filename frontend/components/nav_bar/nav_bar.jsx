@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    this.dropdownHandler = this.dropdownHandler.bind(this);
+  }
+
+  dropdownHandler(e) {
+    e.preventDefault();
+    document.getElementById("dropdown").classList.toggle("show");
   }
 
   render() {
@@ -22,10 +28,19 @@ class NavBar extends React.Component {
             </a>
           </div>
 
-          <div className="greeting-user">Hello, {this.props.currentUser.first_name} </div>
+          {/* <div className="greeting-user">Hello, {this.props.currentUser.first_name} </div> */}
+
+          <div className="user-dropdown">
+            <button onClick={this.dropdownHandler}>
+              Hello {this.props.currentUser.first_name}<i className="fas fa-cookie-bite"></i>
+            </button>
+            <div id="dropdown" className="dropdown-content">
+              <div className="dropdown-logout" onClick={this.props.logout}>Logout</div>
+            </div>
+          </div>
         </div>
 
-        <button onClick={this.props.logout} className="btn logout">Log out</button>
+        {/* <button onClick={this.props.logout} className="btn logout">Log out</button> */}
       </div>
     ) : (
       <div className="greeting">
