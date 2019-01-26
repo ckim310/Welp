@@ -52,7 +52,7 @@ class BusinessPage extends React.Component {
                         </div>
 
                         <div className="reviews-count">
-                          Review Count (placeholder)
+                          # Review (placeholder)
                         </div>
                       </div>
 

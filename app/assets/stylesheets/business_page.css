@@ -1,3 +1,7 @@
+.top-container {
+  background-color: #f5f5f5;
+}
+
 .title-name {
   font-size: 36px;
   font-weight: 700;
@@ -20,6 +24,10 @@
 
 .top-header {
   display: flex;
+}
+
+.top-header-left {
+  padding-right: 30px;
 }
 
 .top-header-title {
@@ -66,6 +74,10 @@
   margin: 5px 0;
 }
 
+.top-header-right {
+  align-self: center;
+}
+
 .business-page-actions {
   display: flex;
 }
@@ -77,6 +89,7 @@
   padding: 8px 19px;
   font-weight: 700;
   border-radius: 3px;
+  margin-right: 12px;
 }
 
 .page-options {
@@ -96,4 +109,18 @@
 .page-options a {
   color: #666666;
   border-right: 1px solid #666666;
+  padding: 5px 8px;
+  transition: ease-in-out, width .35s ease-in-out;
+}
+
+.page-options a:hover {
+  background-color: #f5f5f5;
+}
+
+.page-options a:focus {
+  background-color: #e6e6e6;
+}
+
+.bookmark {
+  padding: 5px 8px;
 }
