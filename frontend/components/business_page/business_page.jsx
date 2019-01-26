@@ -1,5 +1,5 @@
 import React from 'react';
-import { fetchBusiness } from '../../actions/business_actions';
+import { fetchBusiness, fetchBusinesses } from '../../actions/business_actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -66,7 +66,7 @@ class BusinessPage extends React.Component {
 
                     <div className="price-category">
                       <div className="price">
-                        $$ •
+                        $$ • <br/>
                       </div>
 
                       <div className="business-category">
@@ -123,6 +123,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    fetchBusinesses: () => dispatch(fetchBusinesses()),
     fetchBusiness: (id) => dispatch(fetchBusiness(id)),
   }
 }

@@ -1,10 +1,13 @@
 .title-name {
   font-size: 36px;
   font-weight: 700;
+  padding-top: 6px;
+  margin-bottom: 6px;
 }
 
 .title-claim i {
   color: #0073bb;
+  margin: 0 5px;
 }
 
 .star-avg-rating i {
@@ -13,4 +16,84 @@
   color: white;
   padding: 5px;
   margin: 2px;
+}
+
+.top-header {
+  display: flex;
+}
+
+.top-header-title {
+  display: flex;
+  align-items: baseline;
+}
+
+.rating-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.avg-rating-reviews {
+  display: flex;
+  align-items: baseline;
+}
+
+.reviews-count {
+  color: #666666;
+  margin-left: 5px;
+}
+
+.rating-details {
+  align-self: center;
+  padding: 0 8px;
+  font-size: 12px;
+}
+
+.rating-details a {
+  color: #999999;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  padding: 2px 6px;
+}
+
+.rating-details i {
+  margin-right: 4px;
+}
+
+.price-category {
+  display: flex;
+  position: relative;
+  left: 1%;
+  margin: 5px 0;
+}
+
+.business-page-actions {
+  display: flex;
+}
+
+.business-write-review {
+  display: flex;
+  color: white;
+  background-color: #be2020;
+  padding: 8px 19px;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.page-options {
+  display: flex;
+  color: #666666;
+  background-color: #ffffff;
+  border: 1px solid #666666;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 18px;
+  align-items: center;
+  height: fit-content;
+  margin: auto;
+  font-weight: 700;
+}
+
+.page-options a {
+  color: #666666;
+  border-right: 1px solid #666666;
 }
