@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import HeaderForm from './header_form';
@@ -101,7 +102,8 @@ class SignupForm extends React.Component {
                       value={this.state.email}
                       onChange={this.handleInput('email')}
                       placeholder="Email"
-                      required="required"/>
+                      // required="required"
+                      />
 
                     <input
 
