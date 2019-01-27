@@ -32,6 +32,14 @@ body {
 a {
 	color: #0073bb;
 }
+/* update styling reset to have no focus */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
