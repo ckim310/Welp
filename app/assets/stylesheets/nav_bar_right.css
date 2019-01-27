@@ -6,6 +6,12 @@
   background-color: transparent;
   border: none;
   border-radius: 3px;
+  padding: 6px;
+}
+
+.nav-bar-right-container button:hover {
+  background-color: #333333;
+  opacity: 30%;
 }
 
 .greeting {
@@ -15,11 +21,6 @@
 .greeting-notif-wrapper {
   display: flex;
   align-self: center;
-}
-
-.greeting-notif-wrapper a {
-  color: white;
-  margin: 5px;
 }
 
 .dropdown-content-container {
