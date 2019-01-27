@@ -1,9 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import BusinessPageHeaderContainer from './business_page_header_container';
+import { fetchBusinesses } from '../../util/business_api_util';
 
 class BusinessPage extends React.Component {
   constructor(props) {
     super(props);
+  }
+  
+  componentDidMount() {
+    debugger
+    this.props.fetchBusinesses();
   }
 
   render() {
@@ -16,4 +23,11 @@ class BusinessPage extends React.Component {
   }
 }
 
-export default BusinessPage;
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchBusinesses: () => dispatch(fetchBusinesses()),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(BusinessPage);
