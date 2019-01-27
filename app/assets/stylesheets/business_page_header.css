@@ -63,6 +63,14 @@
   padding: 2px 6px;
 }
 
+.rating-details a:hover {
+  background: linear-gradient(#fff, #eee);
+}
+
+.rating-details a:focus {
+  background: -webkit-linear-gradient(#fff, #eee);
+}
+
 .rating-details i {
   margin-right: 4px;
 }
@@ -90,6 +98,11 @@
   font-weight: 700;
   border-radius: 3px;
   margin-right: 12px;
+  border: 1px solid #be2020;
+}
+
+.business-write-review:hover {
+  background-color: #dc4f4f;
 }
 
 .page-options {
@@ -104,6 +117,10 @@
   height: fit-content;
   margin: auto;
   font-weight: 700;
+}
+
+.page-options i {
+  padding-right: 5px;
 }
 
 .page-options a {
@@ -123,4 +140,12 @@
 
 .bookmark {
   padding: 5px 8px;
+}
+
+.bookmark:hover {
+  background-color: #f5f5f5;
+}
+
+.bookmark:focus {
+  background-color: #e6e6e6;
 }
