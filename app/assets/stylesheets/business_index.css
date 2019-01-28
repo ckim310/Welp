@@ -9,17 +9,18 @@
   padding: 0 15px;
 }
 
-.business-index-content ul li h3 {
-  font-weight: 700;
+.businesses-list {
+  width: 630px;
 }
 
-.business-detail {
-  text-align: right;
-  font-size: 14px;
+.businesses-list li {
+  padding: 18px 0;
+  border-top: 1px solid #e6e6e6;
 }
 
 .index-map {
-  margin-left: 25px;
+  margin-left: 5%;
+  margin-top: 10%;
 }
 
 .index-map div {
@@ -34,4 +35,24 @@
 /* business index item css */
 .business-name a:hover {
   text-decoration: underline;
+}
+
+.business-index-content ul li h3 {
+  font-weight: 700;
+  width: -webkit-fill-available;
+  line-height: 2;
+}
+
+.business-detail {
+  text-align: right;
+  font-size: 14px;
+  width: -webkit-fill-available;
+  line-height: 2;
+}
+
+.business-index-pic img{
+  width: 210px;
+  height: 210px;
+  border-radius: 4px;
+  margin-right: 20px;
 }
