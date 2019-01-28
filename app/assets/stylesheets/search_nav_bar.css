@@ -1,0 +1,42 @@
+.search-nav-bar-container {
+  background-color: #d32323;
+}
+
+.search-nav-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-nav-bar-item {
+  display: flex;
+  margin: 0 10px;
+}
+
+.search-nav-bar-container form {
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+}
+
+.search-nav-bar-container form span{
+  font-size: 14px;
+  margin-right: 5px;
+  color: #333;
+}
+
+.search-nav-bar-container input {
+  width: 280px;
+  padding-left: 0;
+}
+
+.search-nav-bar-container .search-submit button {
+  background-color: #bd1f1f;
+  height: 38px;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.search-nav-bar-container form i {
+  color: white;
+}
