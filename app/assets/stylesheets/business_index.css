@@ -1,6 +1,7 @@
 .business-index-content-container {
   display: flex;
   justify-content: space-between;
+  margin: 18px 0;
 }
 
 .business-index-content {

@@ -4,6 +4,7 @@ import BusinessIndexItem from './business_index_item';
 import SearchNavBar from '../nav_bar/search_nav_bar';
 import BusinessPage from '../business_page/business_page';
 import Map from '../business_map/map';
+import SubNavBar from '../nav_bar/sub_nav_bar';
 
 class BusinessIndex extends React.Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class BusinessIndex extends React.Component {
     return (
       <div className="businesses-list-container">
         <SearchNavBar />
+        <SubNavBar />
         <Route
           path="/businesses/:businessId"
           component={BusinessPage}
