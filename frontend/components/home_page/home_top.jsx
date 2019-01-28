@@ -19,33 +19,33 @@ const HomeTop = (props) => {
 
       <div className="home-inner-links-wrapper">
         <div className="search-links">
-          <a className="restaurant" href="#">
+          <Link to="/businesses" className="restaurants">
             <i className="fas fa-utensils"></i>
             <span className="link-text">
               Restaurants
             </span>
-          </a>
+          </Link>
 
-          <Link to="/businesses" className="desserts" href="#">
-            <i className="fas fa-cookie-bite"></i>
+          <Link to="/businesses" className="nightlife">
+            <i className="fas fa-glass-martini-alt"></i>
             <span className="link-text">
-              Desserts
+              Nightlife
             </span>
           </Link>
 
-          <a className="home-service" href="#">
+          <Link to="/businesses" className="home-service">
             <i className="fas fa-tools"></i>
             <span className="link-text">
               Home Services
             </span>
-          </a>
+          </Link>
 
-          <a className="delivery" href="#">
+          <Link to="/businesses" className="delivery">
             <i className="fas fa-truck"></i>
             <span className="link-text">
               Delivery
             </span>
-          </a>
+          </Link>
         </div>
       </div>
 

@@ -48,6 +48,10 @@ i.fa-yelp {
   margin: 15px auto;
 }
 
+.search-links a i {
+  margin-right: 6px;
+}
+
 .search-links a {
   color: white;
   font-weight: 700;
@@ -55,7 +59,7 @@ i.fa-yelp {
 }
 
 .search-links a span:hover {
-  border-bottom: 1px solid white;
+  text-decoration: underline;
 }
 
 .home-inner-cred-wrapper {
