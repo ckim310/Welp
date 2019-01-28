@@ -9,18 +9,17 @@ export default class MarkerManager {
       // this.markers[business.id] = business;
       this.createMarkerFromBusiness(business);
     });
-    // debugger
   }
 
   createMarkerFromBusiness(business) {
     const position = new google.maps.LatLng(business.latitude, business.longitude);
-    // debugger
+  
     const marker = new google.maps.Marker({
       position,
       map: this.map,
       businessId: business.id
     });
-    // debugger
+  
     this.markers[marker.businessId] = marker;
   }
 }
