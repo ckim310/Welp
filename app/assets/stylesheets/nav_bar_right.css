@@ -16,6 +16,7 @@
 
 .greeting {
   display: flex;
+  font-weight: 700;
 }
 
 .greeting-notif-wrapper {
@@ -23,9 +24,13 @@
   align-self: center;
 }
 
+#login {
+  align-self: center;
+}
+
 .signup {
   margin: 0;
-  padding: 9px;
+  padding: 9px 20px;
 }
 
 .nav-bar-link {
