@@ -13,7 +13,6 @@ const HomePage = (props) => {
 
   return (
     <div className="home-main-container overlay" style={sectionStyle} >
-      {/* <img src={window.pieURL} /> */}
       <NavBar />
 
       <HomeTop />

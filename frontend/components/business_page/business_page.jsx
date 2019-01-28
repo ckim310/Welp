@@ -7,14 +7,8 @@ class BusinessPage extends React.Component {
   constructor(props) {
     super(props);
   }
-  
-  componentDidMount() {
-    debugger
-    this.props.fetchBusinesses();
-  }
 
   render() {
-
     return (
       <div className="business-page-container">
         <BusinessPageHeaderContainer props={this.props} />

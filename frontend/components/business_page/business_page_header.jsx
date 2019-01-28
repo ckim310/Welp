@@ -6,18 +6,6 @@ class BusinessPageHeader extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    return (
-      this.props.fetchBusiness(this.props.business.id)
-    );
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.match.params.businessId !== prevProps.match.params.businessId) {
-      return this.props.fetchBusiness(this.props.business.id);
-    }
-  }
-
   render() {
     const { business } = this.props;
     
@@ -100,6 +88,48 @@ class BusinessPageHeader extends React.Component {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="top-subheader">
+                <div className="top-map-container">
+                  <div className="top-map">
+                    <div className="map-map">
+                      MAP GOES HERE
+                    </div>
+
+                    <div className="map-text">
+                      <ul className="map-text-content">
+                        <li className="text-address">
+                          <i className="fas fa-map-marker-alt"></i>
+                          <br/>
+                          <div className="address">
+                            {business.address}
+                          </div>
+                        </li>
+
+                        <li className="text-direction">
+                          <i className="fas fa-directions"></i>
+                          <br/>
+                          <div className="get-directions">
+                            Get Directions
+                          </div>
+                        </li>
+
+                        <li className="text-phone-number">
+                          <i className="fas fa-phone"></i>
+                          <br/>
+                          <div>
+                            {business.phone_number}
+                          </div>
+                        </li>
+
+                        <li className="text-link">website</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="top-pics-container"></div>
               </div>
             </div>
 

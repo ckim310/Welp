@@ -149,3 +149,31 @@
 .bookmark:focus {
   background-color: #e6e6e6;
 }
+
+/* TOP SUBHEADER CSS */
+.top-subheader {
+  display: table;
+}
+
+.top-map-container {
+  width: 33.33%;
+  background-color: #ffffff;
+}
+
+.top-map {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.top-map i {
+  color: #333333;
+}
+
+.top-map li {
+  display: flex;
+}
+
+.address {
+  font-weight: 700;
+}
