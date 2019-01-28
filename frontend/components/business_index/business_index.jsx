@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import BusinessIndexItem from './business_index_item';
 import SearchNavBar from '../nav_bar/search_nav_bar';
 import BusinessPage from '../business_page/business_page';
+import Map from '../business_map/map';
 
 class BusinessIndex extends React.Component {
   constructor(props) {
@@ -25,9 +26,16 @@ class BusinessIndex extends React.Component {
           path="/businesses/:businessId"
           component={BusinessPage}
         />
-        <ul className="businesses-list">
-          {businessesLi}
-        </ul>
+        <div className="business-index-content-container">
+          <div className="business-index-content">
+            <ul className="businesses-list">
+              {businessesLi}
+            </ul>
+            <div className="index-map">
+              <Map />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

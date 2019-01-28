@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class BusinessPageHeader extends React.Component {
   constructor(props) {
     super(props);
   }
 
+
   render() {
     const { business } = this.props;
-    
+    if (!business) return null;
     return(
       <div className="business-page-header-container">
         <div className="business-page-header-wrapper">

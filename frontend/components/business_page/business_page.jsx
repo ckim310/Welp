@@ -1,12 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import BusinessPageHeaderContainer from './business_page_header_container';
-import { fetchBusinesses } from '../../util/business_api_util';
+import { fetchBusiness } from '../../actions/business_actions';
 import SearchNavBar from '../nav_bar/search_nav_bar';
+import { withRouter } from 'react-router-dom';
 
 class BusinessPage extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    this.props.fetchBusiness(this.props.match.params.businessId)
+  }
+
+  componentDidUpdate(prevProps) {
+    debugger
+    if (prevProps.match.params.businessId !== this.props.match.params.businessId) {
+      this.props.fetchBusiness(this.props.match.params.businessId);
+    }
   }
 
   render() {
@@ -22,8 +34,8 @@ class BusinessPage extends React.Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchBusinesses: () => dispatch(fetchBusinesses()),
+    fetchBusiness: (id) => dispatch(fetchBusiness(id)),
   }
 }
 
-export default connect(null, mapDispatchToProps)(BusinessPage);
+export default withRouter(connect(null, mapDispatchToProps)(BusinessPage));
