@@ -22,8 +22,17 @@ User.create!(
 Business.create!(
   name: "Gong Cha",
   zipcode: 10018,
-  address: "75 W 38th St, New York",
-  phone_number: "212-398-2716",
+  address: "75 W 38th St, New York, NY",
+  phone_number: "(212)398-2716",
   longitude: 40.752310,
   latitude: -73.985630,
+)
+
+Business.create!(
+  name: "Kung Fu Tea",
+  zipcode: 10001,
+  address: "11 W 32nd St, New York, NY",
+  phone_number: "(212) 695-5888",
+  longitude: 40.747746,
+  latitude: -73.986192,
 )
