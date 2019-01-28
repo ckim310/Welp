@@ -1,0 +1,25 @@
+.sub-nav-bar-container {
+  background-color: #fafafa;
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.sub-content-container {
+  display: flex;
+  line-height: 24px;
+}
+
+.sub-item {
+  padding: 8px 12px;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  font-size: 14px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+li:hover .popup {
+  display: block;
+}

@@ -4,6 +4,7 @@ import BusinessPageHeaderContainer from './business_page_header_container';
 import { fetchBusiness } from '../../actions/business_actions';
 import SearchNavBar from '../nav_bar/search_nav_bar';
 import { withRouter } from 'react-router-dom';
+import SubNavBar from '../nav_bar/sub_nav_bar';
 
 class BusinessPage extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class BusinessPage extends React.Component {
     return (
       <div className="business-page-container">
         <SearchNavBar />
+        <SubNavBar />
         <BusinessPageHeaderContainer props={this.props} />
       </div>
     )
