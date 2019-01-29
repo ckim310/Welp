@@ -156,9 +156,16 @@
   display: table;
 }
 
+.top-subheader .top-map-container, .top-subheader .top-pics-container {
+  display: table-cell;
+  vertical-align: center;
+}
+
 .top-map-container {
   width: 33.33%;
   background-color: #ffffff;
+  line-height: 1.5;
+  font-size: 14px;
 }
 
 .top-map {
@@ -167,14 +174,37 @@
   padding: 5px;
 }
 
-.top-map i {
-  color: #333333;
-}
-
 .top-map li {
   display: flex;
 }
 
 .address {
   font-weight: 700;
+}
+
+.map-text-content > li {
+  display: flex;
+}
+
+.map-text-icon {
+  color: rgb(102, 102, 102);
+  margin: 0 5px;
+
+}
+
+.map-text-content i {
+  /* color: rgb(102, 102, 102); */
+}
+
+.top-pics-container {
+  width: 66.66%;
+}
+
+.map-map {
+  padding-bottom: 5px;
+}
+
+.map-map div#map {
+  height: 135px;
+  width: 288px;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Map from '../business_map/map';
 
 class BusinessPageHeader extends React.Component {
   constructor(props) {
@@ -95,30 +96,36 @@ class BusinessPageHeader extends React.Component {
                 <div className="top-map-container">
                   <div className="top-map">
                     <div className="map-map">
-                      MAP GOES HERE
+                      <Map />
                     </div>
 
                     <div className="map-text">
                       <ul className="map-text-content">
                         <li className="text-address">
-                          <i className="fas fa-map-marker-alt"></i>
-                          <br/>
+                          <div className="map-text-icon">
+                            <i className="fas fa-map-marker-alt"></i>
+                          </div>
+                          
                           <div className="address">
                             {business.address}
                           </div>
                         </li>
 
                         <li className="text-direction">
-                          <i className="fas fa-directions"></i>
-                          <br/>
+                          <div className="map-text-icon">
+                            <i className="fas fa-directions"></i>
+                          </div>
+
                           <div className="get-directions">
                             Get Directions
                           </div>
                         </li>
 
                         <li className="text-phone-number">
-                          <i className="fas fa-phone"></i>
-                          <br/>
+                          <div className="map-text-icon">
+                            <i className="fas fa-phone"></i>
+                          </div>
+                          
                           <div>
                             {business.phone_number}
                           </div>
