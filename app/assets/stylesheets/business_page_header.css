@@ -1,5 +1,15 @@
+.top {
+  margin-bottom: -18px;
+  padding: 18px 0 24px;
+  overflow: hidden;
+  min-width: 990px;
+}
+
 .top-container {
   background-color: #f5f5f5;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .title-name {
@@ -154,6 +164,7 @@
 /* TOP SUBHEADER CSS */
 .top-subheader {
   display: table;
+  width: 100%;
 }
 
 .top-subheader .top-map-container, .top-subheader .top-pics-container {
@@ -162,16 +173,19 @@
 }
 
 .top-map-container {
-  width: 33.33%;
+  width: 32%;
   background-color: #ffffff;
   line-height: 1.5;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 .top-map {
   display: flex;
   flex-direction: column;
   padding: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
 }
 
 .top-map li {
@@ -182,13 +196,22 @@
   font-weight: 700;
 }
 
+.map-text {
+  min-height: 105px;
+}
+
+.map-text-content {
+  margin: 5px;
+}
+
 .map-text-content > li {
   display: flex;
+  margin-bottom: 3px;
 }
 
 .map-text-icon {
   color: rgb(102, 102, 102);
-  margin: 0 5px;
+  margin-right: 5px;
 
 }
 
@@ -197,7 +220,7 @@
 }
 
 .top-pics-container {
-  width: 66.66%;
+  width: 68%;
 }
 
 .map-map {
@@ -206,5 +229,5 @@
 
 .map-map div#map {
   height: 135px;
-  width: 288px;
+  border: 1px solid #ccc;
 }
