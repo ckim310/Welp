@@ -8,6 +8,11 @@
   position: relative;
 }
 
+.home-main-top-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .home-logo {
   margin: 0;
   display: flex;
