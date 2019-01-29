@@ -268,6 +268,11 @@
   align-items: center;
 }
 
+.pics-content:hover .pic-middle img {
+  width: 220px;
+  height: 220px;
+}
+
 .pic img {
   z-index: 100;
   width: 220px;
@@ -280,10 +285,16 @@
   height: 250px;
 }
 
-.pic img:hover {
+#first:hover, #last:hover {
   width: 250px;
   height: 250px;
   margin: -15px;
   z-index: 102;
   position: relative;
+}
+
+#middle:hover {
+  z-index: 101;
+  width: 250px;
+  height: 250px;
 }
