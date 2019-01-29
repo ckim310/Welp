@@ -35,6 +35,7 @@
 .top-header {
   display: flex;
   margin-bottom: 13px;
+  justify-content: space-between;
 }
 
 .top-header-left {
