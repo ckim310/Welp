@@ -9,7 +9,7 @@ class BusinessPageHeader extends React.Component {
 
 
   render() {
-    const { business } = this.props;
+    const { business, fetchBusiness } = this.props;
     if (!business) return null;
     return(
       <div className="business-page-header-container">
@@ -96,7 +96,11 @@ class BusinessPageHeader extends React.Component {
                 <div className="top-map-container">
                   <div className="top-map">
                     <div className="map-map">
-                      <Map />
+                      <Map
+                        business={business}
+                        fetchBusiness={fetchBusiness}
+                        singleBusiness={true}
+                      />
                     </div>
 
                     <div className="map-text">
