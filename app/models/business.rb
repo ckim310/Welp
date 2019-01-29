@@ -18,4 +18,6 @@
 class Business < ApplicationRecord
   validates :name, :zipcode, :address, :phone_number, :latitude, :longitude, :city, :state, presence: true
   validates :zipcode, length: { is: 5 }
+
+  has_many :reviews
 end
