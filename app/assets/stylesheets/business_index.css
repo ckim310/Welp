@@ -24,10 +24,6 @@
   margin-top: 10%;
 }
 
-.index-map div {
-  display: flex;
-}
-
 .index-map div#map {
   height: 345px;
   width: 300px;

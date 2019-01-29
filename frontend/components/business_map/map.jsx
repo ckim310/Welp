@@ -15,7 +15,15 @@ class Map extends React.Component {
     } else {
       mapOptions= {
         center: { lat: 40.742829, lng: -73.986679 },
-        zoom: 13
+        zoom: 13,
+        zoomControl: true,
+        zoomControlOptions: {
+          position: google.maps.ControlPosition.LEFT_TOP,
+          style: google.maps.ZoomControlStyle.HORIZONTAL,
+        },
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl: false
       };
     }
 
