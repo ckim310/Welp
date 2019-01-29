@@ -28,7 +28,7 @@ class BusinessPage extends React.Component {
         <SearchNavBar />
         <SubNavBar />
         <BusinessPageHeaderContainer props={this.props} />
-        <BusinessPageReviews />
+        <BusinessPageReviews props={this.props}/>
       </div>
     )
   }

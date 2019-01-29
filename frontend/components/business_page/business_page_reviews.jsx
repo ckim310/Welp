@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 class BusinessPageReviews extends React.Component {
   constructor(props) {
@@ -6,6 +8,9 @@ class BusinessPageReviews extends React.Component {
   }
 
   render() {
+    const { business } = this.props;
+
+    if (!business) return null;
 
     return (
       <div className="reviews-wrapper">
@@ -14,7 +19,7 @@ class BusinessPageReviews extends React.Component {
             <div className="feed-header-content">
               <h2 className="feed-header">
                 Recommended Reviews
-                <b> for Upstate</b>
+                <b> for {business.name}</b>
               </h2>
 
               <div className="feed-banner-container">
@@ -59,4 +64,19 @@ class BusinessPageReviews extends React.Component {
   }
 }
 
-export default BusinessPageReviews;
+const mapStateToProps = (state, ownProps) => {
+  const businessId = ownProps.props.match.params.businessId;
+  const business = state.entities.businesses[businessId];
+
+  return {
+    business
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchBusiness: (id) => dispatch(fetchBusiness(id))
+  }
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BusinessPageReviews));
