@@ -3,10 +3,10 @@
   padding: 18px 0 24px;
   overflow: hidden;
   min-width: 990px;
+  position: relative;
 }
 
 .top-container {
-  background-color: #f5f5f5;
   width: 960px;
   margin: 0 auto;
   padding: 0 15px;
@@ -163,7 +163,7 @@
 
 /* TOP SUBHEADER CSS */
 .top-subheader {
-  display: table;
+  display: flex;
   width: 100%;
 }
 
@@ -197,7 +197,7 @@
 }
 
 .map-text {
-  min-height: 105px;
+  min-height: 180px;
 }
 
 .map-text-content {
@@ -228,18 +228,63 @@
 }
 
 .map-map div#map {
-  height: 135px;
+  height: 140px;
   border: 1px solid #ccc;
 }
 
 /* Top subheader pics container */
+.top-pics-container {
+  margin: auto;
+}
+
 .top-background {
   z-index: -1;
   position: absolute;
   top: -9999px;
   right: -9999px;
-  bottom: 0;
+  bottom: 82px;
   left: -9999px;
   background-color: #f5f5f5;
   border-bottom: 1px solid #e6e6e6;
+}
+
+.top-pics-footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 100%;
+  padding: 6px 0;
+}
+
+.pics-container {
+  height: 250px;
+  width: 660px;
+  position: relative;
+}
+
+.pics-content {
+  display: flex;
+  /* align-content: center; */
+  align-items: center;
+}
+
+.pic {
+  /* height: 220px;
+  width: 220px; */
+}
+
+.pic img {
+  z-index: 1000;
+  /* position: absolute; */
+  /* margin: -15px; */
+  width: 220px;
+  height: 220px;
+}
+
+.pic-middle img {
+  z-index: 1001;
+  width: 250px;
+  height: 250px;
+  margin: 0 -15px;
+  position: relative;
 }
