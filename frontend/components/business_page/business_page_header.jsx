@@ -146,15 +146,15 @@ class BusinessPageHeader extends React.Component {
                     <div className="pics-container">
                       <div className="pics-content">
                         <div className="pic">
-                          <img src="./food.jpg" alt="food"/>
+                          <img id="first" src="./food.jpg" alt="food"/>
                         </div>
 
                         <div className="pic-middle">
-                          <img src="./gongcha.png" alt="gongcha"/>
+                          <img id="middle" src="./gongcha.png" alt="gongcha"/>
                         </div>
 
                         <div className="pic">
-                          <img src="./sushi.jpg" alt="sushi"/>
+                          <img id="last" src="./sushi.jpg" alt="sushi"/>
                         </div>
                       </div>
                     </div>

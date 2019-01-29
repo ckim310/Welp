@@ -265,27 +265,25 @@
 
 .pics-content {
   display: flex;
-  /* align-content: center; */
   align-items: center;
 }
 
-.pic {
-  /* height: 220px;
-  width: 220px; */
-}
-
 .pic img {
-  z-index: 1000;
-  /* position: absolute; */
-  /* margin: -15px; */
+  z-index: 100;
   width: 220px;
   height: 220px;
 }
 
 .pic-middle img {
-  z-index: 1001;
+  z-index: 101;
   width: 250px;
   height: 250px;
-  margin: 0 -15px;
+}
+
+.pic img:hover {
+  width: 250px;
+  height: 250px;
+  margin: -15px;
+  z-index: 102;
   position: relative;
 }
