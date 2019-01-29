@@ -6,7 +6,13 @@
 .sub-content-container {
   display: flex;
   line-height: 24px;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: auto;
+}
+
+.sub-content-right, .sub-content-left {
+  display: flex;
 }
 
 .sub-item {
