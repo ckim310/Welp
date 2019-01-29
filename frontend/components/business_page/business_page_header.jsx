@@ -40,7 +40,7 @@ class BusinessPageHeader extends React.Component {
                         </div>
 
                         <div className="reviews-count">
-                          # Review (placeholder)
+                          # Reviews
                         </div>
                       </div>
 
@@ -58,7 +58,7 @@ class BusinessPageHeader extends React.Component {
                       </div>
 
                       <div className="business-category">
-                        Catgories!!!
+                        Catgories
                       </div>
                     </div>
                   </div>
@@ -137,7 +137,15 @@ class BusinessPageHeader extends React.Component {
                   </div>
                 </div>
 
-                <div className="top-pics-container"></div>
+                <div className="top-pics-container">
+                  <div className="top-pics-content">
+                    <div className="top-background"></div>
+
+                    <div className="top-pics-footer"></div>
+
+                    <div className="pics-container"></div>
+                  </div>
+                </div>
               </div>
             </div>
 

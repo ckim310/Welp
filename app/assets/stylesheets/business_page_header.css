@@ -231,3 +231,15 @@
   height: 135px;
   border: 1px solid #ccc;
 }
+
+/* Top subheader pics container */
+.top-background {
+  z-index: -1;
+  position: absolute;
+  top: -9999px;
+  right: -9999px;
+  bottom: 0;
+  left: -9999px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e6e6e6;
+}
