@@ -288,7 +288,6 @@
 #first:hover, #last:hover {
   width: 250px;
   height: 250px;
-  margin: -15px;
   z-index: 102;
   position: relative;
 }
