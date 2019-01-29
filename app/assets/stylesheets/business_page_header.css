@@ -24,6 +24,7 @@
 
 .top-header {
   display: flex;
+  margin-bottom: 13px;
 }
 
 .top-header-left {
@@ -93,12 +94,12 @@
 .business-write-review {
   display: flex;
   color: white;
-  background-color: #be2020;
+  background-color: rgb(211, 35, 35);
   padding: 8px 19px;
   font-weight: 700;
   border-radius: 3px;
   margin-right: 12px;
-  border: 1px solid #be2020;
+  border: 1px solid rgb(211, 35, 35);
 }
 
 .business-write-review:hover {
