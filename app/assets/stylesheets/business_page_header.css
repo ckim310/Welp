@@ -1,5 +1,15 @@
+.top {
+  margin-bottom: -18px;
+  padding: 18px 0 24px;
+  overflow: hidden;
+  min-width: 990px;
+  position: relative;
+}
+
 .top-container {
-  background-color: #f5f5f5;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .title-name {
@@ -24,6 +34,8 @@
 
 .top-header {
   display: flex;
+  margin-bottom: 13px;
+  justify-content: space-between;
 }
 
 .top-header-left {
@@ -93,12 +105,12 @@
 .business-write-review {
   display: flex;
   color: white;
-  background-color: #be2020;
+  background-color: rgb(211, 35, 35);
   padding: 8px 19px;
   font-weight: 700;
   border-radius: 3px;
   margin-right: 12px;
-  border: 1px solid #be2020;
+  border: 1px solid rgb(211, 35, 35);
 }
 
 .business-write-review:hover {
@@ -152,22 +164,29 @@
 
 /* TOP SUBHEADER CSS */
 .top-subheader {
-  display: table;
+  display: flex;
+  width: 100%;
+}
+
+.top-subheader .top-map-container, .top-subheader .top-pics-container {
+  display: table-cell;
+  vertical-align: center;
 }
 
 .top-map-container {
-  width: 33.33%;
+  width: 32%;
   background-color: #ffffff;
+  line-height: 1.5;
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
 .top-map {
   display: flex;
   flex-direction: column;
   padding: 5px;
-}
-
-.top-map i {
-  color: #333333;
+  background-color: #fff;
+  border: 1px solid #ccc;
 }
 
 .top-map li {
@@ -176,4 +195,105 @@
 
 .address {
   font-weight: 700;
+}
+
+.map-text {
+  min-height: 180px;
+}
+
+.map-text-content {
+  margin: 5px;
+}
+
+.map-text-content > li {
+  display: flex;
+  margin-bottom: 3px;
+}
+
+.map-text-icon {
+  color: rgb(102, 102, 102);
+  margin-right: 5px;
+
+}
+
+.map-text-content i {
+  /* color: rgb(102, 102, 102); */
+}
+
+.top-pics-container {
+  width: 68%;
+}
+
+.map-map {
+  padding-bottom: 5px;
+}
+
+.map-map div#map {
+  height: 140px;
+  border: 1px solid #ccc;
+}
+
+/* Top subheader pics container */
+.top-pics-container {
+  margin: auto;
+}
+
+.top-background {
+  z-index: -1;
+  position: absolute;
+  top: -9999px;
+  right: -9999px;
+  bottom: 82px;
+  left: -9999px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.top-pics-footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 100%;
+  padding: 6px 0;
+}
+
+.pics-container {
+  height: 250px;
+  width: 660px;
+  position: relative;
+}
+
+.pics-content {
+  display: flex;
+  align-items: center;
+}
+
+.pics-content:hover .pic-middle img {
+  width: 220px;
+  height: 220px;
+}
+
+.pic img {
+  z-index: 100;
+  width: 220px;
+  height: 220px;
+}
+
+.pic-middle img {
+  z-index: 101;
+  width: 250px;
+  height: 250px;
+}
+
+#first:hover, #last:hover {
+  width: 250px;
+  height: 250px;
+  z-index: 102;
+  position: relative;
+}
+
+#middle:hover {
+  z-index: 101;
+  width: 250px;
+  height: 250px;
 }

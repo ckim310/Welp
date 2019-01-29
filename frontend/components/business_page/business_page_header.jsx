@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Map from '../business_map/map';
 
 class BusinessPageHeader extends React.Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class BusinessPageHeader extends React.Component {
 
 
   render() {
-    const { business } = this.props;
+    const { business, fetchBusiness } = this.props;
     if (!business) return null;
     return(
       <div className="business-page-header-container">
@@ -39,7 +40,7 @@ class BusinessPageHeader extends React.Component {
                         </div>
 
                         <div className="reviews-count">
-                          # Review (placeholder)
+                          # Reviews
                         </div>
                       </div>
 
@@ -57,7 +58,7 @@ class BusinessPageHeader extends React.Component {
                       </div>
 
                       <div className="business-category">
-                        Catgories!!!
+                        Catgories
                       </div>
                     </div>
                   </div>
@@ -95,30 +96,45 @@ class BusinessPageHeader extends React.Component {
                 <div className="top-map-container">
                   <div className="top-map">
                     <div className="map-map">
-                      MAP GOES HERE
+                      <Map
+                        business={business}
+                        fetchBusiness={fetchBusiness}
+                        singleBusiness={true}
+                      />
                     </div>
 
                     <div className="map-text">
                       <ul className="map-text-content">
                         <li className="text-address">
-                          <i className="fas fa-map-marker-alt"></i>
-                          <br/>
+                          <div className="map-text-icon">
+                            <i className="fas fa-map-marker-alt"></i>
+                          </div>
+                          
                           <div className="address">
-                            {business.address}
+                            <div className="street">
+                              {business.address}
+                            </div>
+                            <div className="city-state">
+                              {business.city}, {business.state}
+                            </div>
                           </div>
                         </li>
 
                         <li className="text-direction">
-                          <i className="fas fa-directions"></i>
-                          <br/>
+                          <div className="map-text-icon">
+                            <i className="fas fa-directions"></i>
+                          </div>
+
                           <div className="get-directions">
                             Get Directions
                           </div>
                         </li>
 
                         <li className="text-phone-number">
-                          <i className="fas fa-phone"></i>
-                          <br/>
+                          <div className="map-text-icon">
+                            <i className="fas fa-phone"></i>
+                          </div>
+                          
                           <div>
                             {business.phone_number}
                           </div>
@@ -130,7 +146,29 @@ class BusinessPageHeader extends React.Component {
                   </div>
                 </div>
 
-                <div className="top-pics-container"></div>
+                <div className="top-pics-container">
+                  <div className="top-pics-content">
+                    <div className="top-background"></div>
+
+                    <div className="top-pics-footer"></div>
+
+                    <div className="pics-container">
+                      <div className="pics-content">
+                        <div className="pic">
+                          <img id="first" src="./food.jpg" alt="food"/>
+                        </div>
+
+                        <div className="pic-middle">
+                          <img id="middle" src="./gongcha.png" alt="gongcha"/>
+                        </div>
+
+                        <div className="pic">
+                          <img id="last" src="./sushi.jpg" alt="sushi"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 

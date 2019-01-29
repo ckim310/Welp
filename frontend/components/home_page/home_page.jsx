@@ -13,10 +13,11 @@ const HomePage = (props) => {
 
   return (
     <div className="home-main-container overlay" style={sectionStyle} >
-      <NavBar />
+      <div className="home-main-top-container">
+        <NavBar />
 
-      <HomeTop />
-
+        <HomeTop />
+      </div>
     </div>
   )
 }
