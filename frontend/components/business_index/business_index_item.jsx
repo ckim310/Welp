@@ -16,7 +16,13 @@ const BusinessIndexItem = ({ business, idx }) => {
         </div>
 
         <div className="business-address">
-          {business.address}
+          <div className="street">
+            {business.address}
+          </div>
+
+          <div className="city">
+            {business.city}
+          </div>
         </div>
       </div>
 

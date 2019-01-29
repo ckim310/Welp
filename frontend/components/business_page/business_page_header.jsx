@@ -107,7 +107,12 @@ class BusinessPageHeader extends React.Component {
                           </div>
                           
                           <div className="address">
-                            {business.address}
+                            <div className="street">
+                              {business.address}
+                            </div>
+                            <div className="city-state">
+                              {business.city}, {business.state}
+                            </div>
                           </div>
                         </li>
 
