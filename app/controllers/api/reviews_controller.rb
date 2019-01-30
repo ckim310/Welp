@@ -5,7 +5,7 @@ class Api::ReviewsController < ApplicationController
     @review = current_user.reviews.new(review_params)
 
     if @review.save
-      render "api/businesses/show"
+      render "api/reviews/show"
     else
       render json: @review.errors.full_messages, status: :unprocessable_entity
     end
@@ -16,7 +16,7 @@ class Api::ReviewsController < ApplicationController
     @review = current_user.reviews.find(params[:id])
 
     if @review.update(review_params)
-      render "api/businesses/show"
+      render "api/reviews/show"
     else
       render json: ['Cannot update review']
     end
@@ -28,7 +28,7 @@ class Api::ReviewsController < ApplicationController
 
     if @review
       @review.destroy
-      render "api/businesses/show"
+      render "api/reviews/show"
     else
       render json: ['Unable to find review'], status: 422
     end
