@@ -6,10 +6,13 @@ const businessesReducer = (state = {}, action) => {
   let newState;
   switch (action.type) {
     case RECEIVE_BUSINESSES:
+      newState = merge({}, state);
+      const { businesses } = action;
+      newState[businesses.id] = {}
       return action.businesses;
     case RECEIVE_BUSINESS:
       newState = merge({}, state);
-      const { business } = action;
+      const { business } = action.businessData;
       newState[business.id] = business;
       return newState;
     default:

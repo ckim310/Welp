@@ -10,10 +10,10 @@ const receiveBusinesses = businesses => {
   };
 };
 
-const receiveBusiness = business => {
+const receiveBusiness = businessData => {
   return {
     type: RECEIVE_BUSINESS,
-    business,
+    businessData,
   };
 };
 

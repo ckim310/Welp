@@ -13,7 +13,7 @@ class NavBarRight extends React.Component {
   }
 
   render() {
-    const userPic = <i className="fas fa-cookie-bite fa-2x"></i>;
+    const userPic = <i className="fas fa-meh fa-2x"></i>;
   
     const display = this.props.currentUser ? (
       <div className="greeting">

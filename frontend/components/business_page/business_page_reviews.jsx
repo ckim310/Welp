@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import ReviewIndexContainer from '../reviews/review_index_container';
 
 class BusinessPageReviews extends React.Component {
   constructor(props) {
@@ -55,7 +56,9 @@ class BusinessPageReviews extends React.Component {
             </div>
           </div>
 
-          <div className="reviews-list-container"></div>
+          <div className="reviews-list-container">
+            <ReviewIndexContainer />
+          </div>
 
           <div className="review-page-no-container"></div>
         </div>
