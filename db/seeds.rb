@@ -19,13 +19,25 @@ User.create!(
   password: 'password'
 )
 
+5.times do
+  User.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    zipcode: Faker::Address.zip_code,
+    email: Faker::Internet.email,
+    birthday_month: Faker::Number.between(1,12),
+    birthday_day: Faker::Number.between(1, 31),
+    birthday_year: Faker::Number.between(1940, 2018),
+  )
+end
+
 Business.create!(
   name: "Gong Cha",
   zipcode: 10018,
   address: "75 W 38th St",
   city: "New York",
   state: "NY",
-  phone_number: "(212)398-2716",
+  phone_number: "(212) 398-2716",
   latitude: 40.752310,
   longitude: -73.985630,
 )
@@ -39,4 +51,25 @@ Business.create!(
   phone_number: "(212) 695-5888",
   latitude: 40.747746,
   longitude: -73.986192,
+)
+
+10.times do
+  Business.create(
+    name: Faker::Coffee.blend_name,
+    zipcode: Faker::Address.zip_code,
+    address: Faker::Address.street_address,
+    city: Faker::Address.city,
+    state: Faker::Address.state,
+    phone_number: Faker::PhoneNumber.cell_phone,
+    latitude: Faker::Number.between(40.70, 41.0),
+    longitude: Faker::Number.between(-73.9, -74.1)
+  )
+end
+
+
+Review.create!(
+  body: Faker::Food.description,
+  author_id: User.first.id,
+  business_id: Business.first.id,
+  rating: 4
 )

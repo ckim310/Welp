@@ -16,6 +16,8 @@ class Review < ApplicationRecord
   validates :rating, inclusion: { in: 1..5 }
   validates :author_id, uniqueness: { scope: :business_id }
 
-  belongs_to :user
+  belongs_to :author,
+    class_name: :User
+
   belongs_to :business
 end
