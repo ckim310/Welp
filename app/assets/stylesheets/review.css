@@ -1,0 +1,33 @@
+.review-item-container {
+  display: flex;
+  margin: 0 -15px;
+}
+
+.review-list-item {
+  padding: 18px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.review-item-side-container {
+  width: 37.5%;
+}
+
+.review-wrapper {
+  width: 62.5%;
+  padding: 0 15px;
+}
+
+/* review side content */
+.review-item-user-content {
+  display: flex;
+  padding: 0 15px;
+}
+
+.review-user-pic {
+  margin-right: 9px;
+}
+
+.review-user-pic i {
+  color: lightgray;
+}
