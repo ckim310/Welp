@@ -10,11 +10,11 @@
 }
 
 .review-item-side-container {
-  width: 37.5%;
+  width: 23%;
 }
 
 .review-wrapper {
-  width: 62.5%;
+  width: 77%;
   padding: 0 15px;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .reviewer-pic {
-  margin-right: 9px;
+  margin-right: 20px;
 }
 
 .reviewer-pic i {
@@ -68,4 +68,6 @@
   color: white;
   border: 1px solid rgb(241, 92, 0);
   background-color: rgb(241, 92, 0);
+  padding: 1px;
+  border-radius: 2px;
 }
