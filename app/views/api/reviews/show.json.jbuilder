@@ -1,1 +1,3 @@
-json.partial! "api/reviews/review", review: @review
+@reviews.each do |review|
+  json.partial! "api/reviews/review", review: review
+end
