@@ -28,6 +28,7 @@ User.create!(
     birthday_month: Faker::Number.between(1,12),
     birthday_day: Faker::Number.between(1, 31),
     birthday_year: Faker::Number.between(1940, 2018),
+    password: 'password'
   )
 end
 
@@ -39,7 +40,7 @@ Business.create!(
   state: "NY",
   phone_number: "(212) 398-2716",
   latitude: 40.752310,
-  longitude: -73.985630,
+  longitude: -73.985630
 )
 
 Business.create!(
@@ -50,10 +51,10 @@ Business.create!(
   state: "NY",
   phone_number: "(212) 695-5888",
   latitude: 40.747746,
-  longitude: -73.986192,
+  longitude: -73.986192
 )
 
-10.times do
+5.times do
   Business.create(
     name: Faker::Coffee.blend_name,
     zipcode: Faker::Address.zip_code,
@@ -72,4 +73,25 @@ Review.create!(
   author_id: User.first.id,
   business_id: Business.first.id,
   rating: 4
+)
+
+Review.create!(
+  body: Faker::Food.description,
+  author_id: User.first.id,
+  business_id: Business.third.id,
+  rating: 5
+)
+
+Review.create!(
+  body: Faker::Food.description,
+  author_id: User.second.id,
+  business_id: Business.second.id,
+  rating: 3
+)
+
+Review.create!(
+  body: Faker::Food.description,
+  author_id: User.second.id,
+  business_id: Business.first.id,
+  rating: 2
 )
