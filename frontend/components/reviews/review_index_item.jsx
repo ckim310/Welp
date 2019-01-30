@@ -7,35 +7,38 @@ const ReviewIndexItem = ({ review }) => {
 
       <div className="review-item-container">
         <div className="review-item-side-container">
-          <div className="review-item-user-content">
-            <div className="review-user-pic">
+          <div className="review-item-reviewer-content">
+            <div className="reviewer-pic">
               <i className="fas fa-meh fa-3x"></i>
             </div>
 
-            <div className="user-info-container">
-              <ul className="user-data">
-                <li className="user-name">{review.author_id}</li>
+            <div className="reviewer-info-container">
+              <ul className="reviewer-data">
+                <li className="reviewer-name">
+                  <a href="#/businesses">{review.authorName}</a>
+                </li>
 
-                <li className="user-location">
-                  author city, author state
+                <li className="reviewer-location">
+                  {review.authorZipcode}
                 </li>
               </ul>
 
-              <ul className="user-stats">
-                <li className="user-friend-count">
+              <ul className="reviewer-stats">
+                <li className="reviewer-friend-count">
                   <i className="fas fa-female"></i>
+                  &nbsp;
                   <i className="fas fa-male"></i>
-                  &nbsp;friends
+                  &nbsp; friends
                 </li>
 
-                <li className="user-review-count">
+                <li className="reviewer-review-count">
                   <i className="fas fa-star"></i>
-                  &nbsp;reviews
+                  &nbsp; reviews
                 </li>
 
-                <li className="user-photo-count">
+                <li className="reviewer-photo-count">
                   <i className="fas fa-camera"></i>
-                  &nbsp;photos
+                  &nbsp; photos
                 </li>
               </ul>
             </div>

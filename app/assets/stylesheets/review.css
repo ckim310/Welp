@@ -19,15 +19,53 @@
 }
 
 /* review side content */
-.review-item-user-content {
+.review-item-reviewer-content {
   display: flex;
   padding: 0 15px;
 }
 
-.review-user-pic {
+.reviewer-pic {
   margin-right: 9px;
 }
 
-.review-user-pic i {
+.reviewer-pic i {
   color: lightgray;
+}
+
+.reviewer-info-container {
+  line-height: 18px;
+  font-size: 14px;
+}
+
+.reviewer-name {
+  font-weight: 700;
+  color: #0073bb;
+}
+
+.reviewer-name:hover {
+  text-decoration: underline;
+}
+
+.reviewer-location {
+  font-weight: 700;
+}
+
+/* reviewer-stats */
+.reviewer-stats {
+  color: #666;
+  font-size: 12px;
+}
+
+.reviewer-stats i {
+  color: rgb(241, 92, 0);
+}
+
+.reviewer-stats i.fa-male {
+  color: rgb(235, 169, 129);
+}
+
+.reviewer-stats i.fa-star {
+  color: white;
+  border: 1px solid rgb(241, 92, 0);
+  background-color: rgb(241, 92, 0);
 }
