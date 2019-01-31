@@ -2,11 +2,12 @@ class Api::ReviewsController < ApplicationController
   before_action :require_logged_in
   
   def create
-    @review = current_user.reviews.new(review_params)
+    @review = Review.new(review_params)
 
     if @review.save
       render "api/reviews/show"
     else
+      debugger
       render json: @review.errors.full_messages, status: :unprocessable_entity
     end
     
@@ -36,6 +37,6 @@ class Api::ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:body, :rating, :business_id)
+    params.require(:review).permit(:body, :rating, :business_id, :author_id)
   end
 end

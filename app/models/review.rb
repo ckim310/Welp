@@ -17,6 +17,7 @@ class Review < ApplicationRecord
   validates :author_id, uniqueness: { scope: :business_id }
 
   belongs_to :author,
+    foreign_key: :author_id,
     class_name: :User
 
   belongs_to :business
