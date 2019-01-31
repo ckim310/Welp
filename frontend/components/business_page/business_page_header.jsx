@@ -66,10 +66,12 @@ class BusinessPageHeader extends React.Component {
 
                 <div className="top-header-right">
                   <div className="business-page-actions">
-                    <a className="business-write-review" href="#">
+                    <Link className="business-write-review" to={`/businesses/${business.id}/reviews`}>
                       <i className="fas fa-star"></i>
-                      <div className="write-review-btn-text">Write a Review</div>
-                    </a>
+                      <div className="write-review-btn-text">
+                        Write a Review
+                      </div>
+                    </Link>
 
                     <div className="page-options">
                       <Link to={`/businesses/${business.id}`}>

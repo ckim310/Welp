@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import { createReview } from '../../actions/review_actions';
 import ReviewIndexContainer from '../reviews/review_index_container';
 
 class BusinessPageReviews extends React.Component {
@@ -56,6 +57,12 @@ class BusinessPageReviews extends React.Component {
             </div>
           </div>
 
+          <div className="review-form">
+            <Link to={`/businesses/${this.props.match.params.businessId}/reviews`} >
+              Start your review of {this.props.business.name}
+            </Link>
+          </div>
+
           <div className="reviews-list-container">
             <ReviewIndexContainer />
           </div>
@@ -78,7 +85,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchBusiness: (id) => dispatch(fetchBusiness(id))
+    fetchBusiness: (id) => dispatch(fetchBusiness(id)),
+    createReview: (businessId, review) => dispatch(createReview(businessId, review)),
   }
 }
 
