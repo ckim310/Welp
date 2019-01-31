@@ -1,0 +1,145 @@
+/* rating- star */
+
+[class*="rating-"] {
+  display: inline-block;
+  background-image: url("stars.png");
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  overflow: hidden;
+  height: 0;
+  min-width: 110px;
+  padding-top: 18px;
+  background-position: 0 -240px;
+}
+/* 23 px height of biggest stars 14px of smallest*/
+
+/* Rating mid size (rating on reviews-business page) */
+.rating-mid {
+  margin-right: 6px;
+}
+
+#five.rating-mid {
+  background-position: 0 -402px;
+}
+
+#four.rating-mid {
+  background-position: 0 -366px;
+}
+
+#three.rating-mid {
+  background-position: 0 -330px;
+}
+
+#two.rating-mid {
+  background-position: 0 -294px;
+}
+
+#one.rating-mid {
+  background-position: 0 -258px;
+}
+
+/* Rating big (rating on review form) */
+.rating-big {
+  min-width: 27px;
+  padding-top: 24px;
+  background-position: 0 0;
+  /* display: none; */
+}
+
+/* #five.rating-big:hover {
+  background-position: 0 -216px;
+}
+
+#five.rating-big:hover ~ .rating-big {
+  background-position: 0 -216px;
+}
+
+#four.rating-big:hover {
+  background-position: 0 -168px;
+}
+
+#four.rating-big:hover ~#three {
+  background-position: 0 -168px;
+}
+
+#four.rating-big:hover ~#two {
+  background-position: 0 -168px;
+}
+
+#four.rating-big:hover ~#one {
+  background-position: 0 -168px;
+}
+
+#three.rating-big:hover {
+  background-position: 0 -120px;
+}
+
+#three.rating-big:hover ~ #two {
+  background-position: 0 -120px;
+}
+
+#three.rating-big:hover ~ #one {
+  background-position: 0 -120px;
+}
+
+#two.rating-big:hover {
+  background-position: 0 -72px;
+}
+
+#two.rating-big:hover ~ #one{
+  background-position: 0 -72px;
+}
+
+#one.rating-big:hover {
+  background-position: 0 -24px;
+} */
+
+
+
+#five.show-star {
+  background-position: 0 -216px;
+}
+
+#five.show-star ~ .rating-big{
+  background-position: 0 -216px;
+}
+
+#four.show-star {
+  background-position: 0 -168px;
+}
+
+#four.show-star ~ #three {
+  background-position: 0 -168px;
+}
+
+#four.show-star ~ #two {
+  background-position: 0 -168px;
+}
+
+#four.show-star ~ #one {
+  background-position: 0 -168px;
+}
+
+#three.show-star {
+  background-position: 0 -120px;
+}
+
+#three.show-star ~ #two {
+  background-position: 0 -120px;
+}
+
+#three.show-star ~ #one {
+  background-position: 0 -120px;
+}
+
+#two.show-star {
+  background-position: 0 -72px;
+}
+
+#two.show-star ~ #one {
+  background-position: 0 -72px;
+}
+
+#one.show-star {
+  background-position: 0 -24px;
+}

@@ -124,3 +124,8 @@
 .nav-bar-right {
   align-self: center;
 }
+
+/* NAV BAR ON REVIEW FORM */
+.review-form-header {
+  background-color: #d32323;
+}

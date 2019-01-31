@@ -1,0 +1,105 @@
+/* review form header nav */
+.review-form-top {
+  background-color: #d32323;
+  padding: 12px 0;
+}
+
+.review-form-header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #d32323;
+}
+
+.review-form-header-title {
+  display: flex;
+  align-items: baseline;
+}
+
+.write-review-title {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.review-form-header h1.home-logo a{
+  font-size: 30px !important;
+}
+
+/* review form */
+.review-form-container {
+  min-width: 1020px;
+}
+
+.review-form-wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 15px;
+}
+
+/* Review form title */
+.review-title {
+  padding: 24px 0 12px;
+}
+
+h2.review-business-name {
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+
+h2.review-business-name:hover {
+  text-decoration: underline;
+}
+
+/* review form */
+.review-body-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: text;
+  padding: 18px;
+  max-width: 630px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Review form rating */
+.review-form-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #333;
+  align-items: center;
+}
+
+/* Review form body */
+
+.review-body-content textarea {
+  border: none;
+  font-size: 18px;
+  line-height: 1.44em;
+  min-height: 258px;
+  width: 100%;
+  resize: none;
+}
+
+/* Review submit button */
+.review-post {
+  margin-top: 20px;
+  margin-bottom: 500px;
+}
+
+.review-form-create {
+  min-width: 240px;
+  height: 48px;
+  color: #fff;
+  background-color: #d3232d;
+  border: 1px solid #d32323;
+  font-size: 16px;
+  line-height: 1.3125em;
+  border-radius: 3px;
+  font-weight: 700;
+}
