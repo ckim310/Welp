@@ -171,13 +171,6 @@ const SubNavBar = (props) => {
                   <a href="#/businesses">Write a Review</a>
                 </div>
               </div>
-
-              {/* <div className="sub-item" id="for-business">
-                <div className="sub-item-container">
-                  <i className="fas fa-store"></i>
-                  <span>For Businesses</span>
-                </div>
-              </div> */}
             </div>
 
           </div>
