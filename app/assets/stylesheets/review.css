@@ -1,3 +1,8 @@
+ul.review-index-list {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .review-item-container {
   display: flex;
   margin: 0 -15px;
