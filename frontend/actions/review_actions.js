@@ -26,6 +26,14 @@ export const clearReviewErrors = () => {
   };
 };
 
+const deleteReview = (reviewId) => {
+  
+  return {
+    type: DELETE_REVIEW,
+    reviewId,
+  };
+};
+
 export const createReview = (businessId, review) => {
   return dispatch => {
     return ReviewAPIUtil.createReview(businessId, review).then(review => {
@@ -33,6 +41,14 @@ export const createReview = (businessId, review) => {
     },
     (errors) => {
       return dispatch(receiveReviewErrors(errors));
+    });
+  };
+};
+
+export const trashReview = (id) => {
+  return dispatch => {
+    return ReviewAPIUtil.deleteReview(id).then((review)=> {
+      return dispatch(deleteReview(review.id));
     });
   };
 };

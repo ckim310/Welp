@@ -21,6 +21,9 @@ ul.review-index-list {
 .review-wrapper {
   width: 77%;
   padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* review side content */
@@ -93,4 +96,14 @@ ul.review-index-list {
 /* REVIEW BODY */
 .review-body {
   font-size: 14px;
+}
+
+/* REVIEW FOOTER */
+/* trash buton */
+.review-trash {
+  float: right;
+}
+
+button.delete {
+  color: #999;
 }

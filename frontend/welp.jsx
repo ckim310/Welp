@@ -7,7 +7,7 @@ import configureStore from './store/store';
 // // for TESTING only
 // import { login } from './actions/session_actions';
 // import { fetchBusinesses } from './actions/business_actions';
-import { createReview } from './actions/review_actions';
+// import { trashReview } from './actions/review_actions';
 
 const Root = ({ store }) => {
   return (
@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.getState = store.getState;
   // window.fetchBusinesses = fetchBusinesses;
   // window.createReview = createReview;
+  // window.trashReview = trashReview;
 
   ReactDOM.render(<Root store={store} />, root)
 });

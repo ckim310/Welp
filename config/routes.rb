@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     resources :businesses, only: [:create, :index, :show] do
       resources :reviews, only: [:create, :edit]
     end
-    resources :reviews, only: [:delete]
+    resources :reviews, only: [:destroy]
   end
 end

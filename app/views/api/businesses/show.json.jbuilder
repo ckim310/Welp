@@ -9,6 +9,7 @@ json.reviews do
       json.partial! "api/reviews/review", review: review
       json.authorName review.author.first_name + " " + review.author.last_name
       json.authorZipcode review.author.zipcode
+      json.authorId review.author.id
     end
   end
 end

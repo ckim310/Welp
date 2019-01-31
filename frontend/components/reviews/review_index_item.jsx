@@ -4,11 +4,17 @@ import { formatDate } from '../../util/date_util';
 class ReviewIndexItem extends React.Component {
   constructor(props) {
     super(props);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
+  handleDelete(e) {
+    e.preventDefault();
+    const { review } = this.props;
+    this.props.trashReview(review.id);
+  }
 
   render() {
-    const { review } = this.props;
+    const { review, currentUserId } = this.props;
   
       const ratingNum = () => {
         let rating;
@@ -33,6 +39,14 @@ class ReviewIndexItem extends React.Component {
             return rating;
         }
       };
+      let trash;
+      if (review.authorId === currentUserId) {
+        trash = <button className="delete" onClick={this.handleDelete}>
+          <i className="fas fa-trash-alt"></i>
+          </button>;
+      } else {
+        trash = null
+      }
     
 
     return (
@@ -94,7 +108,11 @@ class ReviewIndexItem extends React.Component {
               </div>
             </div>
 
-            <div className="review-footer"></div>
+            <div className="review-footer">
+              <div className="review-trash">
+                {trash}
+              </div>
+            </div>
           </div>
         </div>
       </li>
