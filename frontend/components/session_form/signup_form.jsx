@@ -102,7 +102,6 @@ class SignupForm extends React.Component {
                       value={this.state.email}
                       onChange={this.handleInput('email')}
                       placeholder="Email"
-                      // required="required"
                       />
 
                     <input
@@ -266,8 +265,7 @@ class SignupForm extends React.Component {
 
                   <div className="signup-fineprint">
                     <p className="fineprint">
-                    You also understand that Welp may send emails with
-                    Christine Kim's resume upon submission.</p>
+                    You also understand that Welp is by no means a substitute of yelp. Thank you for signing up!</p>
                   </div>
 
                   <div className="form-group">
