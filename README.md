@@ -69,6 +69,7 @@ Part of welp's appeal and primary purpose of welp is the ability to write & view
 ## Technologies Used
 + Ruby on Rails
 + PostgreSQL
++ JavaScript (ES6)
 + React.js and Redux
 + HTML and CSS
 
