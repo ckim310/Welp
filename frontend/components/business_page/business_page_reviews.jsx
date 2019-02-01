@@ -10,9 +10,12 @@ class BusinessPageReviews extends React.Component {
   }
 
   render() {
-    const { business } = this.props;
+    const { business, currentUser } = this.props;
 
     if (!business) return null;
+    // if (currentUser) {
+
+    // };
 
     return (
       <div className="reviews-wrapper">
@@ -58,9 +61,30 @@ class BusinessPageReviews extends React.Component {
           </div>
 
           <div className="review-form">
-            <Link to={`/businesses/${this.props.match.params.businessId}/reviews`} >
-              Start your review of {this.props.business.name}
-            </Link>
+            <div className="review-current-user-side">
+              <div className="review-current-user-data">
+                <div className="review-current-user-pic">
+                  <i className="fas fa-meh fa-3x"></i>
+                </div>
+
+                <div className="review-form-current-user-name-location">
+                  <div className="review-current-user-name">
+                    {/* {currentUser.first_name} */}
+                  </div>
+
+                  <div className="review-current-user-location">
+                    {/* {currentUser.zipcode} */}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="review-form-input">
+              <Link to={`/businesses/${this.props.match.params.businessId}/reviews`} >
+                Start your review of {this.props.business.name}
+              </Link>
+            </div>
           </div>
 
           <div className="reviews-list-container">
@@ -77,9 +101,12 @@ class BusinessPageReviews extends React.Component {
 const mapStateToProps = (state, ownProps) => {
   const businessId = ownProps.props.match.params.businessId;
   const business = state.entities.businesses[businessId];
+  const currentUserId = state.session.currentUserId;
+  const currentUser = state.entities.users[currentUserId];
 
   return {
-    business
+    business,
+    currentUser
   }
 }
 

@@ -6,15 +6,9 @@ import BrowseCategory from './browse_category';
 
 
 const HomePage = (props) => {
-  var sectionStyle = {
-    width: "100%",
-    backgroundImage: "url(" +  window.pieURL  + ")",
-    background: "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(" + window.pieURL + ")",
-    backgroundPosition: "50%",
-  };
 
   return (
-    <div className="home-main-container overlay" style={sectionStyle} >
+    <div className="home-main-container overlay" >
       <div className="home-main-top-container">
         <NavBar />
 

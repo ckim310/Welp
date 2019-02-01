@@ -15,8 +15,16 @@
 
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
     
+    <% backgroundImg = [image_url('pie.jpg'), image_url('sushi.jpg'), image_url('food.jpg')] %>
+    <% backgroundImg.map do |img| %>
+      <script type="text/javascript">
+        window.background = "<%= img %>"
+      </script>
+    <% end %>
+
     <script type="text/javascript">
         window.pieURL = "<%= image_url('pie.jpg') %>"
+        window.sushiURL = "<%= image_url('sushi.jpg') %>"
    </script>
   </head>
 

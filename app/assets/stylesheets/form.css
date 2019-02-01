@@ -45,6 +45,7 @@ div input {
   vertical-align: center;
   margin: 14px 0;
   box-sizing: border-box;
+  text-shadow: 0 5px 10px white, 0 -5px 10px white, 5px 0 10px white, -5px 0 10px white;
 }
 
 .logo a {
@@ -52,6 +53,8 @@ div input {
   color: black;
   font-weight: bold;
   font-size: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .login {

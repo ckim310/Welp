@@ -54,3 +54,52 @@
 .banner-close {
   color: #666;
 }
+
+/* REVIEW FORM ON PAGE */
+.review-form {
+  display: flex;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 15px 0;
+}
+
+.review-current-user-side {
+  display: flex;
+  width: 23%;
+}
+
+.review-current-user-data {
+  display: flex;
+  padding-right: 15px;
+}
+
+.review-current-user-pic {
+  margin-right: 20px;
+}
+
+.review-current-user-pic i {
+  color: pink;
+}
+
+.review-form-current-user-name-location {
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.review-current-user-name {
+  color: #0073bb;
+}
+
+.review-form-input {
+  width: 77%;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-form-input a{
+  margin: 0 auto;
+}

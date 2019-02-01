@@ -9,7 +9,9 @@ const HomeTop = (props) => {
     <div className="home-inner">
       <div className="home-inner-logo">
         <h1 className="home-logo">
-          <Link to="/">welp<i className="fab fa-yelp"></i></Link>
+          <Link to="/">
+            <div className="logo">welp</div>
+            <i className="fab fa-yelp"></i></Link>
         </h1>
       </div>
 
