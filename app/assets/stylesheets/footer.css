@@ -72,3 +72,11 @@
 .footer-main-content a:hover {
   border-bottom: 1px solid #0073bb;
 }
+
+/* DISCLAIMER */
+.disclaimer {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 12px;
+}

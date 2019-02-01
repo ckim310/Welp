@@ -71,12 +71,6 @@ class BusinessPageReviews extends React.Component {
                       <a href="https://www.linkedin.com/in/christine-kim-46857544/"> Learn more about Christine.</a>
                     </span>
                   </div>
-
-                  {/* <div className="feed-banner-x">
-                    <span className="banner-close">
-                      &times;
-                    </span>
-                  </div> */}
                 </div>
               </div>
 
@@ -87,7 +81,7 @@ class BusinessPageReviews extends React.Component {
             </div>
           </div>
 
-          <div className="review-form">
+          <div className="business-page-review-form">
             <div className="review-current-user-side">
               {currentUserData}
             </div>

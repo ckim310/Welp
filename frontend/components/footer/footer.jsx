@@ -93,6 +93,17 @@ const Footer = props => {
             <img src="./footer_cityscape.png" alt="footer_cityscape"/>
           </div>
         </div>
+
+        <div className="disclaimer">
+          <div className="copyright">
+            <i className="far fa-copyright"></i>
+            &nbsp;Christine Kim | welp est. 2019
+          </div>
+
+          <div className="est">
+            welp is a clone and not a substitute of yelp
+          </div>
+        </div>
       </div>
 
     </div>

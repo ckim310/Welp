@@ -6,7 +6,6 @@ export default class MarkerManager {
 
   updateMarkers(businesses) {
     businesses.forEach(business => {
-      // this.markers[business.id] = business;
       this.createMarkerFromBusiness(business);
     });
   }

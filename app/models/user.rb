@@ -22,8 +22,6 @@ class User < ApplicationRecord
   validates :zipcode, length: { is: 5 }
   validates :password, length: { minimum: 6, allow_nil: true }
 
-  has_one_attached :photo
-
   has_many :reviews,
     foreign_key: :author_id
 
