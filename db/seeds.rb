@@ -88,17 +88,39 @@ Business.create!(
 )
 
 Business.create!(
-  name: "Grace Street",
-  zipcode: 10001,
-  address: "17 W 32nd St",
+  name: "Ippudo NYC",
+  zipcode: 10003,
+  address: "65 4th Ave",
   city: "New York",
   state: "NY",
-  phone_number: "(917) 745-2125",
-  latitude: 40.747820,
-  longitude: -73.986510
+  phone_number: "(123) 456-7890",
+  latitude: 40.730880,
+  longitude: -73.990310
 )
 
-5.times do
+Business.create!(
+  name: "Burger & Lobster",
+  zipcode: 10011,
+  address: "39 W 19th St",
+  city: "New York",
+  state: "NY",
+  phone_number: "(646) 833-7532",
+  latitude: 40.740160,
+  longitude: -73.993370
+)
+
+Business.create!(
+  name: "Jane",
+  zipcode: 10012,
+  address: "100 W Houston St",
+  city: "New York",
+  state: "NY",
+  phone_number: "(646) 833-7532",
+  latitude: 40.727380,
+  longitude: -74.000200
+)
+
+4.times do
   Business.create(
     name: Faker::Coffee.blend_name,
     zipcode: Faker::Address.zip_code,
@@ -159,4 +181,11 @@ Review.create!(
   author_id: User.last.id,
   business_id: Business.first.id,
   rating: 3
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.fourth.id,
+  business_id: Business.last.id,
+  rating: 5
 )

@@ -13,9 +13,36 @@ class BusinessPageReviews extends React.Component {
     const { business, currentUser } = this.props;
 
     if (!business) return null;
-    // if (currentUser) {
 
-    // };
+    let currentUserData;
+    if (currentUser) {
+      currentUserData =
+        <div className="review-current-user-data">
+          <div className="review-current-user-pic">
+            <i className="fas fa-meh fa-3x"></i>
+          </div>
+          <div className="review-form-current-user-name-location">
+            <div className="review-current-user-name">
+              {currentUser.first_name}
+            </div>
+
+            <div className="review-current-user-location">
+              {currentUser.zipcode}
+            </div>
+          </div>
+        </div>
+    } else {
+      currentUserData =
+        <div className="review-current-user-data">
+          <div className="review-no-user-pic">
+            <i className="fas fa-meh fa-3x"></i>
+          </div>
+          <div className="review-form-no-user">
+            <i className="fas fa-grip-lines fa-3x"></i>
+            <i className="fas fa-grip-lines fa-2x"></i>
+          </div>
+        </div>
+    };
 
     return (
       <div className="reviews-wrapper">
@@ -45,11 +72,11 @@ class BusinessPageReviews extends React.Component {
                     </span>
                   </div>
 
-                  <div className="feed-banner-x">
+                  {/* <div className="feed-banner-x">
                     <span className="banner-close">
                       &times;
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -62,22 +89,7 @@ class BusinessPageReviews extends React.Component {
 
           <div className="review-form">
             <div className="review-current-user-side">
-              <div className="review-current-user-data">
-                <div className="review-current-user-pic">
-                  <i className="fas fa-meh fa-3x"></i>
-                </div>
-
-                <div className="review-form-current-user-name-location">
-                  <div className="review-current-user-name">
-                    {/* {currentUser.first_name} */}
-                  </div>
-
-                  <div className="review-current-user-location">
-                    {/* {currentUser.zipcode} */}
-                  </div>
-                </div>
-              </div>
-
+              {currentUserData}
             </div>
 
             <div className="review-form-input">

@@ -72,7 +72,7 @@
   padding-right: 15px;
 }
 
-.review-current-user-pic {
+.review-current-user-pic, .review-no-user-pic {
   margin-right: 20px;
 }
 
@@ -80,10 +80,31 @@
   color: pink;
 }
 
+.review-no-user-pic i {
+  color: grey;
+}
+
 .review-form-current-user-name-location {
   line-height: 18px;
   font-size: 14px;
   font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-form-no-user {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.review-form-no-user i {
+  color: #e6e6e6;
+  margin-bottom: -15px;
+}
+
+.review-form-no-user .fa-3x {
+  margin-top: -10px;
 }
 
 .review-current-user-name {

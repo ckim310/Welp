@@ -6,7 +6,7 @@ const BusinessIndexItem = ({ business, idx }) => {
   <li className="business-index-item">
     <div className="business-index-content-container">
       <div className="business-index-pic">
-        <img src="./gongcha.png" alt="gongcha"/>
+        <img src="egg.png" alt="egg"/>
       </div>
         <h3 className="business-name">{idx}. <Link to={`/businesses/${business.id}`}>{business.name}</Link></h3>
 

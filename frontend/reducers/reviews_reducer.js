@@ -9,7 +9,7 @@ const reviewsReducer = (state = {}, action) => {
     case RECEIVE_BUSINESS:
       newState = merge({}, state);
       const { reviews } = action.businessData;
-      newState = reviews;
+      newState = reviews || {};
       return newState;
     case RECEIVE_REVIEW:
       newState = merge({}, state);
