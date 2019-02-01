@@ -2,7 +2,7 @@
 
 [class*="rating-"] {
   display: inline-block;
-  background-image: url("stars.png");
+  background-image: url("https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png");
   background-repeat: no-repeat;
   vertical-align: bottom;
   overflow: hidden;
