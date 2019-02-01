@@ -55,14 +55,14 @@ const HomeTop = (props) => {
         <div className="credit-links">
           <div className="description">
             <a className="photo-description" href="#">
-              <p className="credit-text">Photo description</p>
+              <p className="credit-text">Shake Shack Burger</p>
             </a>
           </div>
 
           <div className="credit">
-            <p className="credit-text">Photo by</p>
-            <a className="photo-by" href="#">
-              <p className="photographer-name">Name</p>
+            <p className="credit-text">Photo by &nbsp;</p>
+            <a className="photo-by" href="https://www.instagram.com/dsfoodtravels/">
+              <p className="photographer-name">dsfoodtravels<i className="fab fa-instagram"></i></p>
             </a>
           </div>
         </div>

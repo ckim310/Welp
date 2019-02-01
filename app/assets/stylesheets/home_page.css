@@ -73,12 +73,19 @@ i.fa-yelp {
   text-decoration: underline;
 }
 
+/* PHOTO CREDIT DATA */
 .home-inner-cred-wrapper {
-  position: absolute;
-  bottom: 35px;
-  right: 46%;
   color: white;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 190px;
+}
+
+.credit-links {
+  display: flex;
+  flex-direction: column;
 }
 
 .credit-links a {
@@ -89,13 +96,11 @@ i.fa-yelp {
 
 .description {
   margin-bottom: 4px;
+  align-self: center;
 }
 
 .credit {
   display: flex;
   justify-content: center;
-}
-
-.credit p {
-  margin-right: 3px;
+  align-self: center;
 }

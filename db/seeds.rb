@@ -54,6 +54,50 @@ Business.create!(
   longitude: -73.986192
 )
 
+Business.create!(
+  name: "Shake Shack",
+  zipcode: 10018,
+  address: "1333 Broadway",
+  city: "New York",
+  state: "NY",
+  phone_number: "(646) 230-0696",
+  latitude: 40.751170,
+  longitude: -73.988130
+)
+
+Business.create!(
+  name: "The Cibo",
+  zipcode: 10018,
+  address: "22 W 38th St",
+  city: "New York",
+  state: "NY",
+  phone_number: "(212) 933-4361",
+  latitude: 40.751260,
+  longitude: -73.984030
+)
+
+Business.create!(
+  name: "Cava",
+  zipcode: 10018,
+  address: "1385 Broadway",
+  city: "New York",
+  state: "NY",
+  phone_number: "(718) 502-9282",
+  latitude: 40.752790,
+  longitude: -73.987860
+)
+
+Business.create!(
+  name: "Grace Street",
+  zipcode: 10001,
+  address: "17 W 32nd St",
+  city: "New York",
+  state: "NY",
+  phone_number: "(917) 745-2125",
+  latitude: 40.747820,
+  longitude: -73.986510
+)
+
 5.times do
   Business.create(
     name: Faker::Coffee.blend_name,
@@ -69,29 +113,50 @@ end
 
 
 Review.create!(
-  body: Faker::Food.description,
+  body: Faker::Hipster.paragraph,
   author_id: User.first.id,
   business_id: Business.first.id,
-  rating: 4
+  rating: 1
 )
 
 Review.create!(
-  body: Faker::Food.description,
+  body: Faker::Hipster.paragraph,
   author_id: User.first.id,
   business_id: Business.third.id,
   rating: 5
 )
 
 Review.create!(
-  body: Faker::Food.description,
+  body: Faker::Hipster.paragraph,
   author_id: User.second.id,
   business_id: Business.second.id,
   rating: 3
 )
 
 Review.create!(
-  body: Faker::Food.description,
+  body: Faker::Hipster.paragraph,
   author_id: User.second.id,
   business_id: Business.first.id,
-  rating: 2
+  rating: 4
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.third.id,
+  business_id: Business.second.id,
+  rating: 5
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.third.id,
+  business_id: Business.fifth.id,
+  rating: 4
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.last.id,
+  business_id: Business.first.id,
+  rating: 3
 )
