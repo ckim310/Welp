@@ -2,6 +2,8 @@
 
 [welp live](https://welp-ck.herokuapp.com/#/)
 
+Welp is a clone of Yelp that allows users to look at local businesses. A user can see a list of businesses and see more detailed information about each business. The user can see reviews from other users and also create and delete their own reviews.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
