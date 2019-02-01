@@ -110,6 +110,7 @@
 .user-pic i {
   background-color: #0073bb;
   padding: 2px;
+  border-radius: 15px;
 }
 
 .user-name {
