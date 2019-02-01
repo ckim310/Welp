@@ -62,6 +62,10 @@
   padding: 15px 0;
 }
 
+span#business-name {
+  font-weight: 700;
+}
+
 .review-current-user-side {
   display: flex;
   width: 23%;

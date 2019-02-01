@@ -88,7 +88,7 @@ class BusinessPageReviews extends React.Component {
 
             <div className="review-form-input">
               <Link to={`/businesses/${this.props.match.params.businessId}/reviews`} >
-                Start your review of {this.props.business.name}
+                Start your review of <span id="business-name">{this.props.business.name}</span>
               </Link>
             </div>
           </div>
