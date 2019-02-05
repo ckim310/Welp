@@ -41,23 +41,6 @@ const Footer = props => {
 
           <div className="footer-section">
             <div className="footer-content">
-              <h3 className="footer-content-header">Welp for Business Owners</h3>
-              <ul className="footer-content-list">
-                <li className="footer-content-item">
-                  <a href="#">Claim Your Business Page</a>
-                </li>
-                <li className="footer-content-item">
-                  <a href="#">Advertise on Welp</a>
-                </li>
-                <li className="footer-content-item">
-                  <a href="#">Welp Reservations</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="footer-section">
-            <div className="footer-content">
 
               <div className="footer-languages">
                 <h3 className="footer-content-header">Languages</h3>
