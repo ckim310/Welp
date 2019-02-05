@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as BusinessAPIUtil from '../../util/business_api_util';
+import { searchBusinesses } from '../../actions/search_actions';
 
 class SearchForm extends React.Component {
   constructor(props) {
@@ -14,8 +14,11 @@ class SearchForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger
-    return BusinessAPIUtil.searchBusinesses(this.state.find).then(e => console.log(e));
+    if (this.state.find !== "") {
+      return this.props.searchBusinesses(this.state.find);
+    } else if (this.state.near !== "") {
+      return this.props.searchBusinesses(this.state.near);
+    }
   }
 
   handleInput(field) {
@@ -76,5 +79,10 @@ class SearchForm extends React.Component {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+    searchBusinesses: query => dispatch(searchBusinesses(query)),
+  }
+}
 
-export default connect(null, null)(SearchForm)
+export default connect(null, mapDispatchToProps)(SearchForm)
