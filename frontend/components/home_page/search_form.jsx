@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import * as BusinessAPIUtil from '../../util/business_api_util';
 
 class SearchForm extends React.Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class SearchForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // need to add in where to go after search submit!
+    // debugger
+    return BusinessAPIUtil.searchBusinesses(this.state.find).then(e => console.log(e));
   }
 
   handleInput(field) {
