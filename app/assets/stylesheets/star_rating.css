@@ -3,6 +3,7 @@
 [class*="rating-"] {
   display: inline-block;
   background-image: url("https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png");
+  /* background-image: url('stars.png'); */
   background-repeat: no-repeat;
   vertical-align: bottom;
   overflow: hidden;
@@ -44,6 +45,48 @@
   padding-top: 24px;
   background-position: 0 0;
   /* display: none; */
+}
+
+.rating-large {
+  min-width: 135px;
+  padding-top: 24px;
+  background-position: 0 0;
+}
+
+#five.rating-large {
+  background-position: 0 -216px;
+}
+
+#four-half.rating-large {
+  background-position: 0 -192px;
+}
+
+#four.rating-large {
+  background-position: 0 -168px;
+}
+
+#three-half.rating-large {
+  background-position: 0 -144px;
+}
+
+#three.rating-large {
+  background-position: 0 -120px;
+}
+
+#two-half.rating-large {
+  background-position: 0 -96px;
+}
+
+#two.rating-large {
+  background-position: 0 -72px;
+}
+
+#one-half.rating-large {
+  background-position: 0 -48px;
+}
+
+#one.rating-large {
+  background-position: 0 -24px;
 }
 
 /* #five.rating-big:hover {

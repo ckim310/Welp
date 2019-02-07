@@ -5,9 +5,11 @@ import { fetchBusiness, fetchBusinesses } from '../../actions/business_actions';
 const mapStateToProps = (state, ownProps) => {
   const businessId = ownProps.props.match.params.businessId;
   const business = state.entities.businesses[businessId];
+  const reviews = Object.values(state.entities.reviews);
   
   return {
     business,
+    reviews
   };
 };
 

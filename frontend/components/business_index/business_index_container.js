@@ -5,8 +5,11 @@ import { searchBusinesses } from '../../actions/search_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const businesses = Object.values(state.entities.businesses);
+  const reviews = Object.values(state.entities.reviews);
+
   return {
     businesses,
+    reviews,
   };
 };
 

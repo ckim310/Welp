@@ -20,4 +20,5 @@ class Business < ApplicationRecord
   validates :zipcode, length: { is: 5 }
 
   has_many :reviews
+
 end

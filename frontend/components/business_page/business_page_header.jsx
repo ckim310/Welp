@@ -9,8 +9,46 @@ class BusinessPageHeader extends React.Component {
 
 
   render() {
-    const { business, fetchBusiness } = this.props;
+    const { business, fetchBusiness, reviews } = this.props;
     if (!business) return null;
+
+    const ratings = reviews.map(review => {
+      return review.rating;
+    });
+    
+    if(ratings.length === 0) return null;
+    const totalRatings = ratings.reduce((a,b) => {
+      return a + b;
+    });
+
+    const ratingAvg = totalRatings/reviews.length;
+
+    const ratingAvgNum = () => {
+      let rating;
+
+      if (ratingAvg >= 4.6) {
+        rating = "five";
+      } else if (ratingAvg >= 4.3) {
+        rating = "four-half";
+      } else if (ratingAvg >= 3.6) {
+        rating = "four";
+      } else if (ratingAvg >= 3.3) {
+        rating = "three-half";
+      } else if (ratingAvg >= 2.6) {
+        rating = "three";
+      } else if (ratingAvg >= 2.3) {
+        rating = "two-half";
+      } else if (ratingAvg >= 1.6) {
+        rating = "two";
+      } else if (ratingAvg >= 1.3) {
+        rating = "one-half";
+      } else {
+        rating = "one";
+      }
+
+      return rating;
+    };
+
     return(
       <div className="business-page-header-container">
         <div className="business-page-header-wrapper">
@@ -31,16 +69,12 @@ class BusinessPageHeader extends React.Component {
                   <div className="top-header-avg-rating">
                     <div className="business-review-container">
                       <div className="avg-rating">
-                        <div className="star-avg-rating">
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
+                        <div className="star-avg-rating rating-large" id={ratingAvgNum()}>
                         </div>
 
                         <div className="reviews-count">
                           {business.reviewsId.length} Reviews
+                          {/* {ratingAvg} */}
                         </div>
                       </div>
 

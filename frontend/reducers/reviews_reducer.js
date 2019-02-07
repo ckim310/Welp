@@ -1,4 +1,4 @@
-import { RECEIVE_BUSINESS } from '../actions/business_actions';
+import { RECEIVE_BUSINESS, RECEIVE_BUSINESSES } from '../actions/business_actions';
 import { merge } from 'lodash';
 import { RECEIVE_REVIEW, DELETE_REVIEW } from '../actions/review_actions';
 
