@@ -7,8 +7,8 @@ class ReviewForm extends React.Component {
     super(props);
     this.state = {
       body: this.props.review.body,
-      authorId: this.props.currentUserId,
-      businessId: this.props.businessId,
+      author_id: this.props.currentUserId,
+      business_id: this.props.businessId,
       rating: this.props.review.rating,
       reviewId: this.props.reviewId,
     };
@@ -28,6 +28,7 @@ class ReviewForm extends React.Component {
     e.preventDefault();
     const { businessId } = this.props.match.params;
     const review = Object.assign({}, this.state);
+
     this.props.action(businessId, review).then(() => this.props.history.push(`/businesses/${businessId}`));
   }
 

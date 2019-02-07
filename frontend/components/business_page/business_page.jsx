@@ -13,7 +13,7 @@ class BusinessPage extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchBusiness(this.props.match.params.businessId)
+    this.props.fetchBusiness(this.props.match.params.businessId);
   }
 
   componentDidUpdate(prevProps) {
