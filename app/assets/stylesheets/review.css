@@ -99,11 +99,44 @@ ul.review-index-list {
 }
 
 /* REVIEW FOOTER */
-/* trash buton */
-.review-trash {
+/* footer buttons */
+.review-footer-item {
   float: right;
+  margin-left: 3px;
+  position: relative;
 }
 
-button.delete {
+.review-footer button, .review-footer a {
   color: #999;
+}
+
+.review-footer button:hover, .review-footer button:hover a {
+  color: black;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.5);
+  background: linear-gradient(#fff, #eee)
+}
+
+/* footer button popup */
+.review-footer-popup {
+  display: none;
+  position: absolute;
+  bottom: 25px;
+  left: -35px;;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  min-width: 84px;
+  width: max-content;
+  /* box-shadow: 2px 2px 3px #bebebe; */
+  z-index: 5;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  padding: 6px 9px;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.review-footer-item:hover .review-footer-popup {
+  display: flex;
 }

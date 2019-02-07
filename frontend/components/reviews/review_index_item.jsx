@@ -53,7 +53,6 @@ class ReviewIndexItem extends React.Component {
       let update;
       if (review.authorId === currentUserId) {
         update = <button className="update">
-
           <Link to={`/businesses/${review.business_id}/reviews/${review.id}/edit`}>
             <i className="fas fa-sync-alt"></i>
           </Link>
@@ -123,12 +122,22 @@ class ReviewIndexItem extends React.Component {
             </div>
 
             <div className="review-footer">
-              <div className="review-trash">
-                {trash}
+              <div className="review-footer-item">
+                <div className="review-trash">
+                  {trash}
+                  <div className="review-footer-popup">
+                    <span>Remove review</span>
+                  </div>
+                </div>
               </div>
 
-              <div className="review-update">
-                {update}
+              <div className="review-footer-item">
+                <div className="review-update">
+                  {update}
+                  <div className="review-footer-popup">
+                    <span>Update review</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
