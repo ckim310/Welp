@@ -1,5 +1,7 @@
 import React from 'react';
 import { formatDate } from '../../util/date_util';
+import { Link, Route } from 'react-router-dom';
+import ReviewFormEdit from './review_form_edit_container';
 
 class ReviewIndexItem extends React.Component {
   constructor(props) {
@@ -46,6 +48,18 @@ class ReviewIndexItem extends React.Component {
           </button>;
       } else {
         trash = null
+      }
+
+      let update;
+      if (review.authorId === currentUserId) {
+        update = <button className="update">
+
+          <Link to={`/businesses/${review.business_id}/reviews/${review.id}/edit`}>
+            <i className="fas fa-sync-alt"></i>
+          </Link>
+          </button>;
+      } else {
+        update = null
       }
     
 
@@ -98,8 +112,8 @@ class ReviewIndexItem extends React.Component {
                 <div className="rating-mid" id={ratingNum()}>
                 </div>
 
-                <div className="created-at">
-                  {formatDate(review.created_at)}
+                <div className="updated-at">
+                  {formatDate(review.updated_at)}
                 </div>
               </div>
 
@@ -111,6 +125,10 @@ class ReviewIndexItem extends React.Component {
             <div className="review-footer">
               <div className="review-trash">
                 {trash}
+              </div>
+
+              <div className="review-update">
+                {update}
               </div>
             </div>
           </div>

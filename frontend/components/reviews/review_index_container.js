@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import ReviewIndex from './reviews_index';
-import { trashReview } from '../../actions/review_actions';
+import { trashReview, updateReview } from '../../actions/review_actions';
 
 const mapStateToProps = state => {
   const reviews = Object.values(state.entities.reviews);
@@ -15,7 +15,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    trashReview: (id) => dispatch(trashReview(id))
+    trashReview: (id) => dispatch(trashReview(id)),
+    updateReview: (businessId, review) => dispatch(updateReview(businessId, review)),
   };
 };
 

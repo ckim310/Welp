@@ -7,7 +7,8 @@ import HomePage from './home_page/home_page';
 import Footer from './footer/footer';
 import BusinessIndexContainer from './business_index/business_index_container';
 import BusinessPage from './business_page/business_page';
-import ReviewForm from './reviews/review_form';
+import ReviewFormNew from './reviews/review_form_new_container';
+import ReviewFormEdit from './reviews/review_form_edit_container';
 
 export default () => {
   return (
@@ -21,7 +22,8 @@ export default () => {
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <Route exact path="/businesses" component={BusinessIndexContainer} />
         <Route exact path="/businesses/:businessId" component={BusinessPage} />
-        <ProtectedRoute path="/businesses/:businessId/reviews" component={ReviewForm} />
+        <ProtectedRoute path="/businesses/:businessId/reviews/:reviewId/edit" component={ReviewFormEdit} />
+        <ProtectedRoute exact path="/businesses/:businessId/reviews" component={ReviewFormNew} />
 
         <footer className="main-footer-wrapper">
           <Footer />

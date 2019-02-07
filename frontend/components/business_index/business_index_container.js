@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import BusinessIndex from './business_index';
-import { fetchBusinesses, searchBusinesses } from '../../actions/business_actions';
+import { fetchBusinesses } from '../../actions/business_actions';
+import { searchBusinesses } from '../../actions/search_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const businesses = Object.values(state.entities.businesses);

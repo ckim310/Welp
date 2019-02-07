@@ -10,6 +10,6 @@ const reviewErrorsReducer = (state = [], action) => {
     default:
       return state;
   }
-}
+};
 
 export default reviewErrorsReducer;

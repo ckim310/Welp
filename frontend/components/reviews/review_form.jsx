@@ -1,20 +1,23 @@
 import React from 'react';
 import { withRouter, Redirect, Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { createReview, clearReviewErrors } from '../../actions/review_actions';
 import NavBarRight from '../nav_bar/nav_bar_right_container';
 
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      body: "",
-      author_id: this.props.currentUserId,
-      business_id: this.props.businessId,
-      rating: 0,
+      body: this.props.review.body,
+      authorId: this.props.currentUserId,
+      businessId: this.props.businessId,
+      rating: this.props.review.rating,
+      reviewId: this.props.reviewId,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleRating = this.handleRating.bind(this);
+  }
+
+  componentDidMount() {
+
   }
 
   componentWillUnmount() {
@@ -25,7 +28,7 @@ class ReviewForm extends React.Component {
     e.preventDefault();
     const { businessId } = this.props.match.params;
     const review = Object.assign({}, this.state);
-    this.props.createReview(businessId, review).then(() => this.props.history.push(`/businesses/${businessId}`));
+    this.props.action(businessId, review).then(() => this.props.history.push(`/businesses/${businessId}`));
   }
 
   handleInput(field) {
@@ -68,9 +71,9 @@ class ReviewForm extends React.Component {
 
   render() {
     const businessId = this.props.match.params.businessId;
-    const  { business } = this.props;
+    const  { business, formType, review } = this.props;
 
-      if (!business) {
+      if (!business || review.body === null) {
         return <Redirect to={`/businesses/${businessId}`} />
       }
 
@@ -127,13 +130,14 @@ class ReviewForm extends React.Component {
                       placeholder="Your review helps others learn about great local businesses.
 
                       Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees."
+                      value={this.state.body}
                       onChange={this.handleInput('body')}
                       ></textarea>
                   </div>
                 </div>
 
                 <div className="review-post">
-                  <button className="review-form-create">Post Review</button>
+                  <button className="review-form-create">{formType}</button>
                 </div>
               </form>
             </div>
@@ -145,25 +149,4 @@ class ReviewForm extends React.Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
-  const businessId = ownProps.match.params.businessId;
-  const business = state.entities.businesses[businessId];
-  const currentUserId = state.session.currentUserId;
-  const errors = state.errors.review;
-
-  return {
-    businessId,
-    business,
-    currentUserId,
-    errors,
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    createReview: (businessId, review) => dispatch(createReview(businessId, review)),
-    clearReviewErrors: () => dispatch(clearReviewErrors()),
-  }
-}
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ReviewForm));
+export default withRouter(ReviewForm);

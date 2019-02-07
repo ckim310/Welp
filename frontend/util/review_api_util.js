@@ -9,7 +9,7 @@ export const createReview = (businessId, review) => {
 export const updateReview = (businessId, review) => {
   return $.ajax({
     method: 'PATCH',
-    url: `api/businesses/${businessId}/reviews/${review.id}/edit`,
+    url: `api/businesses/${businessId}/reviews/${review.reviewId}`,
     data: { review }
   });
 };
