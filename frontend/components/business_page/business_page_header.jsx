@@ -29,8 +29,8 @@ class BusinessPageHeader extends React.Component {
                   </div>
 
                   <div className="top-header-avg-rating">
-                    <div className="rating-container">
-                      <div className="avg-rating-reviews">
+                    <div className="business-review-container">
+                      <div className="avg-rating">
                         <div className="star-avg-rating">
                           <i className="fas fa-star"></i>
                           <i className="fas fa-star"></i>
@@ -40,11 +40,11 @@ class BusinessPageHeader extends React.Component {
                         </div>
 
                         <div className="reviews-count">
-                          # Reviews
+                          {business.reviewsId.length} Reviews
                         </div>
                       </div>
 
-                      <div className="rating-details">
+                      <div className="ratings-details">
                         <Link to={`/businesses/${business.id}`}>
                           <i className="fas fa-signal"></i>
                           Details
