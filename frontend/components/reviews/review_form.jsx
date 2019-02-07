@@ -79,7 +79,7 @@ class ReviewForm extends React.Component {
       }
 
     const errors = this.props.errors.map((err, idx) => {
-      return <li key={idx}>Error: {err}</li>
+      return <li className="review-errors-list" key={idx}>{err}</li>
     });
 
     return (
@@ -100,9 +100,7 @@ class ReviewForm extends React.Component {
 
         <div className="review-form-container">
           <div className="review-form-wrapper">
-            <div className="errors">
-              {errors}
-            </div>
+
 
             <div className="review-title">
               <h2 className="review-business-name">
@@ -134,6 +132,10 @@ class ReviewForm extends React.Component {
                       value={this.state.body}
                       onChange={this.handleInput('body')}
                       ></textarea>
+
+                    <div className="review-errors">
+                      {errors}
+                    </div>
                   </div>
                 </div>
 

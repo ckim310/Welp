@@ -81,7 +81,7 @@ h2.review-business-name:hover {
   border: none;
   font-size: 18px;
   line-height: 1.44em;
-  min-height: 258px;
+  min-height: 218px;
   width: 100%;
   resize: none;
 }
@@ -102,4 +102,16 @@ h2.review-business-name:hover {
   line-height: 1.3125em;
   border-radius: 3px;
   font-weight: 700;
+}
+
+/* Review Error */
+
+.review-errors {
+  transition: all .3s ease;
+  color: #d32323;
+  font-size: 14px;
+  min-height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
