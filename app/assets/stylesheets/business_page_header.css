@@ -111,10 +111,15 @@
   border-radius: 3px;
   margin-right: 12px;
   border: 1px solid rgb(211, 35, 35);
+  line-height: normal;
 }
 
 .business-write-review:hover {
   background-color: #dc4f4f;
+}
+
+.write-review-btn-text {
+  margin-left: 5px;
 }
 
 .page-options {
