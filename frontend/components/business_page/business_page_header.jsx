@@ -16,10 +16,14 @@ class BusinessPageHeader extends React.Component {
       return review.rating;
     });
     
-    if(ratings.length === 0) return null;
-    const totalRatings = ratings.reduce((a,b) => {
-      return a + b;
-    });
+    let totalRatings;
+    if(ratings.length === 0) {
+      totalRatings = null;
+    } else {
+      totalRatings = ratings.reduce((a,b) => {
+        return a + b;
+      });
+    }
 
     const ratingAvg = totalRatings/reviews.length;
 
@@ -42,8 +46,10 @@ class BusinessPageHeader extends React.Component {
         rating = "two";
       } else if (ratingAvg >= 1.3) {
         rating = "one-half";
-      } else {
+      } else if (ratingAvg > 0) {
         rating = "one";
+      } else {
+        rating = null;
       }
 
       return rating;
@@ -74,7 +80,6 @@ class BusinessPageHeader extends React.Component {
 
                         <div className="reviews-count">
                           {business.reviewsId.length} Reviews
-                          {/* {ratingAvg} */}
                         </div>
                       </div>
 
