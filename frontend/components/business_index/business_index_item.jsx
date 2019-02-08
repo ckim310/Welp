@@ -10,7 +10,7 @@ const BusinessIndexItem = ({ business, idx }) => {
     return review.rating;
   });
 
-  let avgRatings
+  let avgRatings;
   if (allRatings.length > 0) {
     const sumRatings = allRatings.reduce( (a,b) => {
       return a + b;
@@ -49,11 +49,20 @@ const BusinessIndexItem = ({ business, idx }) => {
     return rating;
   };
 
+  let img;
+  if (idx % 3 === 0) {
+    img = <img src="egg.png" alt="egg"/>
+  } else if (idx % 2 === 0) {
+    img = <img src="burger_fries.png" alt="burger"/>
+  } else {
+    img = <img src="tea.png" alt="tea"/>
+  }
+
   return (
   <li className="business-index-item">
     <div className="business-index-content-container">
       <div className="business-index-pic">
-        <img src="egg.png" alt="egg"/>
+        {img}
       </div>
 
       <div className="business-information-container">
