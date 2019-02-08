@@ -61,9 +61,9 @@ const BusinessIndexItem = ({ business, idx }) => {
           <h3 className="business-name">{idx}. <Link to={`/businesses/${business.id}`}>{business.name}</Link></h3>
 
           <div className="business-reviews">
-              <div className="star-avg-rating rating-large" id={ratingAvgNum()}>
-              </div>
-            {businessReviewCount} Reviews
+            <div className="star-avg-rating rating-mid" id={ratingAvgNum()}>
+            </div>
+            <span className="business-review-count">{businessReviewCount} Reviews</span>
             
           </div>
         </div>

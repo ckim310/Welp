@@ -43,7 +43,6 @@
 .business-detail {
   text-align: right;
   font-size: 14px;
-  /* width: -webkit-fill-available; */
   line-height: 2;
 }
 
@@ -58,4 +57,9 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+.business-review-count {
+  color: #666;
+  font-size: 14px;
 }

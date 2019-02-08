@@ -23,16 +23,32 @@
   background-position: 0 -402px;
 }
 
+#four-half.rating-mid {
+  background-position: 0 -384px;
+}
+
 #four.rating-mid {
   background-position: 0 -366px;
+}
+
+#three-half.rating-mid {
+  background-position: 0 -348px;
 }
 
 #three.rating-mid {
   background-position: 0 -330px;
 }
 
+#two-half.rating-mid {
+  background-position: 0 -312px;
+}
+
 #two.rating-mid {
   background-position: 0 -294px;
+}
+
+#one-half.rating-mid {
+  background-position: 0 -276px;
 }
 
 #one.rating-mid {
