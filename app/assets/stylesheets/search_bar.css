@@ -62,6 +62,7 @@ label span {
 
 button.search-submit {
   border-style: none;
+  color: white;
 }
 
 /* SEARCH ERRORS */
