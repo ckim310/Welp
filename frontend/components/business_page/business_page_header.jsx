@@ -112,7 +112,7 @@ class BusinessPageHeader extends React.Component {
                       </div>
                     </Link>
 
-                    <div className="page-options">
+                    {/* <div className="page-options">
                       <Link to={`/businesses/${business.id}`}>
                         <i className="fas fa-camera"></i>
                         Add Photo
@@ -128,7 +128,7 @@ class BusinessPageHeader extends React.Component {
                         Save
                       </div>
 
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
