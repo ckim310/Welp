@@ -1,7 +1,7 @@
 .business-index-content-container {
   display: flex;
   justify-content: space-between;
-  padding: 18px 0;
+  padding: 20px 0 35px;
 }
 
 .business-index-content {
