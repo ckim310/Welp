@@ -63,3 +63,37 @@ label span {
 button.search-submit {
   border-style: none;
 }
+
+/* SEARCH ERRORS */
+/* on home page */
+.search-form-wrapper .search-errors-list {
+  background-color: white;
+  border-radius: 0 0 4px 4px;
+  padding: 7px 594px 7px 68px;
+  margin-top: -2px;
+  width: inherit;
+  position: absolute;
+  border-top: 2px solid #ccc;
+  color: #d32323;
+  font-size: 14px;
+}
+
+/* sub nav bar when not on businesses/search */
+.businesses-list-container .search-form-wrapper .search-errors-list {
+  background-color: white;
+  border-radius: 0 0 4px 4px;
+  padding: 8px 396px 10px 45px;
+  margin-top: -2px;
+  width: inherit;
+  position: absolute;
+  border-top: 2px solid #ccc;
+  color: #d32323;
+  position: absolute;
+  z-index: 3;
+  box-shadow: 1px 2px 3px #ccc;
+}
+
+/* search page */
+.businesses-list .search-errors-list {
+  color: #d32323;
+}

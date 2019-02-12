@@ -4,6 +4,7 @@ import MarkerManager from '../../util/marker_manager';
 
 class Map extends React.Component {
   componentDidMount() {
+
     let mapOptions;
     if (this.props.singleBusiness) {
       const { business } = this.props;

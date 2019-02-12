@@ -2,6 +2,7 @@ import * as SearchAPIUtil from '../util/search_api_util';
 
 export const RECEIVE_BUSINESS_SEARCH = "RECEIVE_BUSINESS_SEARCH";
 export const RECEIVE_SEARCH_ERRORS = "RECEIVE_SEARCH_ERRORS";
+export const CLEAR_SEARCH_ERRORS = "CLEAR_SEARCH_ERRORS";
 
 const receiveBusinessSearch = businesses => {
   return {
@@ -17,11 +18,19 @@ const receiveSearchErrors = errors => {
   };
 };
 
+export const clearSearchErrors = () => {
+  return {
+    type: CLEAR_SEARCH_ERRORS,
+  };
+};
+
 export const searchBusinesses = query => {
   return dispatch => {
     return SearchAPIUtil.searchBusinesses(query).then(response => {
       return dispatch(receiveBusinessSearch(response.businesses));
     },
-    (errors) => return dispatch(receiveSearchErrors(errors)));
+    (errors) => {
+      return dispatch(receiveSearchErrors(errors));
+    });
   };
 };

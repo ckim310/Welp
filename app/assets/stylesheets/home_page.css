@@ -52,6 +52,10 @@ i.fa-yelp {
   width: fit-content;
 }
 
+.home-inner-search-wrapper .search-form-wrapper {
+  height: 65px;
+}
+
 .search-links {
   display: flex;
   justify-content: space-around;

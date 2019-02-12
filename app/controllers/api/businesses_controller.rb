@@ -24,18 +24,18 @@ class Api::BusinessesController < ApplicationController
   end
 
   def search
-    search_query = params[:query].downcase
+    @search_query = params[:query].downcase
       @businesses = Business.all.select do |business|
         name = business.name.downcase
         city = business.city.downcase
         address = business.address.downcase
-        (name.include?(search_query) || (city.include?(search_query)) || address.include?(search_query))
+        (name.include?(@search_query) || (city.include?(@search_query)) || address.include?(@search_query))
       end
 
       if @businesses != []
         render :index
       else
-        render json: ['No existing businesses, search again']
+        render json: ['No existing businesses, search again'], status: 422
       end
 
   end

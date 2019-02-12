@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchBusinesses } from '../../actions/search_actions';
+import { searchBusinesses, clearSearchErrors } from '../../actions/search_actions';
 import { Redirect, withRouter } from 'react-router-dom';
 
 class SearchForm extends React.Component {
@@ -14,26 +14,51 @@ class SearchForm extends React.Component {
     this.handleInput = this.handleInput.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.clearSearchErrors();
+  }
+
   handleSubmit(e) {
-    e.preventDefault();
     e.stopPropagation();
-    if (this.state.find !== "") {
-      return this.props.searchBusinesses(this.state.find).then((e) => {
-        const that = this;
-        // debugger
-        that.props.history.push("businesses/search");
-        // return <Redirect to="businesses/search" />
-      });
-    } 
+
+    if ((e.target.className === "btn search-submit") || (e.target.className === "fas fa-search fa-2x")) {
+      e.preventDefault();
+      if (this.state.find !== "") {
+        return this.props.searchBusinesses(this.state.find).then((e) => {
+          const that = this;
+
+          if (that.props.history.location.pathname !== "/businesses/search") {
+            that.props.history.push("businesses/search");
+          }
+        });
+      } else if (this.state.near !== "") {
+        return this.props.searchBusinesses(this.state.near).then((e) => {
+          const that = this;
+
+          if (that.props.history.location.pathname !== "/businesses/search") {
+            that.props.history.push("businesses/search");
+          }
+        });
+      }
+    }
   }
 
   handleInput(field) {
     return (e) => {
       this.setState({ [field]: e.target.value });
+      this.props.clearSearchErrors();
     };
   }
 
   render() {
+    let errors;
+    if (this.props.match.url !== "/businesses/search") {
+      errors = this.props.errors.map((err, idx) => {
+        return <li className="search-errors-list" key={idx}>{err}</li>
+      })
+    } else {
+      errors = null;
+    }
 
     return (
       <div className="search-form-wrapper">
@@ -53,6 +78,7 @@ class SearchForm extends React.Component {
                   </div>
                 </div>
               </label>
+              
             </div>
 
             <div className="vl"></div>
@@ -79,16 +105,26 @@ class SearchForm extends React.Component {
               <i className="fas fa-search fa-2x"></i>
             </button>
           </div>
+          
         </form>
+        <div className="search-errors">{errors}</div>
       </div>
     )
+  }
+}
+
+const mapStateToProps = (state, ownProps) => {
+  const errors = state.errors.search;
+  return {
+    errors,
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     searchBusinesses: query => dispatch(searchBusinesses(query)),
+    clearSearchErrors: () => dispatch(clearSearchErrors()),
   }
 }
 
-export default withRouter(connect(null, mapDispatchToProps)(SearchForm));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchForm));

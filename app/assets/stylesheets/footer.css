@@ -1,7 +1,7 @@
 .main-footer-wrapper {
   border-top: 1px solid #ccc;
   min-width: 1020px;
-  height: 372px;
+  height: 100%;
   background-color: #F5F5F5;
   display: flex;
   flex-direction: column;
