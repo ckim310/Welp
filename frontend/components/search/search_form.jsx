@@ -74,7 +74,7 @@ class SearchForm extends React.Component {
                       className="find"
                       value={this.state.find}
                       onChange={this.handleInput('find')}
-                      placeholder="burgers, barbers, spas, handymen..."/>
+                      placeholder="burger, barbers, cava..."/>
                   </div>
                 </div>
               </label>
@@ -93,7 +93,7 @@ class SearchForm extends React.Component {
                       className="near"
                       value={this.state.near}
                       onChange={this.handleInput('near')}
-                      placeholder="address, neighborhood, city, or zip"/>
+                      placeholder="address or city"/>
                   </div>
                 </div>
               </label>
