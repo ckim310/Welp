@@ -21,4 +21,6 @@ class Review < ApplicationRecord
     class_name: :User
 
   belongs_to :business
+
+  has_many :reactions
 end

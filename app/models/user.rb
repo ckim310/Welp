@@ -25,6 +25,8 @@ class User < ApplicationRecord
   has_many :reviews,
     foreign_key: :author_id
 
+  has_many :reations
+
   attr_reader :password
   after_initialize :ensure_session_token
 
