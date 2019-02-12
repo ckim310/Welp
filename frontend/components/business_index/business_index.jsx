@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import BusinessIndexItem from './business_index_item';
-import SearchNavBar from '../nav_bar/search_nav_bar';
+import SearchNavBar from '../search/search_nav_bar';
 import BusinessPage from '../business_page/business_page';
 import Map from '../business_map/map';
 import SubNavBar from '../nav_bar/sub_nav_bar';

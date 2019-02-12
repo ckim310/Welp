@@ -9,6 +9,7 @@ import BusinessIndexContainer from './business_index/business_index_container';
 import BusinessPage from './business_page/business_page';
 import ReviewFormNew from './reviews/review_form_new_container';
 import ReviewFormEdit from './reviews/review_form_edit_container';
+import SearchIndex from './search/search_index';
 
 export default () => {
   return (
@@ -22,6 +23,7 @@ export default () => {
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <Route exact path="/businesses" component={BusinessIndexContainer} />
         <Route exact path="/businesses/:businessId" component={BusinessPage} />
+        <Route exact path="/businesses/search" component={SearchIndex} />
         <ProtectedRoute path="/businesses/:businessId/reviews/:reviewId/edit" component={ReviewFormEdit} />
         <ProtectedRoute exact path="/businesses/:businessId/reviews" component={ReviewFormNew} />
 

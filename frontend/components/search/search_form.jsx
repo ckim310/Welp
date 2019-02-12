@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { searchBusinesses } from '../../actions/search_actions';
+import { Redirect, withRouter } from 'react-router-dom';
 
 class SearchForm extends React.Component {
   constructor(props) {
@@ -10,15 +11,20 @@ class SearchForm extends React.Component {
       near: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleInput = this.handleInput.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    e.stopPropagation();
     if (this.state.find !== "") {
-      return this.props.searchBusinesses(this.state.find);
-    } else if (this.state.near !== "") {
-      return this.props.searchBusinesses(this.state.near);
-    }
+      return this.props.searchBusinesses(this.state.find).then((e) => {
+        const that = this;
+        // debugger
+        that.props.history.push("businesses/search");
+        // return <Redirect to="businesses/search" />
+      });
+    } 
   }
 
   handleInput(field) {
@@ -85,4 +91,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(SearchForm)
+export default withRouter(connect(null, mapDispatchToProps)(SearchForm));

@@ -5,7 +5,7 @@ const searchesReducer = (state = {}, action) => {
   let newState;
   switch (action.type) {
     case RECEIVE_BUSINESS_SEARCH:
-      return action.response.businesses;
+      return action.businesses;
     default:
       return state;
   }

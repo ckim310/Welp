@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBarRightContainer from './nav_bar_right_container';
-import SearchForm from '../home_page/search_form';
+import NavBarRightContainer from '../nav_bar/nav_bar_right_container';
+import SearchForm from './search_form';
 import HeaderForm from '../session_form/header_form';
 
 const SearchNavBar = props => {
