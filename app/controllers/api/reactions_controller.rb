@@ -7,7 +7,7 @@ class Api::ReactionsController < ApplicationController
     if @reaction.save
       @review = Review.find(reaction_params[:review_id])
 
-      render "api/reviews/show"
+      render "api/reactions/show"
     else
       render json: @reaction.errors.full_messages, status: :unprocessable_entity
     end
@@ -19,7 +19,7 @@ class Api::ReactionsController < ApplicationController
 
     if @reaction
       @reaction.destroy
-      render "api/reviews/show"
+      render "api/reactions/show"
     else
       render json: ['Unable to find reaction'], status: 422
     end

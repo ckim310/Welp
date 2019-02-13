@@ -26,6 +26,7 @@ export default () => {
         <Route exact path="/businesses/search" component={SearchIndex} />
         <ProtectedRoute path="/businesses/:businessId/reviews/:reviewId/edit" component={ReviewFormEdit} />
         <ProtectedRoute exact path="/businesses/:businessId/reviews" component={ReviewFormNew} />
+        {/* <ProtectedRoute exact path="/businesses/:businessId/reviews/:reviewId/reactions" component={ReviewFormNew} /> */}
 
         <footer className="main-footer-wrapper">
           <Footer />
