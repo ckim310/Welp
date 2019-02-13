@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :reviews, only: [:create, :update] do
         resources :reactions, only: [:create, :destroy]
       end
+      resources :reactions, only: [:index]
       get "search", on: :collection
     end
     resources :reviews, only: [:destroy]

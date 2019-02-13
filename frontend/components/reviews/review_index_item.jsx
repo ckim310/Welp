@@ -1,7 +1,7 @@
 import React from 'react';
 import { formatDate } from '../../util/date_util';
 import { Link, Route } from 'react-router-dom';
-import ReviewFormEdit from './review_form_edit_container';
+import ReactionForm from '../reactions/reaction_form';
 
 class ReviewIndexItem extends React.Component {
   constructor(props) {
@@ -41,25 +41,36 @@ class ReviewIndexItem extends React.Component {
             return rating;
         }
       };
-      let trash;
-      if (review.authorId === currentUserId) {
-        trash = <button className="delete" onClick={this.handleDelete}>
-          <i className="fas fa-trash-alt"></i>
-          </button>;
-      } else {
-        trash = null
-      }
 
+      let trash;
       let update;
+      let reactions;
       if (review.authorId === currentUserId) {
         update = <button className="update">
           <Link to={`/businesses/${review.business_id}/reviews/${review.id}/edit`}>
             <i className="fas fa-sync-alt"></i>
           </Link>
+        </button>;
+        trash = <button className="delete" onClick={this.handleDelete}>
+          <i className="fas fa-trash-alt"></i>
           </button>;
+        reactions = null;
       } else {
-        update = null
+        update = null;
+        trash = null;
+        reactions = <ReactionForm props={this.props}/>
       }
+
+      // let update;
+      // if (review.authorId === currentUserId) {
+      //   update = <button className="update">
+      //     <Link to={`/businesses/${review.business_id}/reviews/${review.id}/edit`}>
+      //       <i className="fas fa-sync-alt"></i>
+      //     </Link>
+      //     </button>;
+      // } else {
+      //   update = null
+      // }
     
 
     return (
@@ -122,6 +133,9 @@ class ReviewIndexItem extends React.Component {
             </div>
 
             <div className="review-footer">
+              <div className="review-reactions">
+                {reactions}
+              </div>
               <div className="review-footer-item">
                 <div className="review-trash">
                   {trash}

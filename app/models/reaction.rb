@@ -11,8 +11,7 @@
 #
 
 class Reaction < ApplicationRecord
-  validates :reaction_type, inclusion: { in: %(useful funny cool)}
-  validates :user_id, uniqueness: { scope: :reaction_type }
+  validates :reaction_type, inclusion: { in: %w(useful funny cool)}
 
   belongs_to :user
 

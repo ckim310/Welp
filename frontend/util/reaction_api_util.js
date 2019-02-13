@@ -12,3 +12,10 @@ export const deleteReaction = (businessId, reviewId, id) => {
     url: `api/businesses/${businessId}/reviews/${reviewId}/reactions/${id}`
   });
 };
+
+export const fetchReactions = (businessId) => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/businesses/${businessId}/reactions`
+  });
+};

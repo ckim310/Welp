@@ -1,0 +1,1 @@
+json.extract! reaction, :id, :reaction_type, :review_id, :user_id

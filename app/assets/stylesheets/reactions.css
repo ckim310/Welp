@@ -1,0 +1,5 @@
+.reaction-useful button.reaction-show, .reaction-funny button.reaction-show, .reaction-cool button.reaction-show {
+  background-color: black;
+  color: white;
+  pointer-events: none;
+}

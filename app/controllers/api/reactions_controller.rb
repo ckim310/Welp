@@ -14,6 +14,12 @@ class Api::ReactionsController < ApplicationController
 
   end
 
+  def index
+    @business = Business.find(params[:business_id])
+    @reviews = @business.reviews
+    render "api/reactions/index"
+  end
+
   def destroy
     @reaction = current_user.reactions.find(params[:id])
 
