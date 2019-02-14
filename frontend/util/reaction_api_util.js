@@ -13,9 +13,9 @@ export const deleteReaction = (businessId, reviewId, id) => {
   });
 };
 
-export const fetchReactions = (businessId) => {
+export const fetchReactions = (businessId, reviewId) => {
   return $.ajax({
     method: 'GET',
-    url: `api/businesses/${businessId}/reactions`
+    url: `api/businesses/${businessId}/reviews/${reviewId}/reactions`
   });
 };

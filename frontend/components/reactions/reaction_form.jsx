@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createReaction, fetchReactions } from '../../actions/reaction_actions';
+import { Redirect } from 'react-router-dom';
 
 class ReactionForm extends React.Component {
   constructor(props) {
@@ -8,16 +9,11 @@ class ReactionForm extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount() {
-    const { businessId, reviewId } = this.props;
-    this.props.fetchReactions(businessId);
-  }
-
   handleClick(reactionType) {
     return (e) => {
       e.preventDefault();
-
       e.currentTarget.classList.add("reaction-show");
+
       const { businessId, reviewId, currentUserId } = this.props;
       const reaction = {
         reaction_type: reactionType,
@@ -36,50 +32,48 @@ class ReactionForm extends React.Component {
     let funnyCount = 0;
     let coolCount = 0;
 
+    let useful = [];
+    let funny = [];
+    let cool = [];
+
     let usefulClicked = "not-clicked";
     let funnyClicked = "not-clicked";
     let coolClicked = "not-clicked";
     
     let reactionText;
     reactions.forEach(reaction => {
-      // usefulCount = 0;
-      // funnyCount = 0;
-      // coolCount = 0;
-      if (reaction.reviewId === reviewId && reaction.type === "useful") {
-        usefulCount += 1;
-      }
-      if (reaction.reviewId === reviewId && reaction.type === "funny") {
-        funnyCount += 1;
-      }
-      if (reaction.reviewId === reviewId && reaction.type === "cool") {
-        coolCount += 1;
-      }
-      // if (reaction.reviewId === reviewId) {
-      //   usefulCount = 0;
-      //   funnyCount = 0;
-      //   coolCount = 0;
-      //   if (reaction.type === "useful") {
-      //     usefulCount += 1;
-      //   }
-      //   if (reaction.type === "funny") {
-      //     funnyCount += 1;
-      //   }
-      //   if (reaction.type === "cool") {
-      //     coolCount += 1;
-      //   } 
-      // }
 
+      
       if (reaction.userId === currentUserId && reaction.reviewId === reviewId) {
         if (reaction.type === "useful") {
           usefulClicked = "reaction-show";
-          const reactionBtn = document.getElementsByClassName("reaction-show");
-          reactionBtn.disabled = true;
         } else if (reaction.type === "funny") {
           funnyClicked = "reaction-show";
         } else if (reaction.type === "cool") {
           coolClicked = "reaction-show";
         }
       }
+
+      if (reaction.reviewId === reviewId) {
+        if (reaction.type === "useful") {
+          useful.push(reaction.id);
+        } else if (reaction.type === "funny") {
+          funny.push(reaction.id);
+        } else if (reaction.type === "cool") {
+          cool.push(reaction.id);
+        }
+
+        if (useful.length > 0) {
+          usefulCount = useful.length;
+        }
+        if (funny.length > 0) {
+          funnyCount = funny.length;
+        }
+        if (cool.length > 0) {
+          coolCount = cool.length;
+        }
+      }
+  
     });
 
   // debugger
@@ -110,6 +104,7 @@ class ReactionForm extends React.Component {
               <button className={usefulClicked} onClick={this.handleClick('useful')}>
                 <i className="fas fa-lightbulb"></i>
                 <span className="reaction-text">Useful</span>
+                <span className="reaction-count">{usefulCount}</span>
               </button>
             </div>
 
@@ -117,6 +112,7 @@ class ReactionForm extends React.Component {
               <button className={funnyClicked} onClick={this.handleClick('funny')}>
                 <i className="far fa-grin-tears"></i>
                 <span className="reaction-text">Funny</span>
+                <span className="reaction-count">{funnyCount}</span>
               </button>
             </div>
 
@@ -124,6 +120,7 @@ class ReactionForm extends React.Component {
               <button className={coolClicked} onClick={this.handleClick('cool')}>
                 <i className="far fa-grin-stars"></i>
                 <span className="reaction-">Cool</span>
+                <span className="reaction-count">{coolCount}</span>
               </button>
             </div>
           </div>

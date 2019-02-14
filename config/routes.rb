@@ -7,9 +7,9 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :businesses, only: [:create, :index, :show] do
       resources :reviews, only: [:create, :update] do
-        resources :reactions, only: [:create, :destroy]
+        resources :reactions, only: [:create, :destroy, :index]
       end
-      resources :reactions, only: [:index]
+      # resources :reactions, only: [:index]
       get "search", on: :collection
     end
     resources :reviews, only: [:destroy]

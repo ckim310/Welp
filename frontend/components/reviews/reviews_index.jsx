@@ -6,10 +6,24 @@ class ReviewIndex extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    const { businessId, reviews } = this.props;
+    if (reviews) {
+      reviews.forEach(review => {
+        this.props.fetchReactions(businessId, review.id);
+      });
+    }
+  }
+
   render() {
 
     const reviews = this.props.reviews.map((review, idx) => {
-      return <ReviewIndexItem review={review} currentUserId={this.props.currentUserId} key={idx} trashReview={this.props.trashReview} updateReview={this.props.updateReview}/>
+      return <ReviewIndexItem review={review}
+      currentUserId={this.props.currentUserId}
+      key={idx}
+      trashReview={this.props.trashReview}
+      updateReview={this.props.updateReview}
+      />
     });
 
     return (

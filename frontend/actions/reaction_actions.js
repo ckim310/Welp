@@ -37,9 +37,9 @@ export const createReaction = (businessId, reviewId, reaction) => {
   };
 };
 
-export const fetchReactions = (businessId) => {
+export const fetchReactions = (businessId, reviewId) => {
   return dispatch => {
-    return ReactionAPIUtil.fetchReactions(businessId).then(reactions =>{
+    return ReactionAPIUtil.fetchReactions(businessId, reviewId).then(reactions =>{
       return dispatch(receiveReactions(reactions));
     },
     (errors) => {

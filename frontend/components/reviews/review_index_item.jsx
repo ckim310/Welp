@@ -45,20 +45,22 @@ class ReviewIndexItem extends React.Component {
       let trash;
       let update;
       let reactions;
-      if (review.authorId === currentUserId) {
-        update = <button className="update">
-          <Link to={`/businesses/${review.business_id}/reviews/${review.id}/edit`}>
-            <i className="fas fa-sync-alt"></i>
-          </Link>
-        </button>;
-        trash = <button className="delete" onClick={this.handleDelete}>
-          <i className="fas fa-trash-alt"></i>
+      if(currentUserId) {
+        if (review.authorId === currentUserId) {
+          update = <button className="update">
+            <Link to={`/businesses/${review.business_id}/reviews/${review.id}/edit`}>
+              <i className="fas fa-sync-alt"></i>
+            </Link>
           </button>;
-        reactions = null;
-      } else {
-        update = null;
-        trash = null;
-        reactions = <ReactionForm props={this.props}/>
+          trash = <button className="delete" onClick={this.handleDelete}>
+            <i className="fas fa-trash-alt"></i>
+            </button>;
+          reactions = null;
+        } else {
+          update = null;
+          trash = null;
+          reactions = <ReactionForm props={this.props}/>
+        }
       }
 
       // let update;
