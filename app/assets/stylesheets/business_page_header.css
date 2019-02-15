@@ -54,7 +54,7 @@
 
 .avg-rating {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .reviews-count {

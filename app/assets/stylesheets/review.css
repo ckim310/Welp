@@ -43,6 +43,7 @@ ul.review-index-list {
 .reviewer-info-container {
   line-height: 18px;
   font-size: 14px;
+  pointer-events: none;
 }
 
 .reviewer-name {
@@ -80,6 +81,12 @@ ul.review-index-list {
   border-radius: 2px;
 }
 
+/* REVIEW CONTAINER */
+.review-content {
+  padding: 0 12px 6px 0;
+  pointer-events: none;
+}
+
 /* REVIEW RATING */
 .review-rating {
   display: flex;
@@ -88,14 +95,17 @@ ul.review-index-list {
 
 
 /* review time */
-.created-at {
+.updated-at {
   font-size: 14px;
   color: #666;
+  align-self: center;
+  margin-left: -6px;
 }
 
 /* REVIEW BODY */
 .review-body {
   font-size: 14px;
+  margin-bottom: 6px;
 }
 
 /* REVIEW FOOTER */
@@ -110,7 +120,16 @@ ul.review-index-list {
   color: #999;
 }
 
-.review-footer button:hover, .review-footer button:hover a {
+.review-footer button.update,
+.review-footer button.delete {
+ font-size: 14px;
+ border: 1px solid #ccc;
+ border-radius: 3px;
+ cursor: pointer;
+}
+
+.review-footer button.update:hover,
+.review-footer button.delete:hover {
   color: black;
   box-shadow: 0 1px 1px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.5);
   background: linear-gradient(#fff, #eee)

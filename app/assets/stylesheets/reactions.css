@@ -1,5 +1,49 @@
 .reaction-useful button.reaction-show, .reaction-funny button.reaction-show, .reaction-cool button.reaction-show {
-  background-color: black;
+  background: #0097ec;
+  border-color: #007abe;
   color: white;
+  text-shadow: rgba(0,0,0,0.2) 0 -1px;
+}
+
+.reaction-useful button.reaction-show:hover,
+.reaction-funny button.reaction-show:hover,
+.reaction-cool button.reaction-show:hover {
+  background: #0097ec;
+  color: white;
+  box-shadow: none;
+}
+
+.reactions-container {
+  font-weight: bold;
+  font-size: 12px;
+  color: #666;
+}
+
+.reactions-buttons-container {
+  display: flex;
+}
+
+.reactions-buttons-container button {
+  cursor: pointer;
+}
+
+.reactions-buttons-container button {
+  border-radius: 3px;
+  margin-right: 6px;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 5px 8px;
+}
+
+.reaction-text-content {
+  margin-bottom: 6px;
   pointer-events: none;
+}
+
+.reactions-buttons-container button i {
+  font-size: 15px;
+}
+
+.reactions-buttons-container button .reaction-text {
+  margin: 0 3px;
 }
