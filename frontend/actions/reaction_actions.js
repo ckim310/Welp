@@ -19,6 +19,13 @@ const receiveReactions = reactions => {
   };
 };
 
+const deleteReaction = reactionId => {
+  return {
+    type: DELETE_REACTION,
+    reactionId
+  };
+};
+
 const receiveReactionErrors = errors => {
   return {
     type: RECEIVE_REACTION_ERRORS,
@@ -44,6 +51,14 @@ export const fetchReactions = (businessId, reviewId) => {
     },
     (errors) => {
       return dispatch(receiveReactionErrors(errors));
+    });
+  };
+};
+
+export const removeReaction = (businessId, reviewId, id) => {
+  return dispatch => {
+    return ReactionAPIUtil.deleteReaction(businessId, reviewId, id).then((reaction) => {
+      return dispatch(deleteReaction(reaction.id));
     });
   };
 };

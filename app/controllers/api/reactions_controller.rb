@@ -21,11 +21,14 @@ class Api::ReactionsController < ApplicationController
   end
 
   def destroy
+    @business = Business.find(params[:business_id])
+    @reviews = @business.reviews
+
     @reaction = current_user.reactions.find(params[:id])
 
     if @reaction
       @reaction.destroy
-      render "api/reactions/show"
+      render "api/reactions/index"
     else
       render json: ['Unable to find reaction'], status: 422
     end

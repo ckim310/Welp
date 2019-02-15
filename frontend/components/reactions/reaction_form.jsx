@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createReaction, fetchReactions } from '../../actions/reaction_actions';
+import { createReaction, fetchReactions, removeReaction } from '../../actions/reaction_actions';
 import { Redirect } from 'react-router-dom';
 
 class ReactionForm extends React.Component {
@@ -12,16 +12,25 @@ class ReactionForm extends React.Component {
   handleClick(reactionType) {
     return (e) => {
       e.preventDefault();
-      e.currentTarget.classList.add("reaction-show");
-
       const { businessId, reviewId, currentUserId } = this.props;
       const reaction = {
         reaction_type: reactionType,
         user_id: currentUserId,
         review_id: reviewId,
       };
-      this.props.createReaction(businessId, reviewId, reaction);
-      this.props.fetchReactions(businessId);
+
+      if (e.currentTarget.classList[0] === "reaction-show") {
+        e.currentTarget.classList.remove("reaction-show");
+        const reactionId = parseInt(e.currentTarget.className);
+        this.props.removeReaction(businessId, reviewId, reactionId).then(() => {
+          this.props.fetchReactions(businessId, reviewId);
+        });
+      } else {
+        e.currentTarget.classList.add("reaction-show");
+        this.props.createReaction(businessId, reviewId, reaction).then(() => {
+          this.props.fetchReactions(businessId, reviewId);
+        });
+      }
     };
   }
 
@@ -42,15 +51,13 @@ class ReactionForm extends React.Component {
     
     let reactionText;
     reactions.forEach(reaction => {
-
-      
       if (reaction.userId === currentUserId && reaction.reviewId === reviewId) {
         if (reaction.type === "useful") {
-          usefulClicked = "reaction-show";
+          usefulClicked = `reaction-show ${reaction.id}`;
         } else if (reaction.type === "funny") {
-          funnyClicked = "reaction-show";
+          funnyClicked = `reaction-show ${reaction.id}`;
         } else if (reaction.type === "cool") {
-          coolClicked = "reaction-show";
+          coolClicked = `reaction-show ${reaction.id}`;
         }
       }
 
@@ -76,12 +83,21 @@ class ReactionForm extends React.Component {
   
     });
 
-  // debugger
 
     if ( usefulCount !== 0 || funnyCount !== 0 || coolCount !== 0) {
-      reactionText = null;
+      const totalCount = usefulCount + funnyCount + coolCount;
+
+      if (totalCount === 1) {
+        reactionText = <div className="reaction-text-content">
+          {totalCount} vote for this review
+          </div>
+      } else {
+        reactionText = <div className="reaction-text-content">
+          {totalCount} votes for this review
+          </div>
+      }
     } else {
-      reactionText = <div className="reaction-text">
+      reactionText = <div className="reaction-text-content">
         Was this review...?
         </div>
       usefulCount = null;
@@ -119,17 +135,12 @@ class ReactionForm extends React.Component {
             <div className="reaction-cool">
               <button className={coolClicked} onClick={this.handleClick('cool')}>
                 <i className="far fa-grin-stars"></i>
-                <span className="reaction-">Cool</span>
+                <span className="reaction-text">Cool</span>
                 <span className="reaction-count">{coolCount}</span>
               </button>
             </div>
           </div>
 
-          <div className="reaction-text-count">
-            {usefulCount} useful
-            {funnyCount} funny
-            {coolCount} cool
-          </div>
         </div>
       </div>
     )
@@ -154,6 +165,7 @@ const mapDispatchToProps = dispatch => {
   return {
     createReaction: (businessId, reviewId, reaction) => dispatch(createReaction(businessId, reviewId, reaction)),
     fetchReactions: (businessId, reviewId) => dispatch(fetchReactions(businessId, reviewId)),
+    removeReaction: (businessId, reviewId, id) => dispatch(removeReaction(businessId, reviewId, id)),
   };
 }
 
