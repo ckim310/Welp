@@ -24,9 +24,20 @@ export const clearSearchErrors = () => {
   };
 };
 
-export const searchBusinesses = query => {
+export const searchBusinessesFind = (queryFind, queryNear) => {
   return dispatch => {
-    return SearchAPIUtil.searchBusinesses(query).then(response => {
+    return SearchAPIUtil.searchBusinessesFind(queryFind, queryNear).then(response => {
+      return dispatch(receiveBusinessSearch(response.businesses));
+    },
+    (errors) => {
+      return dispatch(receiveSearchErrors(errors));
+    });
+  };
+};
+
+export const searchBusinessesNear = queryNear => {
+  return dispatch => {
+    return SearchAPIUtil.searchBusinessesNear(queryNear).then(response => {
       return dispatch(receiveBusinessSearch(response.businesses));
     },
     (errors) => {

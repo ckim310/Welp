@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchBusinesses, clearSearchErrors } from '../../actions/search_actions';
+import { searchBusinessesFind, clearSearchErrors, searchBusinessesNear } from '../../actions/search_actions';
 import { Redirect, withRouter } from 'react-router-dom';
 
 class SearchForm extends React.Component {
@@ -8,7 +8,7 @@ class SearchForm extends React.Component {
     super(props);
     this.state = {
       find: "",
-      near: "",
+      near: "New York",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
@@ -23,8 +23,8 @@ class SearchForm extends React.Component {
 
     if ((e.target.className === "btn search-submit") || (e.target.className === "fas fa-search fa-2x")) {
       e.preventDefault();
-      if (this.state.find !== "") {
-        return this.props.searchBusinesses(this.state.find).then((e) => {
+      if (this.state.find !== "" && this.state.near !== "") {
+        return (this.props.searchBusinessesFind(this.state.find, this.state.near)).then((e) => {
           const that = this;
 
           if (that.props.history.location.pathname !== "/businesses/search") {
@@ -32,7 +32,8 @@ class SearchForm extends React.Component {
           }
         });
       } else if (this.state.near !== "") {
-        return this.props.searchBusinesses(this.state.near).then((e) => {
+        return this.props.searchBusinessesNear(this.state.near).then((e) => {
+
           const that = this;
 
           if (that.props.history.location.pathname !== "/businesses/search") {
@@ -93,7 +94,8 @@ class SearchForm extends React.Component {
                       className="near"
                       value={this.state.near}
                       onChange={this.handleInput('near')}
-                      placeholder="address or city"/>
+                      placeholder="address or city"
+                      />
                   </div>
                 </div>
               </label>
@@ -122,7 +124,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    searchBusinesses: query => dispatch(searchBusinesses(query)),
+    searchBusinessesFind: (queryFind, queryNear) => dispatch(searchBusinessesFind(queryFind, queryNear)),
+    searchBusinessesNear: queryNear => dispatch(searchBusinessesNear(queryNear)),
     clearSearchErrors: () => dispatch(clearSearchErrors()),
   }
 }

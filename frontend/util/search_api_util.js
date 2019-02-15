@@ -1,7 +1,15 @@
-export const searchBusinesses = query => {
+export const searchBusinessesFind = (queryFind, queryNear) => {
   return $.ajax({
     method: 'GET',
     url: 'api/businesses/search',
-    data: { query }
+    data: { queryFind, queryNear }
+  });
+};
+
+export const searchBusinessesNear = queryNear => {
+  return $.ajax({
+    method: 'GET',
+    url: 'api/businesses/search',
+    data: { queryNear }
   });
 };

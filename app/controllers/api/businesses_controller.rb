@@ -24,13 +24,27 @@ class Api::BusinessesController < ApplicationController
   end
 
   def search
-    @search_query = params[:query].downcase
+
+    if params[:queryFind] && params[:queryNear]
+      @find_query = params[:queryFind].downcase
+      @near_query = params[:queryNear].downcase
+
       @businesses = Business.all.select do |business|
         name = business.name.downcase
         city = business.city.downcase
         address = business.address.downcase
-        (name.include?(@search_query) || (city.include?(@search_query)) || address.include?(@search_query))
+        (name.include?(@find_query)) && (city.include?(@near_query) || address.include?(@near_query))
       end
+    elsif params[:queryNear]
+      @near_query = params[:queryNear].downcase
+
+      @businesses = Business.all.select do |business|
+        city = business.city.downcase
+        address = business.address.downcase
+        (city.include?(@near_query) || address.include?(@near_query))
+      end
+    end
+
 
       if @businesses != []
         render :index
