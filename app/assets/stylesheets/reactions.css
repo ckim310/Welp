@@ -47,3 +47,19 @@
 .reactions-buttons-container button .reaction-text {
   margin: 0 3px;
 }
+
+.reactions-buttons-container button.not-clicked .reaction-text,
+.reactions-buttons-container button.not-clicked i {
+  color: #666;
+}
+
+.reactions-buttons-container button.not-clicked .reaction-count {
+  font-weight: 400;
+}
+
+
+/* reaction button when not clickec */
+button.not-clicked:hover {
+  background-color: #f5f5f5;
+  transition: all 0.6s;
+}
