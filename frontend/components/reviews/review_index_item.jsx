@@ -63,18 +63,6 @@ class ReviewIndexItem extends React.Component {
         }
       }
 
-      // let update;
-      // if (review.authorId === currentUserId) {
-      //   update = <button className="update">
-      //     <Link to={`/businesses/${review.business_id}/reviews/${review.id}/edit`}>
-      //       <i className="fas fa-sync-alt"></i>
-      //     </Link>
-      //     </button>;
-      // } else {
-      //   update = null
-      // }
-    
-
     return (
       <li className="review-list-item">
 
