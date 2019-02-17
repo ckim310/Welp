@@ -13,9 +13,32 @@ class Map extends React.Component {
         center: position,
         zoom: 15
       };
-    } else {
+    } else if (this.props.searches) {
+      const { searches } = this.props;
+      const position = new google.maps.LatLng(searches[0].latitude, searches[0].longitude);
       mapOptions= {
-        center: { lat: 40.742829, lng: -73.986679 },
+        center: position,
+        zoom: 13,
+        zoomControl: true,
+        zoomControlOptions: {
+          position: google.maps.ControlPosition.LEFT_TOP,
+          style: google.maps.ZoomControlStyle.HORIZONTAL,
+        },
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl: false
+      };
+    } else {
+      const { businesses } = this.props;
+      let position;
+      if (businesses.length !== 0) {
+        position = new google.maps.LatLng(businesses[0].latitude, businesses[0].longitude) || { lat: 40.742829, lng: -73.986679 };
+      } else {
+        position = { lat: 40.742829, lng: -73.986679 };
+      }
+
+      mapOptions= {
+        center: position,
         zoom: 13,
         zoomControl: true,
         zoomControlOptions: {
@@ -34,6 +57,10 @@ class Map extends React.Component {
 
     if (this.props.singleBusiness) {
       this.props.fetchBusiness(this.props.business.id);
+    } else if (this.props.searches) {
+      this.props.searches.forEach(search =>
+        this.MarkerManager.createMarkerFromBusiness(search)
+      );
     } else {
       this.MarkerManager.updateMarkers(this.props.businesses);
     }
@@ -43,6 +70,8 @@ class Map extends React.Component {
     if (this.props.singleBusiness) {
       const targetBusiness = this.props.business;
       this.MarkerManager.updateMarkers([targetBusiness]);
+    } else if (this.props.searches) {
+      this.MarkerManager.updateMarkers(this.props.searches);
     } else {
       this.MarkerManager.updateMarkers(this.props.businesses);
     }
@@ -56,8 +85,9 @@ class Map extends React.Component {
   }
 }
 
-const mapStateToProps = ({ entities }) => {
-  const businesses = Object.values(entities.businesses)
+const mapStateToProps = (state) => {
+  const businesses = Object.values(state.entities.businesses);
+
   return {
     businesses,
   }

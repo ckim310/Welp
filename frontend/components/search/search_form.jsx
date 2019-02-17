@@ -28,9 +28,9 @@ class SearchForm extends React.Component {
           const that = this;
 
           if (that.props.match.path === "/businesses/:businessId") {
-            that.props.history.push("search");
+            that.props.history.push(`search?queryFind=${this.state.find}&queryNear=${this.state.near}`);
           } else if (that.props.history.location.pathname !== "/businesses/search") {
-            that.props.history.push("businesses/search");
+            that.props.history.push(`businesses/search?queryFind=${this.state.find}&queryNear=${this.state.near}`);
           }
         });
       } else if (this.state.near !== "") {
@@ -39,7 +39,7 @@ class SearchForm extends React.Component {
           const that = this;
 
           if (that.props.history.location.pathname !== "/businesses/search") {
-            that.props.history.push("businesses/search");
+            that.props.history.push(`businesses/search?queryNear=${this.state.near}`);
           }
         });
       }

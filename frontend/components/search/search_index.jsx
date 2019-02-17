@@ -33,6 +33,7 @@ class SearchIndex extends React.Component {
         <div className="business-index-content">
           <ul className="businesses-list">
             <div className="search-header-container">
+
               <div className="search-header-text">
                 {errors}
               </div>
@@ -41,7 +42,7 @@ class SearchIndex extends React.Component {
           </ul>
 
           <div className="index-map">
-            <Map />
+            <Map searches={this.props.searches}/>
           </div>
         </div>
 

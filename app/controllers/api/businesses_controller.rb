@@ -46,11 +46,11 @@ class Api::BusinessesController < ApplicationController
     end
 
 
-      if @businesses != []
-        render :index
-      else
-        render json: ['No existing businesses, search again'], status: 422
-      end
+    if @businesses != []
+      render "api/businesses/index"
+    else
+      render json: ['No existing businesses, search again'], status: 422
+    end
 
   end
 

@@ -23,7 +23,7 @@ export default () => {
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <Route exact path="/businesses" component={BusinessIndexContainer} />
         <Route exact path="/businesses/:businessId" component={BusinessPage} />
-        <Route exact path="/businesses/search" component={SearchIndex} />
+        <Route path="/businesses/search" component={SearchIndex} />
         <ProtectedRoute path="/businesses/:businessId/reviews/:reviewId/edit" component={ReviewFormEdit} />
         <ProtectedRoute exact path="/businesses/:businessId/reviews" component={ReviewFormNew} />
         {/* <ProtectedRoute exact path="/businesses/:businessId/reviews/:reviewId/reactions" component={ReviewFormNew} /> */}
