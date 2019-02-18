@@ -43,9 +43,8 @@ class Api::BusinessesController < ApplicationController
         address = business.address.downcase
         (city.include?(@near_query) || address.include?(@near_query))
       end
-    # elsif !params[:queryFind] && !params[:queryNear]
-    #   debugger
-    #   @businesses = Business.all
+    elsif !params[:queryFind].present? && !params[:queryNear].present?
+      @businesses = Business.all
     end
 
     if @businesses != []

@@ -49,7 +49,10 @@ class SearchForm extends React.Component {
   handleInput(field) {
     return (e) => {
       this.setState({ [field]: e.target.value });
-      this.props.clearSearchErrors();
+
+      if (this.props.errors.length !== 0) {
+        this.props.clearSearchErrors();
+      }
     };
   }
 
