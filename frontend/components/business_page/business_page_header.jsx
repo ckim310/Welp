@@ -82,13 +82,6 @@ class BusinessPageHeader extends React.Component {
                           {business.reviewsId.length} Reviews
                         </div>
                       </div>
-
-                      <div className="ratings-details">
-                        <Link to={`/businesses/${business.id}`}>
-                          <i className="fas fa-signal"></i>
-                          Details
-                        </Link>
-                      </div>
                     </div>
 
                     <div className="price-category">
