@@ -50,7 +50,7 @@ class LoginForm extends React.Component {
     let errorX;
     let errorShow;
     if (this.props.errors.length > 0) {
-      errorX = <div className="error-x" onClick={this.toggleErrorShow}>&times;</div>
+      errorX = <span className="error-x" onClick={this.toggleErrorShow}>&times;</span>
       errorShow = "error-show"
     } else {
       errorShow = "error-hidden"
@@ -66,7 +66,10 @@ class LoginForm extends React.Component {
             <div className="session-form-wrapper">
               <ul className="form-group-errors">
                 <div className={`form-errors ${errorShow}`}>
-                  {errors}
+                  <div className="error-list">
+                    {errors}
+                  </div>
+                  
                   {errorX}
                 </div>
               </ul>

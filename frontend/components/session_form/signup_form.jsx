@@ -18,6 +18,7 @@ class SignupForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
+    this.toggleErrorShow = this.toggleErrorShow.bind(this);
   }
 
   componentWillUnmount() {
@@ -42,11 +43,25 @@ class SignupForm extends React.Component {
     this.props.demoLogin(user);
   }
 
+  toggleErrorShow(e) {
+    e.preventDefault();
+    this.props.clearSessionErrors();
+  }
+
   render() {
 
     const errors = this.props.errors.map((err, idx) => {
       return <li key={idx}>{err}</li>
     });
+
+    let errorX;
+    let errorShow;
+    if (this.props.errors.length > 0) {
+      errorX = <span className="error-x" onClick={this.toggleErrorShow}>&times;</span>
+      errorShow = "error-show"
+    } else {
+      errorShow = "error-hidden"
+    }
 
     return (
       <div className="container-main">
@@ -56,7 +71,13 @@ class SignupForm extends React.Component {
             <div className="session-form-wrapper">
             
               <ul className="form-group-errors">
-                {errors}
+                <div className={`form-errors ${errorShow}`}>
+                  <div className="error-list">
+                    {errors}
+                  </div>
+
+                  {errorX}
+                </div>
               </ul>
 
               <div className="session-form signup">

@@ -109,11 +109,12 @@ select {
 .session-form {
   width: 100%;
   text-align: center;
-  margin: auto;
+  margin: 10px auto 0;
   position: relative;
   bottom: 0;
   padding: 0 40px;
   box-sizing: border-box;
+  /* margin-top: 10px; */
 }
 
 div.login {
@@ -209,6 +210,7 @@ ul.form-group-errors {
 
 .form-errors {
   display: flex;
+  /* flex-direction: column; */
   min-height: 60px;
 }
 
@@ -216,18 +218,28 @@ ul.form-group-errors {
   justify-content: space-between;
   background: #fcd6d3;
   border-radius: 3px;
+  min-width: max-content;
+}
+
+.error-list {
+  margin: 10px 0;
+  align-self: center;
 }
 
 .form-errors li {
   margin: auto 24px;
   color: #333;
+  display: flex;
+  flex-direction: column;
 }
 
 .error-x {
   color: #666;
-  margin: auto 18px;
+  margin-top: 10px;
+  margin-right: 18px;
   cursor: pointer;
   opacity: 0.5;
+  text-align: end;
 }
 
 .error-x:hover {
