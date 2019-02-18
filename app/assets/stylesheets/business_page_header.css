@@ -302,3 +302,29 @@
   width: 250px;
   height: 250px;
 }
+
+/* pic caption
+.pic-caption {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  width: 250px;
+  height: 48px;
+  color: white;
+  z-index: 105;
+}
+
+.pics-content div img:hover ~ .pic-caption {
+  display: block;
+}
+
+.pics-content div .pic-caption:hover {
+  display: block;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  width: 220px;
+  height: 48px;
+  color: white;
+  z-index: 105;
+  bottom: 31px
+} */

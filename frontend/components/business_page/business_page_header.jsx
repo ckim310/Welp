@@ -194,15 +194,22 @@ class BusinessPageHeader extends React.Component {
                     <div className="pics-container">
                       <div className="pics-content">
                         <div className="pic">
-                          <img id="first" src="./food.jpg" alt="food"/>
+                          <img id="first" src="./salad.png" alt="salad"/>
+                          {/* <div className="pic-caption">Poke bowls by
+                            <a href="https://www.instagram.com/euneats/">
+                              <i className="fab fa-instagram"></i>euneats
+                            </a>
+                          </div> */}
                         </div>
 
                         <div className="pic-middle">
-                          <img id="middle" src="./gongcha.png" alt="gongcha"/>
+                          <img id="middle" src="./bear-cookie.png" alt="cookie"/>
+                          {/* <div className="pic-caption middle-pic-caption">Cookie by euneats</div> */}
                         </div>
 
                         <div className="pic">
-                          <img id="last" src="./sushi.jpg" alt="sushi"/>
+                          <img id="last" src="./buredo.png" alt="buredo"/>
+                          {/* <div className="pic-caption">Buredo by euneats</div> */}
                         </div>
                       </div>
                     </div>
