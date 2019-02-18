@@ -174,7 +174,12 @@ class BusinessPageHeader extends React.Component {
                           </div>
                         </li>
 
-                        <li className="text-link">website</li>
+                        <li className="text-link">
+                          <div className="map-text-icon">
+                            <i className="fas fa-external-link-alt"></i>
+                          </div>
+                          website
+                        </li>
                       </ul>
                     </div>
                   </div>
