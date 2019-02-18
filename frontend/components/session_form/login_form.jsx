@@ -11,6 +11,7 @@ class LoginForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
+    this.demoLoginHelper = this.demoLoginHelper.bind(this);
     this.toggleErrorShow = this.toggleErrorShow.bind(this);
   }
 
@@ -38,7 +39,34 @@ class LoginForm extends React.Component {
   demoLogin(e) {
     e.preventDefault();
     const user = { email: "demo@email.com", password: "password" };
-    this.props.demoLogin(user);
+    const emailArray = user.email.split('');
+    const passwordArray = user.password.split('');
+
+    this.setState({ email: '', password: ''}, () => {
+      this.demoLoginHelper(emailArray, passwordArray);
+    });
+  }
+
+  demoLoginHelper(emailArray, passwordArray) {
+    if (emailArray.length > 0) {
+      this.setState({
+        email: this.state.email + emailArray.shift()
+      }, () => {
+        window.setTimeout(() =>
+          this.demoLoginHelper(emailArray, passwordArray), 75);
+        }
+      );
+    } else if (passwordArray.length > 0) {
+      this.setState({
+        password: this.state.password + passwordArray.shift()
+      }, () => {
+        window.setTimeout(() =>
+          this.demoLoginHelper(emailArray, passwordArray), 75);
+        }
+      );
+    } else {
+      this.props.demoLogin(this.state);
+    }
   }
 
   render() {
