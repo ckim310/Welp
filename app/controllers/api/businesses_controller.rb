@@ -43,11 +43,16 @@ class Api::BusinessesController < ApplicationController
         address = business.address.downcase
         (city.include?(@near_query) || address.include?(@near_query))
       end
-    elsif !params[:queryFind] && !params[:queryNear]
-      @businesses = Business.all
+    # elsif !params[:queryFind] && !params[:queryNear]
+    #   debugger
+    #   @businesses = Business.all
     end
 
-    render "api/businesses/index"
+    if @businesses != []
+      render "api/businesses/index"
+    else
+      render json: ["No existing businesses, search again"], status: 422
+    end
 
   end
 

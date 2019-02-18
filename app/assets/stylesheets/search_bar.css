@@ -80,7 +80,7 @@ button.search-submit {
 }
 
 /* sub nav bar when not on businesses/search */
-.businesses-list-container .search-form-wrapper .search-errors-list {
+.search-nav-bar-container .search-nav-bar-content .search-nav-bar-item .search-form-wrapper .search-errors-list {
   background-color: white;
   border-radius: 0 0 4px 4px;
   padding: 8px 396px 10px 45px;
