@@ -15,13 +15,14 @@ const SubNavBar = (props) => {
                         <i className="fas fa-utensils"></i>
                       </div>
                       <span>Restaurants</span>
-                      <div className="arrow">
+                      {/* <div className="arrow">
                         <i className="fas fa-angle-down"></i>
-                      </div>
+                      </div> */}
                     </a>
 
-                    <ul className="popup">
+                    {/* <ul className="popup">
                       <li>
+                        <a href="#/businesses/search">New York</a>
                         <i className="fas fa-motorcycle"></i>
                         <span>Delivery</span>
                       </li>
@@ -35,7 +36,7 @@ const SubNavBar = (props) => {
                         <i className="fas fa-lemon"></i>
                         <span>Sour</span>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
                 </ul>
               </div>
@@ -43,74 +44,45 @@ const SubNavBar = (props) => {
               <div className="sub-item" id="home-services">
                 <ul className="list">
                   <li>
-                    <a href="#/businesses">
+                    <div className="list-title">
                       <div className="list-icon">
-                        <i className="fas fa-home"></i>
+                        <i className="fas fa-external-link-alt"></i>
                       </div>
-                      <span>Home Services</span>
+                      <span>Christine's sites</span>
                       <div className="arrow">
                         <i className="fas fa-angle-down"></i>
                       </div>
-                    </a>
+                    </div>
 
                     <ul className="popup">
                       <li>
-                        <i className="fas fa-hammer"></i>
-                        <span>Contractors</span>
+                        <a href="http://christinekim.co/">
+                          <i className="far fa-address-card"></i>
+                          <span>Personal Site</span>
+                        </a>
                       </li>
 
                       <li>
-                        <i className="fas fa-plug"></i>
-                        <span>Electricians</span>
-                      </li>
-                    
-                      <li>
-                        <i className="fas fa-broom"></i>
-                        <span>Home Cleaners</span>
-                      </li>
-                    
-                      <li>
-                        <i className="fas fa-thermometer-half"></i>
-                        <span>HVAC</span>
-                      </li>
-                    
-                      <li>
-                        <i className="fas fa-tree"></i>
-                        <span>Landscaping</span>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="sub-item" id="auto-services">
-                <ul className="list">
-                  <li>
-                    <a href="#/businesses">
-                      <div className="list-icon">
-                        <i className="fas fa-car"></i>
-                      </div>
-                      <span>Auto Services</span>
-                      <div className="arrow">
-                        <i className="fas fa-angle-down"></i>
-                      </div>
-                    </a>
-
-                    <ul className="popup">
-                      <li>
-                        <i className="fas fa-oil-can"></i>
-                        <span>Oil Change</span>
+                        <a href="https://www.linkedin.com/in/christine-kim-46857544/">
+                          <i className="fab fa-linkedin-in"></i>
+                          <span>LinkedIn</span>
+                        </a>
                       </li>
 
                       <li>
-                        <i className="fas fa-parking"></i>
-                        <span>Parking</span>
+                        <a href="https://github.com/ckim310">
+                          <i className="fab fa-github"></i>
+                          <span>GitHub</span>
+                        </a>
                       </li>
 
                       <li>
-                        <i className="fas fa-truck-pickup"></i>
-                        <span>Towing</span>
+                        <a href="https://angel.co/ckim310">
+                          <i className="fab fa-angellist"></i>
+                          <span>AngelList</span>
+                        </a>
                       </li>
+
                     </ul>
                   </li>
                 </ul>
@@ -119,43 +91,22 @@ const SubNavBar = (props) => {
               <div className="sub-item" id="more">
                 <ul className="list">
                   <li>
-                    <a href="#/businesses">
-                      <span>More</span>
+                    <div className="list-title">
+                      <span>Contact Christine</span>
                       <div className="arrow">
                         <i className="fas fa-angle-down"></i>
                       </div>
-                    </a>
+                    </div>
 
                     <ul className="popup">
-                      <li>
-                        <i className="fas fa-mobile"></i>
-                        <span>Phone Repair</span>
-                      </li>
 
                       <li>
-                        <i className="fas fa-beer"></i>
-                        <span>Bars</span>
+                        <a href="mailto: ckim393@gmail.com">
+                          <i className="far fa-envelope"></i>
+                          <span>Email me</span>
+                        </a>
                       </li>
 
-                      <li>
-                        <i className="fas fa-glass-martini"></i>
-                        <span>Nightlife</span>
-                      </li>
-
-                      <li>
-                        <i className="fas fa-cut"></i>
-                        <span>Hair Salons</span>
-                      </li>
-
-                      <li>
-                        <i className="fas fa-dumbbell"></i>
-                        <span>Gyms</span>
-                      </li>
-
-                      <li>
-                        <i className="fas fa-shopping-bag"></i>
-                        <span>Shopping</span>
-                      </li>
                     </ul>
                   </li>
                 </ul>
