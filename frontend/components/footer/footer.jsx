@@ -30,10 +30,16 @@ const Footer = props => {
               <h3 className="footer-content-header">Discover Christine</h3>
               <ul className="footer-content-list">
                 <li className="footer-content-item">
-                  <a href="https://github.com/ckim310">Christine's Github</a>
+                  <a href="http://christinekim.co/">Personal Site</a>
                 </li>
                 <li className="footer-content-item">
-                  <a href="https://www.linkedin.com/in/christine-kim-46857544/">Christine's LinkedIn</a>
+                  <a href="https://github.com/ckim310">Github</a>
+                </li>
+                <li className="footer-content-item">
+                  <a href="https://www.linkedin.com/in/christine-kim-46857544/">LinkedIn</a>
+                </li>
+                <li className="footer-content-item">
+                  <a href="https://angel.co/ckim310">AngelList</a>
                 </li>
               </ul>
             </div>
