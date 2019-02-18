@@ -18,7 +18,7 @@ class NavBarRight extends React.Component {
     const display = this.props.currentUser ? (
       <div className="greeting">
         <div className="greeting-notif-wrapper">
-          <div className="message-icon">
+          {/* <div className="message-icon">
             <button>
               <i className="fas fa-comment-alt fa-2x"></i>
             </button>
@@ -28,7 +28,7 @@ class NavBarRight extends React.Component {
             <button>
               <i className="fas fa-bell fa-2x"></i>
             </button>
-          </div>
+          </div> */}
   
           <div className="user-dropdown">
             <button className="btn-user-dropdown" onClick={this.dropdownHandler}>
