@@ -11,6 +11,7 @@ class LoginForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
+    this.toggleErrorShow = this.toggleErrorShow.bind(this);
   }
 
   componentWillUnmount() {
@@ -29,6 +30,11 @@ class LoginForm extends React.Component {
     };
   }
 
+  toggleErrorShow(e) {
+    e.preventDefault();
+    this.props.clearSessionErrors();
+  }
+
   demoLogin(e) {
     e.preventDefault();
     const user = { email: "demo@email.com", password: "password" };
@@ -41,6 +47,15 @@ class LoginForm extends React.Component {
       return <li key={idx}>{err}</li>
     });
 
+    let errorX;
+    let errorShow;
+    if (this.props.errors.length > 0) {
+      errorX = <div className="error-x" onClick={this.toggleErrorShow}>&times;</div>
+      errorShow = "error-show"
+    } else {
+      errorShow = "error-hidden"
+    }
+
     return (
       <div className="container-main">
         <HeaderForm />
@@ -50,7 +65,10 @@ class LoginForm extends React.Component {
           <div className="session-wrapper">
             <div className="session-form-wrapper">
               <ul className="form-group-errors">
-                {errors}
+                <div className={`form-errors ${errorShow}`}>
+                  {errors}
+                  {errorX}
+                </div>
               </ul>
               <div className="session-form login">
                 <h2 className="session-form-header">Log In to Welp</h2>
