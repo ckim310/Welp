@@ -38,7 +38,9 @@ class SearchForm extends React.Component {
 
           const that = this;
 
-          if (that.props.history.location.pathname !== "/businesses/search") {
+          if (that.props.match.path === "/businesses/:businessId") {
+            that.props.history.push(`search?queryNear=${this.state.near}`);
+          } else if (that.props.history.location.pathname !== "/businesses/search") {
             that.props.history.push(`businesses/search?queryNear=${this.state.near}`);
           }
         });

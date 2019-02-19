@@ -28,11 +28,29 @@ class SearchIndex extends React.Component {
       return <li className="search-errors-list" key={idx}>{err}</li>
     })
 
+    let searchResults;
+    if (this.props.location.search.split("=")[0] === "?queryFind") {
+      const search = this.props.location.search.split("=")
+      const searchFind = search[1].split("&")[0];
+
+      searchResults = <div className="search-query">
+        Search results for <strong>{searchFind}</strong>
+      </div>
+    } else if (this.props.location.search.split("=")[0] === "?queryNear") {
+      const search = this.props.location.search.split("=")
+      const searchNear = search[1].split("%20").join(" ");
+
+      searchResults = <div className="search-query">
+        Search results in <strong>{searchNear}</strong>
+      </div>
+    }
+
     return (
       <div className="business-index-content-container">
         <div className="business-index-content">
           <ul className="businesses-list">
             <div className="search-header-container">
+              {searchResults}
 
               <div className="search-header-text">
                 {errors}
