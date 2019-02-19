@@ -34,19 +34,21 @@ class BookmarkForm extends React.Component {
 
     const { currentUserId, bookmarks } = this.props;
     let bookmarked = "not-bookmarked";
+    let bookmarkText = "Save";
 
     bookmarks.forEach(bookmark => {
       if (bookmark.user_id === currentUserId) {
         bookmarked = `bookmarked ${bookmark.id}`;
+        bookmarkText = "Saved";
       }
     });
 
 
     return (
-      <div className="bookmark-form-container bookmark">
+      <div className="bookmark-form-container">
         <div className={bookmarked} id="bookmark" onClick={this.handleClick}>
           <i className="fas fa-bookmark"></i>
-          <span className="bookmark-text">Save</span>
+          <span className="bookmark-text">{bookmarkText}</span>
         </div>
       </div>
     )

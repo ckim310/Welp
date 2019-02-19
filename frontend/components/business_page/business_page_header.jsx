@@ -93,7 +93,7 @@ class BusinessPageHeader extends React.Component {
                       </div>
 
                       <div className="business-category">
-                        Catgories
+                        Categories
                       </div>
                     </div>
                   </div>
@@ -119,9 +119,7 @@ class BusinessPageHeader extends React.Component {
                         Share
                       </Link> */}
 
-                      <div>
-                        <BookmarkForm props={this.props}/>
-                      </div>
+                      <BookmarkForm props={this.props}/>
 
                     </div>
                   </div>
