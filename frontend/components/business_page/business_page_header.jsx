@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Map from '../business_map/map';
+import BookmarkForm from '../bookmark/bookmark_form';
 
 class BusinessPageHeader extends React.Component {
   constructor(props) {
@@ -55,6 +56,8 @@ class BusinessPageHeader extends React.Component {
       return rating;
     };
 
+    // const bookmark = <BookmarkForm />
+
     return(
       <div className="business-page-header-container">
         <div className="business-page-header-wrapper">
@@ -105,8 +108,8 @@ class BusinessPageHeader extends React.Component {
                       </div>
                     </Link>
 
-                    {/* <div className="page-options">
-                      <Link to={`/businesses/${business.id}`}>
+                    <div className="page-options">
+                      {/* <Link to={`/businesses/${business.id}`}>
                         <i className="fas fa-camera"></i>
                         Add Photo
                       </Link>
@@ -114,14 +117,13 @@ class BusinessPageHeader extends React.Component {
                       <Link to={`/businesses/${business.id}`}>
                         <i className="fas fa-share-square"></i>
                         Share
-                      </Link>
+                      </Link> */}
 
-                      <div className="bookmark">
-                        <i className="fas fa-bookmark"></i>
-                        Save
+                      <div>
+                        <BookmarkForm props={this.props}/>
                       </div>
 
-                    </div> */}
+                    </div>
                   </div>
                 </div>
               </div>

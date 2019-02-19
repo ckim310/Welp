@@ -19,7 +19,7 @@ class Api::BookmarksController < ApplicationController
 
     if @bookmark
       @bookmark.destroy
-      render "api/businesses/show"
+      render "api/bookmarks/show"
     else
       render json: ['Unable to find bookmark'], status: 422
     end
