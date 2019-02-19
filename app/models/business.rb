@@ -21,4 +21,6 @@ class Business < ApplicationRecord
 
   has_many :reviews
 
+  has_many :bookmarks
+
 end

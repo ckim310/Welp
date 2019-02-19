@@ -27,6 +27,8 @@ class User < ApplicationRecord
 
   has_many :reactions
 
+  has_many :bookmarks
+
   attr_reader :password
   after_initialize :ensure_session_token
 
