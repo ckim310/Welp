@@ -10,6 +10,7 @@ Rails.application.routes.draw do
         resources :reactions, only: [:create, :destroy, :index]
       end
       get "search", on: :collection
+      resources :bookmarks, only: [:create, :destroy]
     end
     resources :reviews, only: [:destroy]
   end

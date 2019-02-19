@@ -13,3 +13,11 @@ json.reviews do
     end
   end
 end
+
+json.bookmarks do
+  @business.bookmarks.each do |bookmark|
+    json.set! bookmark.id do
+      json.partial! "api/bookmarks/bookmark", bookmark: bookmark
+    end
+  end
+end

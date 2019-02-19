@@ -1,0 +1,1 @@
+json.extract! bookmark, :id, :business_id, :user_id
