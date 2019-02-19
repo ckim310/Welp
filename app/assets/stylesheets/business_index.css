@@ -68,3 +68,12 @@
 .business-reviews {
   margin-top: 6px;
 }
+
+/* SEARCH INDEX */
+.search-query {
+  margin-bottom: 20px;
+}
+
+.search-query strong{
+  font-size: 16px;
+}
