@@ -21,4 +21,5 @@ export default class MarkerManager {
   
     this.markers[marker.businessId] = marker;
   }
+
 }
