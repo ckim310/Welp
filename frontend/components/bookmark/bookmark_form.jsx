@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createBookmark, removeBookmark } from '../../actions/bookmark_actions';
+import { Redirect, withRouter } from 'react-router-dom';
 
 class BookmarkForm extends React.Component {
   constructor(props) {
@@ -15,6 +16,10 @@ class BookmarkForm extends React.Component {
       user_id: currentUserId,
       business_id: businessId,
     };
+
+    if(!currentUserId) {
+      this.props.history.push("/signup");
+    }
 
     if (e.currentTarget.classList[0] === "bookmarked") {
       e.currentTarget.classList.remove("bookmarked");
@@ -33,6 +38,7 @@ class BookmarkForm extends React.Component {
   render() {
 
     const { currentUserId, bookmarks } = this.props;
+
     let bookmarked = "not-bookmarked";
     let bookmarkText = "Save";
 
@@ -42,7 +48,6 @@ class BookmarkForm extends React.Component {
         bookmarkText = "Saved";
       }
     });
-
 
     return (
       <div className="bookmark-form-container">
@@ -74,4 +79,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookmarkForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BookmarkForm));
