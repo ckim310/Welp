@@ -23,6 +23,16 @@ export default class MarkerManager {
     });
   
     this.markers[marker.businessId] = marker;
+
+    // marker.addListener("click", toggleBounce);
+  }
+
+  toggleBounce() {
+    if (marker.getAnimation() !== null) {
+      marker.setAnimation(null);
+    } else {
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
   }
 
 }
