@@ -1,3 +1,7 @@
+.search-form-wrapper {
+  width: 100%;
+}
+
 .search-form {
   display: flex;
   min-width: 100%;
@@ -70,9 +74,10 @@ button.search-submit {
 .search-form-wrapper .search-errors-list {
   background-color: white;
   border-radius: 0 0 4px 4px;
-  padding: 7px 594px 7px 68px;
+  padding: 7px 226px 7px 68px;
   margin-top: -2px;
-  width: inherit;
+  width: 600px;
+  max-width: inherit;
   position: absolute;
   border-top: 2px solid #ccc;
   color: #d32323;
@@ -83,9 +88,10 @@ button.search-submit {
 .search-nav-bar-container .search-nav-bar-content .search-nav-bar-item .search-form-wrapper .search-errors-list {
   background-color: white;
   border-radius: 0 0 4px 4px;
-  padding: 8px 396px 10px 45px;
+  padding: 8px 271px 10px 45px;
   margin-top: -2px;
-  width: inherit;
+  width: 356px;
+  max-width: inherit;
   position: absolute;
   border-top: 2px solid #ccc;
   color: #d32323;

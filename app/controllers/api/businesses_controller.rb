@@ -50,7 +50,13 @@ class Api::BusinessesController < ApplicationController
     if @businesses != []
       render "api/businesses/index"
     else
-      render json: ["No existing businesses, search again"], status: 422
+      if params[:queryFind] && params[:queryNear]
+        render json: ["No existing businesses for #{params[:queryFind]} in #{params[:queryNear]}, search again"], status: 422
+      elsif params[:queryNear]
+        render json: ["No existing businesses in #{params[:queryNear]}, search again"], status: 422
+      else
+        render json: ["No existing businesses, search again"], status: 422
+      end
     end
 
   end
