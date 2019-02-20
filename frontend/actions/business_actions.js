@@ -17,9 +17,9 @@ const receiveBusiness = businessData => {
   };
 };
 
-export const fetchBusinesses = () => {
+export const fetchBusinesses = (filter) => {
   return dispatch => {
-    return BusinessAPIUtil.fetchBusinesses().then(businesses => {
+    return BusinessAPIUtil.fetchBusinesses(filter).then(businesses => {
       return dispatch(receiveBusinesses(businesses));
     });
   };
