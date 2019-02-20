@@ -23,6 +23,9 @@
 .index-map {
   margin-left: 5%;
   margin-top: 10%;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
 }
 
 .index-map div#map {

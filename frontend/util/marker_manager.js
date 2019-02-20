@@ -13,13 +13,13 @@ export default class MarkerManager {
 
   createMarkerFromBusiness(business, idx) {
     const position = new google.maps.LatLng(business.latitude, business.longitude);
-  
+
     const marker = new google.maps.Marker({
       position,
       map: this.map,
       label: `${idx}`,
       animation: google.maps.Animation.DROP,
-      businessId: business.id
+      businessId: business.id,
     });
   
     this.markers[marker.businessId] = marker;
