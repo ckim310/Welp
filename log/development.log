@@ -1,0 +1,188 @@
+Started GET "/" for 127.0.0.1 at 2019-02-20 22:58:42 -0500
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christinekim/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (4.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (81.1ms)
+Completed 500 Internal Server Error in 2605ms (ActiveRecord: 7.6ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3641260218201889532_70365688785220'
+
+Started POST "/__better_errors/eecfadecb5c5a36e/variables" for 127.0.0.1 at 2019-02-20 22:58:46 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-20 22:58:56 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 594ms (ActiveRecord: 0.5ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3641260218201889532_70365742427480'
+
+Started POST "/__better_errors/47d37aca3b7ef9c6/variables" for 127.0.0.1 at 2019-02-20 22:58:57 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-20 22:59:19 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.6ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3641260218201889532_70365773139320'
+
+Started POST "/__better_errors/46ded3d05969a7ea/variables" for 127.0.0.1 at 2019-02-20 22:59:19 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-20 22:59:23 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3641260218201889532_70365690109480'
+
+Started POST "/__better_errors/3f46a6c21cc071f2/variables" for 127.0.0.1 at 2019-02-20 22:59:24 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-20 22:59:45 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3641260218201889532_70365774120860'
+
+Started POST "/__better_errors/59ca1635ac6bf06d/variables" for 127.0.0.1 at 2019-02-20 22:59:45 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-20 23:01:08 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__3641260218201889532_70365774536240'
+
+Started POST "/__better_errors/6bd2e9042c353d1c/variables" for 127.0.0.1 at 2019-02-20 23:01:08 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-20 23:02:16 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.3ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3641260218201889532_70365773873600'
+
+Started POST "/__better_errors/ce1c1dbce647278f/variables" for 127.0.0.1 at 2019-02-20 23:02:16 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-20 23:17:11 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/christinekim/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (3.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 1506ms (Views: 1493.9ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/api/businesses" for 127.0.0.1 at 2019-02-20 23:17:19 -0500
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (13.2ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:2
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (31.3ms)
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (6.7ms)
+  [1m[36mReview Load (2.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.1ms)
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.5ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.6ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.4ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.8ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.5ms)
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  Rendered api/businesses/index.json.jbuilder (156.2ms)
+Completed 200 OK in 175ms (Views: 113.8ms | ActiveRecord: 51.2ms)
+
+
