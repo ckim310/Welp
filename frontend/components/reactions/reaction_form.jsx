@@ -9,6 +9,11 @@ class ReactionForm extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentDidMount() {
+    const { businessId, reviewId } = this.props;
+    this.props.fetchReactions(businessId, reviewId);
+  }
+
   handleClick(reactionType) {
     return (e) => {
       e.preventDefault();
