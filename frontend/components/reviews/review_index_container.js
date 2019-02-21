@@ -5,7 +5,13 @@ import { trashReview, updateReview } from '../../actions/review_actions';
 import { fetchReactions } from '../../actions/reaction_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  const reviews = Object.values(state.entities.reviews);
+  function sortUpdatedAt(a, b) {
+    var dateA = new Date(a.updated_at).getTime();
+    var dateB = new Date(b.updated_at).getTime();
+    return dateA > dateB ? 1 : -1;
+  }
+  
+  const reviews = Object.values(state.entities.reviews).sort(sortUpdatedAt);
   const currentUserId = state.session.currentUserId;
   const businessId = ownProps.match.params.businessId;
 
