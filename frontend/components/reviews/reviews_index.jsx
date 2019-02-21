@@ -7,8 +7,8 @@ class ReviewIndex extends React.Component {
   }
 
   componentDidMount() {
-    const { businessId, reviews } = this.props;
-    if (reviews) {
+    const { businessId, reviews, currentUserId } = this.props;
+    if (reviews && currentUserId) {
       reviews.forEach(review => {
         this.props.fetchReactions(businessId, review.id);
       });
