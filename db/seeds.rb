@@ -142,6 +142,171 @@ Business.create!(
   longitude: -74.000200
 )
 
+Business.create!(
+  name: "Google",
+  zipcode: 10011,
+  address: "85 10th Ave",
+  city: "New York",
+  state: "NY",
+  phone_number: "(212) 565-0000",
+  latitude: 40.743389,
+  longitude: -74.007980
+)
+
+Business.create!(
+  name: "FourSquare",
+  zipcode: 10010,
+  address: "50 W 23rd St",
+  city: "New York",
+  state: "NY",
+  phone_number: "(212) 000-0000",
+  latitude: 40.705608,
+  longitude: -74.016724
+)
+
+Business.create!(
+  name: "UiPath",
+  zipcode: 10016,
+  address: "90 Park Ave 20th floor",
+  city: "New York",
+  state: "NY",
+  phone_number: "(844) 432-0455",
+  latitude: 40.750799,
+  longitude: -73.978946
+)
+
+Business.create!(
+  name: "BarkBox",
+  zipcode: 10013,
+  address: "221 Canal Street",
+  city: "New York",
+  state: "NY",
+  phone_number: "(855) 520-2275",
+  latitude: 40.717913,
+  longitude: -73.999535
+)
+
+Business.create!(
+  name: "Taboola",
+  zipcode: 10010,
+  address: "16 Madison Square West, 7th fl.",
+  city: "New York",
+  state: "NY",
+  phone_number: "(212) 206-7663",
+  latitude: 40.742919,
+  longitude: -73.989295
+)
+
+Business.create!(
+  name: "Deep Lab",
+  zipcode: 10010,
+  address: "Somewhere in NYC",
+  city: "New York",
+  state: "NY",
+  phone_number: "(212) 111-1111",
+  latitude: 40.712776,
+  longitude: -74.005974
+)
+
+Business.create!(
+  name: "iCapital Network",
+  zipcode: 10165,
+  address: "26th Floor, 60 E 42nd St",
+  city: "New York",
+  state: "NY",
+  phone_number: "(212) 994-7400",
+  latitude: 40.752303,
+  longitude: -73.978431
+)
+
+Business.create!(
+  name: "Medidata Solutions",
+  zipcode: 10014,
+  address: "350 Hudson St",
+  city: "New York",
+  state: "NY",
+  phone_number: "(212) 918-1800",
+  latitude: 40.727647,
+  longitude: -74.006704
+)
+
+Business.create!(
+  name: "Doximity",
+  zipcode: 94107,
+  address: "500 3rd St. Suite 510",
+  city: "San Francisco",
+  state: "CA",
+  phone_number: "(415) 000-0000",
+  latitude: 37.780827,
+  longitude: -122.395815
+)
+
+Business.create!(
+  name: "Simple Fractal",
+  zipcode: 10018,
+  address: "500 7th Ave, 8th floor",
+  city: "New York",
+  state: "NY",
+  phone_number: "(857) 207-9431",
+  latitude: 40.753134,
+  longitude: -73.989297
+)
+
+Business.create!(
+  name: "Gamil Design",
+  zipcode: 27602,
+  address: "323 W Martin St, at Designbox",
+  city: "Raleigh",
+  state: "NC",
+  phone_number: "(919) 000-0000",
+  latitude: 35.776979,
+  longitude: -78.643966
+)
+
+Business.create!(
+  name: "Dasmen Residential",
+  zipcode: 10901,
+  address: "400 Rella Blvd #212",
+  city: "Montebello",
+  state: "NY",
+  phone_number: "(888) 583-3212",
+  latitude: 41.117364,
+  longitude: -74.107409
+)
+
+Business.create!(
+  name: "Sourcepoint Technologies",
+  zipcode: 10001,
+  address: "1201 Broadway",
+  city: "New York",
+  state: "NY",
+  phone_number: "(212) 123-4567",
+  latitude: 40.745866,
+  longitude: -73.988786
+)
+
+Business.create!(
+  name: "Crowded",
+  zipcode: 10016,
+  address: "411 Fifth Avenue, Suite 703",
+  city: "New York",
+  state: "NY",
+  phone_number: "(212) 123-4567",
+  latitude: 40.901358,
+  longitude: -73.833869
+)
+
+Business.create!(
+  name: "Concourse",
+  zipcode: 10011,
+  address: "636 Avenue of the Americas, Sixth Floor",
+  city: "New York",
+  state: "NY",
+  phone_number: "(212) 987-6543",
+  latitude: 40.728119,
+  longitude: -74.003108
+)
+
 4.times do
   Business.create(
     name: Faker::Coffee.blend_name,
