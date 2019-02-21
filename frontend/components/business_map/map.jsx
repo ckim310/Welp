@@ -67,7 +67,7 @@ class Map extends React.Component {
   componentDidUpdate() {
     if (this.props.singleBusiness) {
       const targetBusiness = this.props.business;
-      this.MarkerManager.updateMarkers([targetBusiness]);
+      this.MarkerManager.createMarkerForBusinessPage(targetBusiness);
     } else if (this.props.searches) {
       const { searches } = this.props;
       const position = new google.maps.LatLng(searches[0].latitude, searches[0].longitude);
