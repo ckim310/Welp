@@ -186,3 +186,1384 @@ Processing by Api::BusinessesController#index as JSON
 Completed 200 OK in 175ms (Views: 113.8ms | ActiveRecord: 51.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-02-20 23:18:59 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 254ms (Views: 245.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/api/businesses" for 127.0.0.1 at 2019-02-20 23:19:00 -0500
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.7ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:2
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (3.5ms)
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.8ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.8ms)
+  [1m[36mReview Load (3.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (3.5ms)
+  [1m[36mReview Load (11.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (3.2ms)
+  [1m[36mReview Load (2.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.2ms)
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.5ms)
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.3ms)
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.8ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.4ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.8ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  Rendered api/businesses/index.json.jbuilder (119.3ms)
+Completed 200 OK in 140ms (Views: 75.6ms | ActiveRecord: 58.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-20 23:19:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 104ms (Views: 95.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/api/businesses" for 127.0.0.1 at 2019-02-20 23:19:08 -0500
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (5.7ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:2
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (3.4ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.2ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.1ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.5ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.5ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.8ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.0ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.3ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (18.6ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.7ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  Rendered api/businesses/index.json.jbuilder (110.3ms)
+Completed 200 OK in 123ms (Views: 85.4ms | ActiveRecord: 34.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-20 23:20:16 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 782ms (Views: 776.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/businesses" for 127.0.0.1 at 2019-02-20 23:20:17 -0500
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (0.6ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:2
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.1ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.6ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.6ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (5.1ms)
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.3ms)
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.0ms)
+  [1m[36mReview Load (11.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (4.6ms)
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.9ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.2ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  Rendered api/businesses/index.json.jbuilder (75.3ms)
+Completed 200 OK in 88ms (Views: 56.0ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/api/businesses/142" for 127.0.0.1 at 2019-02-20 23:20:19 -0500
+Processing by Api::BusinessesController#show as JSON
+  Parameters: {"id"=>"142"}
+  [1m[36mBusiness Load (0.8ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/businesses_controller.rb:13
+  Rendering api/businesses/show.json.jbuilder
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (3.1ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  Rendered api/reviews/_review.json.jbuilder (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.3ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mBookmark Load (0.8ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.8ms)
+  Rendered api/businesses/show.json.jbuilder (106.3ms)
+Completed 200 OK in 121ms (Views: 92.3ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/api/businesses/142" for 127.0.0.1 at 2019-02-20 23:20:19 -0500
+Processing by Api::BusinessesController#show as JSON
+  Parameters: {"id"=>"142"}
+  [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/businesses_controller.rb:13
+  Rendering api/businesses/show.json.jbuilder
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.9ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  Rendered api/reviews/_review.json.jbuilder (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.4ms)
+  Rendered api/businesses/show.json.jbuilder (18.5ms)
+Completed 200 OK in 28ms (Views: 23.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-20 23:21:16 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 809ms (Views: 806.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/businesses/142" for 127.0.0.1 at 2019-02-20 23:21:18 -0500
+Processing by Api::BusinessesController#show as JSON
+  Parameters: {"id"=>"142"}
+  [1m[36mBusiness Load (0.8ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/businesses_controller.rb:13
+  Rendering api/businesses/show.json.jbuilder
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.4ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  Rendered api/reviews/_review.json.jbuilder (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mBookmark Load (1.1ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.4ms)
+  Rendered api/businesses/show.json.jbuilder (22.7ms)
+Completed 200 OK in 36ms (Views: 26.5ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/api/businesses/142" for 127.0.0.1 at 2019-02-20 23:21:18 -0500
+Processing by Api::BusinessesController#show as JSON
+  Parameters: {"id"=>"142"}
+Started GET "/api/businesses/142/reviews/84/reactions" for 127.0.0.1 at 2019-02-20 23:21:18 -0500
+  [1m[36mBusiness Load (0.6ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+Started GET "/api/businesses/142/reviews/106/reactions" for 127.0.0.1 at 2019-02-20 23:21:18 -0500
+  ↳ app/controllers/api/businesses_controller.rb:13
+Started GET "/api/businesses/142/reviews/87/reactions" for 127.0.0.1 at 2019-02-20 23:21:18 -0500
+  Rendering api/businesses/show.json.jbuilder
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.9ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  Rendered api/reviews/_review.json.jbuilder (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mBookmark Load (11.9ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.4ms)
+  Rendered api/businesses/show.json.jbuilder (31.2ms)
+Completed 200 OK in 43ms (Views: 25.2ms | ActiveRecord: 15.0ms)
+
+
+Processing by Api::ReactionsController#index as JSON
+  Parameters: {"business_id"=>"142", "review_id"=>"106"}
+Processing by Api::ReactionsController#index as JSON
+  Parameters: {"business_id"=>"142", "review_id"=>"87"}
+Processing by Api::ReactionsController#index as JSON
+  Parameters: {"business_id"=>"142", "review_id"=>"84"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mBusiness Load (0.9ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/reactions_controller.rb:18
+  [1m[36mBusiness Load (3.7ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/reactions_controller.rb:18
+  Rendering api/reactions/index.json.jbuilder
+  [1m[36mBusiness Load (12.0ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  Rendering api/reactions/index.json.jbuilder
+  ↳ app/controllers/api/reactions_controller.rb:18
+  [1m[36mReview Load (6.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  Rendering api/reactions/index.json.jbuilder
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  [1m[36mReaction Load (27.8ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReaction Load (12.1ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  [1m[36mReaction Load (20.7ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReaction Load (0.9ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReaction Load (1.4ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReaction Load (0.4ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 106]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  Rendered api/reactions/index.json.jbuilder (60.7ms)
+  [1m[36mReaction Load (0.7ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 106]]
+Completed 200 OK in 82ms (Views: 31.3ms | ActiveRecord: 47.3ms)
+
+
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  Rendered api/reactions/index.json.jbuilder (36.0ms)
+Completed 200 OK in 82ms (Views: 19.9ms | ActiveRecord: 48.4ms)
+
+
+  [1m[36mReaction Load (1.2ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReaction Load (0.3ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 106]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  Rendered api/reactions/index.json.jbuilder (58.9ms)
+Completed 200 OK in 86ms (Views: 40.6ms | ActiveRecord: 41.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-20 23:21:35 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 785ms (Views: 782.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/businesses/142" for 127.0.0.1 at 2019-02-20 23:21:37 -0500
+Processing by Api::BusinessesController#show as JSON
+  Parameters: {"id"=>"142"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/businesses_controller.rb:13
+  Rendering api/businesses/show.json.jbuilder
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  Rendered api/reviews/_review.json.jbuilder (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.3ms)
+  Rendered api/businesses/show.json.jbuilder (17.6ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/businesses/142" for 127.0.0.1 at 2019-02-20 23:21:37 -0500
+Processing by Api::BusinessesController#show as JSON
+  Parameters: {"id"=>"142"}
+Started GET "/api/businesses/142/reviews/84/reactions" for 127.0.0.1 at 2019-02-20 23:21:37 -0500
+Started GET "/api/businesses/142/reviews/87/reactions" for 127.0.0.1 at 2019-02-20 23:21:37 -0500
+  [1m[36mBusiness Load (2.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/businesses_controller.rb:13
+Started GET "/api/businesses/142/reviews/106/reactions" for 127.0.0.1 at 2019-02-20 23:21:37 -0500
+  Rendering api/businesses/show.json.jbuilder
+Processing by Api::ReactionsController#index as JSON
+  Parameters: {"business_id"=>"142", "review_id"=>"87"}
+Processing by Api::ReactionsController#index as JSON
+Processing by Api::ReactionsController#index as JSON
+  Parameters: {"business_id"=>"142", "review_id"=>"106"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  Parameters: {"business_id"=>"142", "review_id"=>"84"}
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/businesses/_business.json.jbuilder (3.4ms)
+  [1m[36mBusiness Load (1.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  [1m[36mBusiness Load (0.7ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/reactions_controller.rb:18
+  ↳ app/controllers/api/reactions_controller.rb:18
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering api/reactions/index.json.jbuilder
+  Rendering api/reactions/index.json.jbuilder
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  [1m[36mReaction Load (1.1ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReview Load (1.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  Rendered api/reviews/_review.json.jbuilder (0.4ms)
+  [1m[36mReaction Load (0.6ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  [1m[36mBusiness Load (1.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  [1m[36mReaction Load (0.7ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  ↳ app/controllers/api/reactions_controller.rb:18
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mReaction Load (1.0ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 106]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  Rendered api/reactions/index.json.jbuilder (12.6ms)
+Completed 200 OK in 42ms (Views: 29.5ms | ActiveRecord: 5.9ms)
+
+
+  Rendering api/reactions/index.json.jbuilder
+  [1m[36mReaction Load (2.5ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReview Load (1.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  Rendered api/reviews/_review.json.jbuilder (0.3ms)
+  [1m[36mReaction Load (0.7ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 106]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  Rendered api/reactions/index.json.jbuilder (26.2ms)
+Completed 200 OK in 49ms (Views: 36.1ms | ActiveRecord: 7.5ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mReaction Load (1.1ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mBookmark Load (0.4ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.3ms)
+  Rendered api/businesses/show.json.jbuilder (61.6ms)
+Completed 200 OK in 77ms (Views: 69.4ms | ActiveRecord: 5.8ms)
+
+
+  [1m[36mReaction Load (0.6ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReaction Load (0.3ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 106]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  Rendered api/reactions/index.json.jbuilder (14.8ms)
+Completed 200 OK in 58ms (Views: 14.1ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/api/businesses" for 127.0.0.1 at 2019-02-20 23:21:39 -0500
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.7ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:2
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (3.0ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.6ms)
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.4ms)
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (9.5ms)
+  [1m[36mReview Load (2.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (4.5ms)
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.1ms)
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.9ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.8ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.4ms)
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.1ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.4ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  Rendered api/businesses/index.json.jbuilder (79.3ms)
+Completed 200 OK in 93ms (Views: 64.4ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/api/businesses/142" for 127.0.0.1 at 2019-02-20 23:21:42 -0500
+Started GET "/api/businesses/142/reviews/84/reactions" for 127.0.0.1 at 2019-02-20 23:21:42 -0500
+Started GET "/api/businesses/142/reviews/106/reactions" for 127.0.0.1 at 2019-02-20 23:21:42 -0500
+Processing by Api::BusinessesController#show as JSON
+Started GET "/api/businesses/142/reviews/87/reactions" for 127.0.0.1 at 2019-02-20 23:21:42 -0500
+  Parameters: {"id"=>"142"}
+Processing by Api::ReactionsController#index as JSON
+  Parameters: {"business_id"=>"142", "review_id"=>"84"}
+Processing by Api::ReactionsController#index as JSON
+  Parameters: {"business_id"=>"142", "review_id"=>"87"}
+Processing by Api::ReactionsController#index as JSON
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  [1m[36mBusiness Load (2.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  Parameters: {"business_id"=>"142", "review_id"=>"106"}
+  ↳ app/controllers/api/businesses_controller.rb:13
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mBusiness Load (1.4ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/reactions_controller.rb:18
+  Rendering api/businesses/show.json.jbuilder
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  [1m[36mBusiness Load (9.6ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  Rendering api/reactions/index.json.jbuilder
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/controllers/api/reactions_controller.rb:18
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  [1m[36mBusiness Load (3.6ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  Rendering api/reactions/index.json.jbuilder
+  Rendered api/businesses/_business.json.jbuilder (18.3ms)
+  ↳ app/controllers/api/reactions_controller.rb:18
+  Rendering api/reactions/index.json.jbuilder
+  [1m[36mReaction Load (12.4ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  [1m[36mReview Load (12.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReview Load (12.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  [1m[36mReview Load (1.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  [1m[36mReaction Load (1.8ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  Rendered api/reviews/_review.json.jbuilder (0.6ms)
+  [1m[36mReaction Load (2.3ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReaction Load (1.5ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mReaction Load (1.7ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  [1m[36mReaction Load (0.7ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 106]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mReaction Load (2.6ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  Rendered api/reviews/_review.json.jbuilder (0.1ms)
+  Rendered api/reactions/index.json.jbuilder (51.2ms)
+Completed 200 OK in 85ms (Views: 46.0ms | ActiveRecord: 24.1ms)
+
+
+  [1m[36mReaction Load (0.6ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 106]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReaction Load (1.6ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 106]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  Rendered api/reactions/index.json.jbuilder (37.3ms)
+Completed 200 OK in 84ms (Views: 32.1ms | ActiveRecord: 27.6ms)
+
+
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  Rendered api/reactions/index.json.jbuilder (27.9ms)
+Completed 200 OK in 84ms (Views: 31.1ms | ActiveRecord: 21.9ms)
+
+
+  Rendered api/reviews/_review.json.jbuilder (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mBookmark Load (0.8ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.3ms)
+  Rendered api/businesses/show.json.jbuilder (79.4ms)
+Completed 200 OK in 102ms (Views: 72.4ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/api/businesses/142" for 127.0.0.1 at 2019-02-20 23:21:42 -0500
+Processing by Api::BusinessesController#show as JSON
+  Parameters: {"id"=>"142"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/businesses_controller.rb:13
+  Rendering api/businesses/show.json.jbuilder
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.5ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  Rendered api/reviews/_review.json.jbuilder (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.2ms)
+  Rendered api/businesses/show.json.jbuilder (13.2ms)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/api/businesses/142/bookmarks/28" for 127.0.0.1 at 2019-02-20 23:21:45 -0500
+Processing by Api::BookmarksController#destroy as JSON
+  Parameters: {"business_id"=>"142", "id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mBookmark Load (2.3ms)[0m  [1m[34mSELECT  "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."user_id" = $1 AND "bookmarks"."id" = $2 LIMIT $3[0m  [["user_id", 44], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookmarks_controller.rb:17
+  [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookmarks_controller.rb:18
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/bookmarks_controller.rb:21
+  [1m[36mBookmark Destroy (9.2ms)[0m  [1m[31mDELETE FROM "bookmarks" WHERE "bookmarks"."id" = $1[0m  [["id", 28]]
+  ↳ app/controllers/api/bookmarks_controller.rb:21
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/bookmarks_controller.rb:21
+  Rendering api/bookmarks/show.json.jbuilder
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.2ms)
+  Rendered api/bookmarks/show.json.jbuilder (1.3ms)
+Completed 200 OK in 46ms (Views: 8.5ms | ActiveRecord: 18.8ms)
+
+
+Started POST "/api/businesses/142/bookmarks" for 127.0.0.1 at 2019-02-20 23:21:46 -0500
+Processing by Api::BookmarksController#create as JSON
+  Parameters: {"bookmark"=>{"user_id"=>"44", "business_id"=>"142"}, "business_id"=>"142"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/bookmarks_controller.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookmarks_controller.rb:7
+  [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookmarks_controller.rb:7
+  [1m[36mBookmark Create (6.2ms)[0m  [1m[32mINSERT INTO "bookmarks" ("user_id", "business_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 44], ["business_id", 142], ["created_at", "2019-02-21 04:21:46.978893"], ["updated_at", "2019-02-21 04:21:46.978893"]]
+  ↳ app/controllers/api/bookmarks_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/bookmarks_controller.rb:7
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookmarks_controller.rb:8
+  Rendering api/businesses/show.json.jbuilder
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.4ms)
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  Rendered api/reviews/_review.json.jbuilder (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mBookmark Load (0.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.2ms)
+  Rendered api/businesses/show.json.jbuilder (9.8ms)
+Completed 200 OK in 31ms (Views: 15.2ms | ActiveRecord: 9.2ms)
+
+
+Started DELETE "/api/reviews/106" for 127.0.0.1 at 2019-02-20 23:21:55 -0500
+Processing by Api::ReviewsController#destroy as JSON
+  Parameters: {"id"=>"106"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."author_id" = $1 AND "reviews"."id" = $2 LIMIT $3[0m  [["author_id", 44], ["id", 106], ["LIMIT", 1]]
+  ↳ app/controllers/api/reviews_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/reviews_controller.rb:31
+  [1m[36mReview Destroy (0.9ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 106]]
+  ↳ app/controllers/api/reviews_controller.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/reviews_controller.rb:31
+  Rendering api/reviews/show.json.jbuilder
+  Rendered api/reviews/_review.json.jbuilder (0.4ms)
+  Rendered api/reviews/show.json.jbuilder (1.6ms)
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2019-02-20 23:22:00 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Oebme2ABcDmtGRq4hWyRwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:51
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "gEWMreHtaUWCovny6RdH8w"], ["id", 44], ["LIMIT", 1]]
+  ↳ app/models/user.rb:51
+  [1m[36mUser Update (2.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "gEWMreHtaUWCovny6RdH8w"], ["updated_at", "2019-02-21 04:22:00.862227"], ["id", 44]]
+  ↳ app/models/user.rb:51
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:51
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.2ms)
+Completed 200 OK in 16ms (Views: 8.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-20 23:22:03 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 64ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-20 23:22:24 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 70ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/businesses" for 127.0.0.1 at 2019-02-20 23:22:29 -0500
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (1.0ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:2
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.4ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.2ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.2ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.6ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.4ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.4ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.2ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.4ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.4ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.4ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  Rendered api/businesses/index.json.jbuilder (46.6ms)
+Completed 200 OK in 61ms (Views: 47.5ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/api/businesses/142" for 127.0.0.1 at 2019-02-20 23:22:31 -0500
+Processing by Api::BusinessesController#show as JSON
+  Parameters: {"id"=>"142"}
+  [1m[36mBusiness Load (0.6ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/businesses_controller.rb:13
+  Rendering api/businesses/show.json.jbuilder
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.6ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  Rendered api/reviews/_review.json.jbuilder (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mBookmark Load (0.9ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.4ms)
+  Rendered api/businesses/show.json.jbuilder (17.4ms)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/businesses/142" for 127.0.0.1 at 2019-02-20 23:22:31 -0500
+Processing by Api::BusinessesController#show as JSON
+  Parameters: {"id"=>"142"}
+  [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/businesses_controller.rb:13
+  Rendering api/businesses/show.json.jbuilder
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.3ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  Rendered api/reviews/_review.json.jbuilder (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.3ms)
+  Rendered api/businesses/show.json.jbuilder (13.7ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2019-02-20 23:22:37 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@email.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:51
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "UN42E_EjhB90pWS0CHm4MA"], ["id", 44], ["LIMIT", 1]]
+  ↳ app/models/user.rb:51
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "UN42E_EjhB90pWS0CHm4MA"], ["updated_at", "2019-02-21 04:22:37.258119"], ["id", 44]]
+  ↳ app/models/user.rb:51
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:51
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (2.6ms)
+Completed 200 OK in 83ms (Views: 14.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/businesses" for 127.0.0.1 at 2019-02-20 23:22:39 -0500
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (0.6ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:2
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (3.0ms)
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.4ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.6ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (5.7ms)
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.8ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (3.1ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.6ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.1ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.8ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.5ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.2ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  Rendered api/businesses/index.json.jbuilder (62.9ms)
+Completed 200 OK in 75ms (Views: 55.9ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/api/businesses/142" for 127.0.0.1 at 2019-02-20 23:22:46 -0500
+Started GET "/api/businesses/142/reviews/84/reactions" for 127.0.0.1 at 2019-02-20 23:22:46 -0500
+Processing by Api::BusinessesController#show as JSON
+  Parameters: {"id"=>"142"}
+Started GET "/api/businesses/142/reviews/87/reactions" for 127.0.0.1 at 2019-02-20 23:22:46 -0500
+Processing by Api::ReactionsController#index as JSON
+  [1m[36mBusiness Load (1.9ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  Parameters: {"business_id"=>"142", "review_id"=>"84"}
+  ↳ app/controllers/api/businesses_controller.rb:13
+Processing by Api::ReactionsController#index as JSON
+  Parameters: {"business_id"=>"142", "review_id"=>"87"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UN42E_EjhB90pWS0CHm4MA"], ["LIMIT", 1]]
+  Rendering api/businesses/show.json.jbuilder
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UN42E_EjhB90pWS0CHm4MA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mBusiness Load (2.1ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  [1m[36mBusiness Load (0.8ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/reactions_controller.rb:18
+  ↳ app/controllers/api/reactions_controller.rb:18
+  Rendered api/businesses/_business.json.jbuilder (2.7ms)
+  Rendering api/reactions/index.json.jbuilder
+  [1m[36mReview Load (11.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  Rendering api/reactions/index.json.jbuilder
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  [1m[36mReview Load (2.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  Rendered api/reviews/_review.json.jbuilder (0.5ms)
+  [1m[36mReaction Load (1.2ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mReaction Load (1.6ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mReaction Load (0.8ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  Rendered api/reactions/index.json.jbuilder (16.9ms)
+Completed 200 OK in 51ms (Views: 30.8ms | ActiveRecord: 14.7ms)
+
+
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mReaction Load (1.2ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  Rendered api/reactions/index.json.jbuilder (18.5ms)
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+Completed 200 OK in 61ms (Views: 32.5ms | ActiveRecord: 9.7ms)
+
+
+  [1m[36mBookmark Load (1.1ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.5ms)
+  Rendered api/businesses/show.json.jbuilder (51.7ms)
+Completed 200 OK in 71ms (Views: 48.0ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/api/businesses/142" for 127.0.0.1 at 2019-02-20 23:22:46 -0500
+Processing by Api::BusinessesController#show as JSON
+  Parameters: {"id"=>"142"}
+  [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/businesses_controller.rb:13
+  Rendering api/businesses/show.json.jbuilder
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.0ms)
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:7
+  Rendered api/reviews/_review.json.jbuilder (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/views/api/businesses/show.json.jbuilder:10
+  [1m[36mBookmark Load (0.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/show.json.jbuilder:18
+  Rendered api/bookmarks/_bookmark.json.jbuilder (0.4ms)
+  Rendered api/businesses/show.json.jbuilder (14.4ms)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/api/businesses/142/reviews/87/reactions" for 127.0.0.1 at 2019-02-20 23:22:53 -0500
+Processing by Api::ReactionsController#create as JSON
+  Parameters: {"reaction"=>{"reaction_type"=>"cool", "user_id"=>"44", "review_id"=>"87"}, "business_id"=>"142", "review_id"=>"87"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UN42E_EjhB90pWS0CHm4MA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/reactions_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/reactions_controller.rb:7
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/api/reactions_controller.rb:7
+  [1m[36mReaction Create (3.3ms)[0m  [1m[32mINSERT INTO "reactions" ("reaction_type", "user_id", "review_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["reaction_type", "cool"], ["user_id", 44], ["review_id", 87], ["created_at", "2019-02-21 04:22:53.324081"], ["updated_at", "2019-02-21 04:22:53.324081"]]
+  ↳ app/controllers/api/reactions_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/reactions_controller.rb:7
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/api/reactions_controller.rb:8
+  Rendering api/reactions/show.json.jbuilder
+  [1m[36mReaction Load (0.5ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/reactions/show.json.jbuilder:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/reactions/show.json.jbuilder:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/reactions/show.json.jbuilder:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/api/reactions/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/reactions/show.json.jbuilder:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/views/api/reactions/show.json.jbuilder:6
+  Rendered api/reactions/show.json.jbuilder (6.4ms)
+Completed 200 OK in 29ms (Views: 11.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/api/businesses/142/reviews/87/reactions" for 127.0.0.1 at 2019-02-20 23:22:53 -0500
+Processing by Api::ReactionsController#index as JSON
+  Parameters: {"business_id"=>"142", "review_id"=>"87"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UN42E_EjhB90pWS0CHm4MA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/reactions_controller.rb:18
+  Rendering api/reactions/index.json.jbuilder
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  [1m[36mReaction Load (0.4ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReaction Load (0.4ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  Rendered api/reactions/index.json.jbuilder (6.6ms)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/api/businesses/142/reviews/87/reactions/134" for 127.0.0.1 at 2019-02-20 23:22:54 -0500
+Processing by Api::ReactionsController#destroy as JSON
+  Parameters: {"business_id"=>"142", "review_id"=>"87", "id"=>"134"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UN42E_EjhB90pWS0CHm4MA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mBusiness Load (0.2ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/reactions_controller.rb:24
+  [1m[36mReaction Load (0.5ms)[0m  [1m[34mSELECT  "reactions".* FROM "reactions" WHERE "reactions"."user_id" = $1 AND "reactions"."id" = $2 LIMIT $3[0m  [["user_id", 44], ["id", 134], ["LIMIT", 1]]
+  ↳ app/controllers/api/reactions_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/reactions_controller.rb:30
+  [1m[36mReaction Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reactions" WHERE "reactions"."id" = $1[0m  [["id", 134]]
+  ↳ app/controllers/api/reactions_controller.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/reactions_controller.rb:30
+  Rendering api/reactions/index.json.jbuilder
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  [1m[36mReaction Load (0.3ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReaction Load (0.5ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  Rendered api/reactions/index.json.jbuilder (5.8ms)
+Completed 200 OK in 20ms (Views: 11.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/businesses/142/reviews/87/reactions" for 127.0.0.1 at 2019-02-20 23:22:54 -0500
+Processing by Api::ReactionsController#index as JSON
+  Parameters: {"business_id"=>"142", "review_id"=>"87"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UN42E_EjhB90pWS0CHm4MA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mBusiness Load (0.3ms)[0m  [1m[34mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/api/reactions_controller.rb:18
+  Rendering api/reactions/index.json.jbuilder
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/reactions/index.json.jbuilder:1
+  [1m[36mReaction Load (0.2ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 84]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  [1m[36mReaction Load (0.2ms)[0m  [1m[34mSELECT "reactions".* FROM "reactions" WHERE "reactions"."review_id" = $1[0m  [["review_id", 87]]
+  ↳ app/views/api/reactions/index.json.jbuilder:2
+  Rendered api/reactions/index.json.jbuilder (6.0ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/businesses" for 127.0.0.1 at 2019-02-20 23:24:03 -0500
+Processing by Api::BusinessesController#index as JSON
+  Rendering api/businesses/index.json.jbuilder
+  [1m[36mBusiness Load (0.4ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/views/api/businesses/index.json.jbuilder:2
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.8ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.3ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.0ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (10.6ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.1ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.0ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.2ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.0ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (8.6ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (4.3ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (3.9ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (3.2ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  Rendered api/businesses/index.json.jbuilder (95.6ms)
+Completed 200 OK in 109ms (Views: 83.9ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/api/businesses/search?queryFind=g&queryNear=New+York" for 127.0.0.1 at 2019-02-20 23:24:12 -0500
+Processing by Api::BusinessesController#search as JSON
+  Parameters: {"queryFind"=>"g", "queryNear"=>"New York"}
+  [1m[36mBusiness Load (0.5ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/controllers/api/businesses_controller.rb:32
+  Rendering api/businesses/index.json.jbuilder
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.2ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.1ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  Rendered api/businesses/index.json.jbuilder (10.0ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/businesses/search" for 127.0.0.1 at 2019-02-20 23:24:12 -0500
+Processing by Api::BusinessesController#search as JSON
+  [1m[36mBusiness Load (0.6ms)[0m  [1m[34mSELECT "businesses".* FROM "businesses"[0m
+  ↳ app/controllers/api/businesses_controller.rb:50
+  Rendering api/businesses/index.json.jbuilder
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.1ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 142]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.6ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 143]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 144]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.9ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 145]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.7ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 146]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.5ms)
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 147]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.7ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 148]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.9ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 149]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.6ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 150]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.6ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 151]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (1.4ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 152]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/_business.json.jbuilder:2
+  Rendered api/businesses/_business.json.jbuilder (2.2ms)
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."business_id" = $1[0m  [["business_id", 153]]
+  ↳ app/views/api/businesses/index.json.jbuilder:6
+  Rendered api/businesses/index.json.jbuilder (61.0ms)
+Completed 200 OK in 72ms (Views: 58.6ms | ActiveRecord: 11.6ms)
+
+

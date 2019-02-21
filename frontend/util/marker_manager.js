@@ -27,6 +27,20 @@ export default class MarkerManager {
     // marker.addListener("click", toggleBounce);
   }
 
+  createMarkerForBusinessPage(business) {
+    const position = new google.maps.LatLng(business.latitude, business.longitude);
+
+    const marker = new google.maps.Marker({
+      position,
+      map: this.map,
+      animation: google.maps.Animation.DROP,
+      businessId: business.id,
+    });
+  
+    this.markers[marker.businessId] = marker;
+
+  }
+
   toggleBounce() {
     if (marker.getAnimation() !== null) {
       marker.setAnimation(null);
