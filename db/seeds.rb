@@ -19,6 +19,17 @@ User.create!(
   password: 'password'
 )
 
+User.create!(
+  first_name: 'Admin',
+  last_name: 'User',
+  zipcode: 12345,
+  email: 'admin@email.com',
+  birthday_month: 2,
+  birthday_day: 21,
+  birthday_year: 2019,
+  password: 'password'
+)
+
 5.times do
   User.create(
     first_name: Faker::Name.first_name,
@@ -31,6 +42,17 @@ User.create!(
     password: 'password'
   )
 end
+
+Business.create!(
+  name: "App Academy",
+  zipcode: 10018,
+  address: "22 W 38th St",
+  city: "New York",
+  state: "NY",
+  phone_number: "(415) 935-3408",
+  latitude: 40.751373,
+  longitude: -73.983948
+)
 
 Business.create!(
   name: "Gong Cha",
@@ -178,6 +200,13 @@ Review.create!(
 
 Review.create!(
   body: Faker::Hipster.paragraph,
+  author_id: User.second.id,
+  business_id: Business.fifth.id,
+  rating: 4
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
   author_id: User.last.id,
   business_id: Business.first.id,
   rating: 3
@@ -188,4 +217,18 @@ Review.create!(
   author_id: User.fourth.id,
   business_id: Business.last.id,
   rating: 5
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.first.id,
+  business_id: Business.last.id,
+  rating: 2
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.second.id,
+  business_id: Business.last.id,
+  rating: 4
 )
