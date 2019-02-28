@@ -1,5 +1,6 @@
 json.business do
   json.partial! "api/businesses/business", business: @business
+  json.photoUrl url_for(@business.photo)
 end
 
 
