@@ -56,8 +56,6 @@ class BusinessPageHeader extends React.Component {
       return rating;
     };
 
-    // const bookmark = <BookmarkForm />
-
     return(
       <div className="business-page-header-container">
         <div className="business-page-header-wrapper">
@@ -82,7 +80,7 @@ class BusinessPageHeader extends React.Component {
                         </div>
 
                         <div className="reviews-count">
-                          {business.reviewsId.length} Reviews
+                          {reviews.length} Reviews
                         </div>
                       </div>
                     </div>
