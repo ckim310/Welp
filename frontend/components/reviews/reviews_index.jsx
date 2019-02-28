@@ -7,10 +7,14 @@ class ReviewIndex extends React.Component {
   }
 
   componentDidMount() {
-    const { businessId, reviews, currentUserId } = this.props;
+    const { businessId, reviews, currentUserId, business } = this.props;
     if (reviews && currentUserId) {
       reviews.forEach(review => {
-        this.props.fetchReactions(businessId, review.id);
+        business.reviewsId.forEach(reviewId => {
+          if (review.id === reviewId) {
+            this.props.fetchAllReactions(businessId, review.id);
+          }
+        });
       });
     }
   }
@@ -22,6 +26,7 @@ class ReviewIndex extends React.Component {
       key={idx}
       trashReview={this.props.trashReview}
       updateReview={this.props.updateReview}
+      reviewReactions={review.reactions}
       />
     });
 

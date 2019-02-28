@@ -6,7 +6,7 @@ class Api::ReviewsController < ApplicationController
 
     if @review.save
       @business = Business.find(review_params[:business_id])
-      render "api/businesses/show"
+      render "api/reviews/show"
     else
       render json: @review.errors.full_messages, status: :unprocessable_entity
     end

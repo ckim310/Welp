@@ -109,10 +109,15 @@ const mapStateToProps = (state, ownProps) => {
   const business = state.entities.businesses[businessId];
   const currentUserId = state.session.currentUserId;
   const currentUser = state.entities.users[currentUserId];
+  let reviewsId = [];
+  if (business) {
+    reviewsId = business.reviewsId;
+  }
 
   return {
     business,
     currentUser,
+    reviewsId,
   }
 }
 

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import ReviewIndex from './reviews_index';
 import { trashReview, updateReview } from '../../actions/review_actions';
-import { fetchReactions } from '../../actions/reaction_actions';
+import { fetchAllReactions } from '../../actions/reaction_actions';
 
 const mapStateToProps = (state, ownProps) => {
   function sortUpdatedAt(a, b) {
@@ -12,13 +12,17 @@ const mapStateToProps = (state, ownProps) => {
   }
   
   const reviews = Object.values(state.entities.reviews).sort(sortUpdatedAt);
+  const reviewReactions = reviews.map(review => review.reactions);
   const currentUserId = state.session.currentUserId;
   const businessId = ownProps.match.params.businessId;
+  const business = state.entities.businesses[parseInt(businessId)];
 
   return {
     reviews,
     currentUserId,
-    businessId
+    businessId,
+    reviewReactions,
+    business,
   };
 };
 
@@ -26,7 +30,7 @@ const mapDispatchToProps = dispatch => {
   return {
     trashReview: (id) => dispatch(trashReview(id)),
     updateReview: (businessId, review) => dispatch(updateReview(businessId, review)),
-    fetchReactions: (businessId, reviewId) => dispatch(fetchReactions(businessId, reviewId)),
+    fetchAllReactions: (businessId, reviewId) => dispatch(fetchAllReactions(businessId, reviewId)),
   };
 };
 

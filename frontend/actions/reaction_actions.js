@@ -19,10 +19,10 @@ const receiveReactions = reactions => {
   };
 };
 
-const deleteReaction = reactionId => {
+const deleteReaction = reaction => {
   return {
     type: DELETE_REACTION,
-    reactionId
+    reaction,
   };
 };
 
@@ -44,9 +44,9 @@ export const createReaction = (businessId, reviewId, reaction) => {
   };
 };
 
-export const fetchReactions = (businessId, reviewId) => {
+export const fetchAllReactions = (businessId, reviewId) => {
   return dispatch => {
-    return ReactionAPIUtil.fetchReactions(businessId, reviewId).then(reactions =>{
+    return ReactionAPIUtil.fetchAllReactions(businessId, reviewId).then(reactions =>{
       return dispatch(receiveReactions(reactions));
     },
     (errors) => {
@@ -58,7 +58,7 @@ export const fetchReactions = (businessId, reviewId) => {
 export const removeReaction = (businessId, reviewId, id) => {
   return dispatch => {
     return ReactionAPIUtil.deleteReaction(businessId, reviewId, id).then((reaction) => {
-      return dispatch(deleteReaction(reaction.id));
+      return dispatch(deleteReaction(reaction));
     });
   };
 };

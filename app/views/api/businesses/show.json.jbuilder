@@ -10,6 +10,7 @@ json.reviews do
       json.authorName review.author.first_name + " " + review.author.last_name
       json.authorZipcode review.author.zipcode
       json.authorId review.author.id
+      json.reactions review.reactions
     end
   end
 end

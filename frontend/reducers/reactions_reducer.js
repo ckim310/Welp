@@ -8,15 +8,15 @@ const reactionsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_REACTION:
       newState = merge({}, state);
-      newState = action.reaction;
+      const { reaction } = action;
+      newState[reaction.id] = reaction;
       return newState;
     case RECEIVE_REACTIONS:
-      newState = merge({}, state);
-      newState = action.reactions;
+      newState = merge({}, state, action.reactions);
       return newState;
     case DELETE_REACTION:
       newState = merge({}, state);
-      delete newState[action.reactionId];
+      delete newState[action.reaction.id];
       return newState;
     default:
       return state;
