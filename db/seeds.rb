@@ -66,11 +66,11 @@ app_academy = Business.create!(
   longitude: -73.983948
 )
 aa_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/aa_00.png')
-app_academy.photos.attach(io: aa_00, filename:"aa_00")
+app_academy.photos.attach(io: aa_00, filename:"aa_00.png")
 aa_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/aa_01.jpeg')
-app_academy.photos.attach(io: aa_01, filename:"aa_01")
+app_academy.photos.attach(io: aa_01, filename:"aa_01.jpeg")
 aa_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/aa_02.jpeg')
-app_academy.photos.attach(io: aa_02, filename:"aa_02")
+app_academy.photos.attach(io: aa_02, filename:"aa_02.jpeg")
 
 gong_cha = Business.create!(
   name: "Gong Cha",
@@ -84,11 +84,11 @@ gong_cha = Business.create!(
   )
 
 gong_cha_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/gong_cha_00.png')
-gong_cha.photos.attach(io: gong_cha_00, filename:"gong_cha_00")
+gong_cha.photos.attach(io: gong_cha_00, filename:"gong_cha_00.png")
 gong_cha_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/gong_cha_01.png')
-gong_cha.photos.attach(io: gong_cha_01, filename:"gong_cha_01")
+gong_cha.photos.attach(io: gong_cha_01, filename:"gong_cha_01.png")
 gong_cha_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/gong_cha_02.png')
-gong_cha.photos.attach(io: gong_cha_02, filename:"gong_cha_02")
+gong_cha.photos.attach(io: gong_cha_02, filename:"gong_cha_02.png")
 
 kft = Business.create!(
   name: "Kung Fu Tea",
@@ -102,11 +102,11 @@ kft = Business.create!(
   )
   
 kft_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/kft_00.png')
-kft.photos.attach(io: kft_00, filename:"kft_00")
+kft.photos.attach(io: kft_00, filename:"kft_00.png")
 kft_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/kft_01.png')
-kft.photos.attach(io: kft_01, filename:"kft_01")
+kft.photos.attach(io: kft_01, filename:"kft_01.png")
 kft_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/kft_02.png')
-kft.photos.attach(io: kft_02, filename:"kft_02")
+kft.photos.attach(io: kft_02, filename:"kft_02.png")
 
 shake_shack = Business.create!(
   name: "Shake Shack",
@@ -120,11 +120,11 @@ shake_shack = Business.create!(
   )
 
 shake_shack_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/shake_shack_00.png')
-shake_shack.photos.attach(io: shake_shack_00, filename:"shake_shack_00")
+shake_shack.photos.attach(io: shake_shack_00, filename:"shake_shack_00.png")
 shake_shack_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/shake_shack_01.png')
-shake_shack.photos.attach(io: shake_shack_01, filename:"shake_shack_01")
+shake_shack.photos.attach(io: shake_shack_01, filename:"shake_shack_01.png")
 shake_shack_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/shake_shack_02.png')
-shake_shack.photos.attach(io: shake_shack_02, filename:"shake_shack_02")
+shake_shack.photos.attach(io: shake_shack_02, filename:"shake_shack_02.png")
 
 the_cibo = Business.create!(
   name: "The Cibo",
@@ -138,11 +138,11 @@ the_cibo = Business.create!(
   )
 
 cibo_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/cibo_00.png')
-the_cibo.photos.attach(io: cibo_00, filename:"cibo_00")
+the_cibo.photos.attach(io: cibo_00, filename:"cibo_00.png")
 cibo_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/cibo_01.png')
-the_cibo.photos.attach(io: cibo_01, filename:"cibo_01")
+the_cibo.photos.attach(io: cibo_01, filename:"cibo_01.png")
 cibo_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/cibo_02.png')
-the_cibo.photos.attach(io: cibo_02, filename:"cibo_02")
+the_cibo.photos.attach(io: cibo_02, filename:"cibo_02.png")
 
 cava = Business.create!(
   name: "Cava",
@@ -154,6 +154,8 @@ cava = Business.create!(
   latitude: 40.752790,
   longitude: -73.987860
 )
+
+cava.photos.attach(io: File.open('./app/assets/images/burger.jpg'), filename:"burger.jpg")
 
 ippudo = Business.create!(
   name: "Ippudo NYC",
@@ -413,7 +415,7 @@ Review.create!(
 
 Review.create!(
   body: "Really intense and rigorous bootcamp. Would only recommend if you are seriously looking to go into computer programming. This fullstack bootcamp is no joke and requires a lot of hours. If you are looking to get into this seriously it's a great bootcamp to attend!",
-  author_id: User.second.id,
+  author_id: User.third.id,
   business_id: app_academy.id,
   rating: 5
 )
