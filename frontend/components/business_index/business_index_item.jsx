@@ -48,9 +48,13 @@ const BusinessIndexItem = ({ business, idx }) => {
 
     return rating;
   };
+  // debugger
 
   let img;
-  if (idx % 3 === 0) {
+  if (business.photos.length > 0) {
+    debugger
+    img = <img src={business.photos[0]} />
+  } else if (idx % 3 === 0) {
     img = <img src="egg.png" alt="egg"/>
   } else if (idx % 2 === 0) {
     img = <img src="burger_fries.png" alt="burger"/>

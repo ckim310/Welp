@@ -23,7 +23,7 @@ class Business < ApplicationRecord
 
   has_many :bookmarks
 
-  has_many_attached :photo
+  has_many_attached :photos
 
   def self.in_bounds(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
