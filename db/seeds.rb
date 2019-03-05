@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Review.destroy_all
 User.destroy_all
 Business.destroy_all
-Review.destroy_all
 
 User.create!(
   first_name: 'Demo',
@@ -250,20 +250,6 @@ foursquare = Business.create!(
 foursquare_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/foursquare_00.png')
 foursquare.photos.attach(io: foursquare_00, filename:"foursquare_00.png")
 
-uipath = Business.create!(
-  name: "UiPath",
-  zipcode: 10016,
-  address: "90 Park Ave 20th floor",
-  city: "New York",
-  state: "NY",
-  phone_number: "(844) 432-0455",
-  latitude: 40.750799,
-  longitude: -73.978946
-)
-
-uipath_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/uipath_00.jpg')
-uipath.photos.attach(io: uipath_00, filename:"uipath_00.jpg")
-  
 bark = Business.create!(
   name: "Bark & Co",
   zipcode: 10013,
@@ -296,20 +282,6 @@ taboola = Business.create!(
 taboola_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/taboola_00.jpg')
 taboola.photos.attach(io: taboola_00, filename:"taboola_00.jpg")
 
-deep_lab = Business.create!(
-  name: "Deep Lab",
-  zipcode: 10010,
-  address: "Somewhere in NYC",
-  city: "New York",
-  state: "NY",
-  phone_number: "(212) 111-1111",
-  latitude: 40.712776,
-  longitude: -74.005974
-)
-
-deep_lab_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/deep_lab_00.jpeg')
-deep_lab.photos.attach(io: deep_lab_00, filename:"deep_lab_00.jpeg")
-
 icapital = Business.create!(
   name: "iCapital Network",
   zipcode: 10165,
@@ -322,7 +294,7 @@ icapital = Business.create!(
 )
 
 icapital_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/icapital_00.jpg')
-icaptial.photos.attach(io: icapital_00, filename:"icapital_00.jpg")
+icapital.photos.attach(io: icapital_00, filename:"icapital_00.jpg")
 
 medidata = Business.create!(
   name: "Medidata Solutions",
@@ -352,20 +324,6 @@ doximity = Business.create!(
 doximity_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/doximity_00.png')
 doximity.photos.attach(io: doximity_00, filename:"doximity_00.png")
 
-simple_fractal = Business.create!(
-  name: "Simple Fractal",
-  zipcode: 10018,
-  address: "500 7th Ave, 8th floor",
-  city: "New York",
-  state: "NY",
-  phone_number: "(857) 207-9431",
-  latitude: 40.753134,
-  longitude: -73.989297
-)
-
-simple_fractal_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/simple_fractal_00.png')
-simple_fractal.photos.attach(io: simple_fractal_00, filename:"simple_fractal_00.png")
-
 dasmen_residential = Business.create!(
   name: "Dasmen Residential",
   zipcode: 10901,
@@ -379,20 +337,6 @@ dasmen_residential = Business.create!(
 
 dasmen_residential_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/dasmen_residential_00.jpeg')
 dasmen_residential.photos.attach(io: dasmen_residential_00, filename:"dasmen_residential_00.jpeg")
-
-sourcepoint = Business.create!(
-  name: "Sourcepoint Technologies",
-  zipcode: 10001,
-  address: "1201 Broadway",
-  city: "New York",
-  state: "NY",
-  phone_number: "(212) 123-4567",
-  latitude: 40.745866,
-  longitude: -73.988786
-)
-
-sourcepoint_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/sourcepoint_00.png')
-sourcepoint.photos.attach(io: sourcepoint_00, filename:"sourcepoint_00.png")
 
 fake_business1 = Business.create(
   name: Faker::Coffee.blend_name,
@@ -484,6 +428,216 @@ Review.create!(
   body: "Really intense and rigorous bootcamp. Would only recommend if you are seriously looking to go into computer programming. This fullstack bootcamp is no joke and requires a lot of hours. If you are looking to get into this seriously it's a great bootcamp to attend!",
   author_id: User.third.id,
   business_id: app_academy.id,
+  rating: 5
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.fifth.id,
+  business_id: gong_cha.id,
+  rating: 2
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.fourth.id,
+  business_id: gong_cha.id,
+  rating: 4
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.second.id,
+  business_id: gong_cha.id,
+  rating: 5
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.second.id,
+  business_id: kft.id,
+  rating: 5
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.first.id,
+  business_id: kft.id,
+  rating: 3
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.third.id,
+  business_id: kft.id,
+  rating: 4
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.fifth.id,
+  business_id: kft.id,
+  rating: 5
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.fifth.id,
+  business_id: shake_shack.id,
+  rating: 5
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.first.id,
+  business_id: shake_shack.id,
+  rating: 2
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.fourth.id,
+  business_id: shake_shack.id,
+  rating: 4
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.third.id,
+  business_id: shake_shack.id,
+  rating: 4
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.third.id,
+  business_id: the_cibo.id,
+  rating: 4
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.second.id,
+  business_id: the_cibo.id,
+  rating: 1
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.fifth.id,
+  business_id: the_cibo.id,
+  rating: 5
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.fifth.id,
+  business_id: cava.id,
+  rating: 5
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.third.id,
+  business_id: cava.id,
+  rating: 4
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.third.id,
+  business_id: ippudo.id,
+  rating: 3
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.first.id,
+  business_id: ippudo.id,
+  rating: 3
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.fifth.id,
+  business_id: ippudo.id,
+  rating: 2
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.fifth.id,
+  business_id: burger_lobster.id,
+  rating: 3
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.third.id,
+  business_id: burger_lobster.id,
+  rating: 4
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.third.id,
+  business_id: jane.id,
+  rating: 4
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.third.id,
+  business_id: google.id,
+  rating: 4
+)
+
+Review.create!(
+  body: "Google rules!",
+  author_id: User.fourth.id,
+  business_id: google.id,
+  rating: 5
+)
+
+Review.create!(
+  body: "Foursquare is great! Love using foursquare's app swarm!!",
+  author_id: User.fourth.id,
+  business_id: foursquare.id,
+  rating: 5
+)
+
+Review.create!(
+  body: "Foursquare is such a cool place to work!",
+  author_id: User.third.id,
+  business_id: foursquare.id,
+  rating: 4
+)
+
+Review.create!(
+  body: "bark.co/jobs! look for us!!",
+  author_id: User.third.id,
+  business_id: bark.id,
+  rating: 5
+)
+
+Review.create!(
+  body: "Love Bark's subscription product BarkBox!! My dog loves all the toys, treats, and chews that come every month!!",
+  author_id: User.fourth.id,
+  business_id: bark.id,
+  rating: 5
+)
+
+Review.create!(
+  body: Faker::Hipster.paragraph,
+  author_id: User.fourth.id,
+  business_id: taboola.id,
+  rating: 4
+)
+
+Review.create!(
+  body: "The BEST fintech company ever!!",
+  author_id: User.third.id,
+  business_id: icapital.id,
   rating: 5
 )
 

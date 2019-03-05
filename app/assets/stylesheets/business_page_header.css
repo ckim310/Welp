@@ -286,12 +286,14 @@
   z-index: 100;
   width: 220px;
   height: 220px;
+  object-fit: cover;
 }
 
 .pic-middle img {
   z-index: 101;
   width: 250px;
   height: 250px;
+  object-fit: cover;
 }
 
 #first:hover, #last:hover {

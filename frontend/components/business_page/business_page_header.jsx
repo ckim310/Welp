@@ -60,11 +60,11 @@ class BusinessPageHeader extends React.Component {
     let img3;
 
     if (business.photos.length === 3) {
-      img1 = <img src={business.photos[1]}/>
-      img3 = <img src={business.photos[2]}/>
+      img1 = <img id="first" src={business.photos[1]}/>
+      img3 = <img id="last" src={business.photos[2]}/>
     } else {
-      img1 = <img src="./no-photo-available.png" alt="no-photo"/>
-      img3 = <img src="./no-photo-available.png" alt="no-photo"/>
+      img1 = <img id="first" src="./no-photo-available.png" alt="no-photo"/>
+      img3 = <img id="last" src="./no-photo-available.png" alt="no-photo"/>
     }
 
     return(
