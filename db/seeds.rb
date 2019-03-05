@@ -55,7 +55,7 @@ User.create!(
   password: 'password'
 )
 
-app_academy = Business.create!(
+app_academy = Business.new({
   name: "App Academy",
   zipcode: 10018,
   address: "22 W 38th St",
@@ -64,13 +64,15 @@ app_academy = Business.create!(
   phone_number: "(415) 935-3408",
   latitude: 40.751373,
   longitude: -73.983948
-)
+})
+
 aa_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/aa_00.png')
 app_academy.photos.attach(io: aa_00, filename:"aa_00.png")
 aa_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/aa_01.jpeg')
 app_academy.photos.attach(io: aa_01, filename:"aa_01.jpeg")
 aa_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/aa_02.jpeg')
 app_academy.photos.attach(io: aa_02, filename:"aa_02.jpeg")
+app_academy.save!
 
 gong_cha = Business.create!(
   name: "Gong Cha",
@@ -81,7 +83,7 @@ gong_cha = Business.create!(
   phone_number: "(212) 398-2716",
   latitude: 40.752310,
   longitude: -73.985630
-  )
+)
 
 gong_cha_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/gong_cha_00.png')
 gong_cha.photos.attach(io: gong_cha_00, filename:"gong_cha_00.png")
@@ -99,7 +101,7 @@ kft = Business.create!(
   phone_number: "(212) 695-5888",
   latitude: 40.747746,
   longitude: -73.986192
-  )
+)
   
 kft_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/kft_00.png')
 kft.photos.attach(io: kft_00, filename:"kft_00.png")
@@ -117,7 +119,7 @@ shake_shack = Business.create!(
   phone_number: "(646) 230-0696",
   latitude: 40.751170,
   longitude: -73.988130
-  )
+)
 
 shake_shack_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/shake_shack_00.png')
 shake_shack.photos.attach(io: shake_shack_00, filename:"shake_shack_00.png")
@@ -135,7 +137,7 @@ the_cibo = Business.create!(
   phone_number: "(212) 933-4361",
   latitude: 40.751260,
   longitude: -73.984030
-  )
+)
 
 cibo_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/cibo_00.png')
 the_cibo.photos.attach(io: cibo_00, filename:"cibo_00.png")
@@ -154,8 +156,13 @@ cava = Business.create!(
   latitude: 40.752790,
   longitude: -73.987860
 )
-
-cava.photos.attach(io: File.open('./app/assets/images/burger.jpg'), filename:"burger.jpg")
+  
+cava_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/cava_00.png')
+cava.photos.attach(io: cava_00, filename:"cava_00.png")
+cava_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/cava_01.png')
+cava.photos.attach(io: cava_01, filename:"cava_01.png")
+cava_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/cava_02.png')
+cava.photos.attach(io: cava_02, filename:"cava_02.png")
 
 ippudo = Business.create!(
   name: "Ippudo NYC",
@@ -168,6 +175,13 @@ ippudo = Business.create!(
   longitude: -73.990310
 )
 
+ippudo_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/ippudo_00.jpg')
+ippudo.photos.attach(io: ippudo_00, filename:"ippudo_00.jpg")
+ippudo_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/ippudo_01.png')
+ippudo.photos.attach(io: ippudo_01, filename:"ippudo_01.png")
+ippudo_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/ippudo_02.png')
+ippudo.photos.attach(io: ippudo_02, filename:"ippudo_02.png")
+
 burger_lobster = Business.create!(
   name: "Burger & Lobster",
   zipcode: 10011,
@@ -178,6 +192,13 @@ burger_lobster = Business.create!(
   latitude: 40.740160,
   longitude: -73.993370
 )
+
+burger_lobster_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/burger_lobster_00.JPG')
+burger_lobster.photos.attach(io: burger_lobster_00, filename:"burger_lobster_00.jpg")
+burger_lobster_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/burger_lobster_01.png')
+burger_lobster.photos.attach(io: burger_lobster_01, filename:"burger_lobster_01.png")
+burger_lobster_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/burger_lobster_02.png')
+burger_lobster.photos.attach(io: burger_lobster_02, filename:"burger_lobster_02.png")
 
 jane = Business.create!(
   name: "Jane",
@@ -190,6 +211,13 @@ jane = Business.create!(
   longitude: -74.000200
 )
 
+jane_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/jane_00.png')
+jane.photos.attach(io: jane_00, filename:"jane_00.png")
+jane_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/jane_01.png')
+jane.photos.attach(io: jane_01, filename:"jane_01.png")
+jane_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/jane_02.png')
+jane.photos.attach(io: jane_02, filename:"jane_02.png")
+
 google = Business.create!(
   name: "Google",
   zipcode: 10011,
@@ -201,6 +229,13 @@ google = Business.create!(
   longitude: -74.007980
 )
 
+google_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/google_00.jpg')
+google.photos.attach(io: google_00, filename:"google_00.jpg")
+google_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/google_01.jpg')
+google.photos.attach(io: google_01, filename:"google_01.jpg")
+google_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/google_02.jpg')
+google.photos.attach(io: google_02, filename:"google_02.jpg")
+  
 foursquare = Business.create!(
   name: "FourSquare",
   zipcode: 10010,
@@ -211,6 +246,9 @@ foursquare = Business.create!(
   latitude: 40.705608,
   longitude: -74.016724
 )
+  
+foursquare_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/foursquare_00.png')
+foursquare.photos.attach(io: foursquare_00, filename:"foursquare_00.png")
 
 uipath = Business.create!(
   name: "UiPath",
@@ -223,6 +261,9 @@ uipath = Business.create!(
   longitude: -73.978946
 )
 
+uipath_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/uipath_00.jpg')
+uipath.photos.attach(io: uipath_00, filename:"uipath_00.jpg")
+  
 bark = Business.create!(
   name: "Bark & Co",
   zipcode: 10013,
@@ -233,6 +274,13 @@ bark = Business.create!(
   latitude: 40.717913,
   longitude: -73.999535
 )
+
+bark_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/bark_00.png')
+bark.photos.attach(io: bark_00, filename:"bark_00.png")
+bark_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/bark_01.png')
+bark.photos.attach(io: bark_01, filename:"bark_01.png")
+bark_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/bark_02.png')
+bark.photos.attach(io: bark_02, filename:"bark_02.png")
 
 taboola = Business.create!(
   name: "Taboola",
@@ -245,6 +293,9 @@ taboola = Business.create!(
   longitude: -73.989295
 )
 
+taboola_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/taboola_00.jpg')
+taboola.photos.attach(io: taboola_00, filename:"taboola_00.jpg")
+
 deep_lab = Business.create!(
   name: "Deep Lab",
   zipcode: 10010,
@@ -255,6 +306,9 @@ deep_lab = Business.create!(
   latitude: 40.712776,
   longitude: -74.005974
 )
+
+deep_lab_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/deep_lab_00.jpeg')
+deep_lab.photos.attach(io: deep_lab_00, filename:"deep_lab_00.jpeg")
 
 icapital = Business.create!(
   name: "iCapital Network",
@@ -267,6 +321,9 @@ icapital = Business.create!(
   longitude: -73.978431
 )
 
+icapital_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/icapital_00.jpg')
+icaptial.photos.attach(io: icapital_00, filename:"icapital_00.jpg")
+
 medidata = Business.create!(
   name: "Medidata Solutions",
   zipcode: 10014,
@@ -277,6 +334,9 @@ medidata = Business.create!(
   latitude: 40.727647,
   longitude: -74.006704
 )
+
+medidata_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/medidata_00.jpg')
+medidata.photos.attach(io: medidata_00, filename:"medidata_00.jpg")
 
 doximity = Business.create!(
   name: "Doximity",
@@ -289,6 +349,9 @@ doximity = Business.create!(
   longitude: -122.395815
 )
 
+doximity_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/doximity_00.png')
+doximity.photos.attach(io: doximity_00, filename:"doximity_00.png")
+
 simple_fractal = Business.create!(
   name: "Simple Fractal",
   zipcode: 10018,
@@ -300,16 +363,8 @@ simple_fractal = Business.create!(
   longitude: -73.989297
 )
 
-gamil_design = Business.create!(
-  name: "Gamil Design",
-  zipcode: 27602,
-  address: "323 W Martin St, at Designbox",
-  city: "Raleigh",
-  state: "NC",
-  phone_number: "(919) 000-0000",
-  latitude: 35.776979,
-  longitude: -78.643966
-)
+simple_fractal_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/simple_fractal_00.png')
+simple_fractal.photos.attach(io: simple_fractal_00, filename:"simple_fractal_00.png")
 
 dasmen_residential = Business.create!(
   name: "Dasmen Residential",
@@ -322,6 +377,9 @@ dasmen_residential = Business.create!(
   longitude: -74.107409
 )
 
+dasmen_residential_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/dasmen_residential_00.jpeg')
+dasmen_residential.photos.attach(io: dasmen_residential_00, filename:"dasmen_residential_00.jpeg")
+
 sourcepoint = Business.create!(
   name: "Sourcepoint Technologies",
   zipcode: 10001,
@@ -333,27 +391,8 @@ sourcepoint = Business.create!(
   longitude: -73.988786
 )
 
-crowded = Business.create!(
-  name: "Crowded",
-  zipcode: 10016,
-  address: "411 Fifth Avenue, Suite 703",
-  city: "New York",
-  state: "NY",
-  phone_number: "(212) 123-4567",
-  latitude: 40.901358,
-  longitude: -73.833869
-)
-
-concourse = Business.create!(
-  name: "Concourse",
-  zipcode: 10011,
-  address: "636 Avenue of the Americas, Sixth Floor",
-  city: "New York",
-  state: "NY",
-  phone_number: "(212) 987-6543",
-  latitude: 40.728119,
-  longitude: -74.003108
-)
+sourcepoint_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/sourcepoint_00.png')
+sourcepoint.photos.attach(io: sourcepoint_00, filename:"sourcepoint_00.png")
 
 fake_business1 = Business.create(
   name: Faker::Coffee.blend_name,
@@ -364,7 +403,14 @@ fake_business1 = Business.create(
   phone_number: Faker::PhoneNumber.cell_phone,
   latitude: Faker::Number.between(40.70, 41.0),
   longitude: Faker::Number.between(-73.9, -74.1)
-)
+  )
+
+faker1_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/faker1_00.jpg')
+fake_business1.photos.attach(io: faker1_00, filename:"faker1_00.jpg")
+faker1_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/faker1_01.png')
+fake_business1.photos.attach(io: faker1_01, filename:"faker1_01.png")
+faker1_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/faker1_02.png')
+fake_business1.photos.attach(io: faker1_02, filename:"faker1_02.png")
 
 fake_business2 = Business.create(
   name: Faker::Coffee.blend_name,
@@ -377,6 +423,13 @@ fake_business2 = Business.create(
   longitude: Faker::Number.between(-73.9, -74.1)
 )
 
+faker2_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/faker2_00.jpg')
+fake_business2.photos.attach(io: faker2_00, filename:"faker2_00.jpg")
+faker2_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/faker2_01.jpg')
+fake_business2.photos.attach(io: faker2_01, filename:"faker2_01.jpg")
+faker2_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/faker2_02.jpg')
+fake_business2.photos.attach(io: faker2_02, filename:"faker2_02.jpg")
+
 fake_business3 = Business.create(
   name: Faker::Coffee.blend_name,
   zipcode: Faker::Address.zip_code,
@@ -388,6 +441,13 @@ fake_business3 = Business.create(
   longitude: Faker::Number.between(-73.9, -74.1)
 )
 
+faker3_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/faker3_00.jpg')
+fake_business3.photos.attach(io: faker3_00, filename:"faker3_00.jpg")
+faker3_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/faker3_01.jpg')
+fake_business3.photos.attach(io: faker3_01, filename:"faker3_01.jpg")
+faker3_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/faker3_02.JPG')
+fake_business3.photos.attach(io: faker3_02, filename:"faker3_02.jpg")
+
 fake_business4 = Business.create(
   name: Faker::Coffee.blend_name,
   zipcode: Faker::Address.zip_code,
@@ -398,6 +458,13 @@ fake_business4 = Business.create(
   latitude: Faker::Number.between(40.70, 41.0),
   longitude: Faker::Number.between(-73.9, -74.1)
 )
+
+faker4_00 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/faker4_00.jpg')
+fake_business4.photos.attach(io: faker4_00, filename:"faker4_00.jpg")
+faker4_01 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/faker4_01.jpg')
+fake_business4.photos.attach(io: faker4_01, filename:"faker4_01.jpg")
+faker4_02 = EzDownload.open('https://s3.amazonaws.com/welp-ck-dev/faker4_02.jpg')
+fake_business4.photos.attach(io: faker4_02, filename:"faker4_02.jpg")
 
 Review.create!(
   body: "App Academy is a great bootcamp! Such great and intelligent instructors who really helped me learn and grow in my knowledge",

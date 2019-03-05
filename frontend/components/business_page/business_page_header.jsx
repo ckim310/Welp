@@ -56,6 +56,17 @@ class BusinessPageHeader extends React.Component {
       return rating;
     };
 
+    let img1;
+    let img3;
+
+    if (business.photos.length === 3) {
+      img1 = <img src={business.photos[1]}/>
+      img3 = <img src={business.photos[2]}/>
+    } else {
+      img1 = <img src="./no-photo-available.png" alt="no-photo"/>
+      img3 = <img src="./no-photo-available.png" alt="no-photo"/>
+    }
+
     return(
       <div className="business-page-header-container">
         <div className="business-page-header-wrapper">
@@ -176,7 +187,7 @@ class BusinessPageHeader extends React.Component {
                           <div className="map-text-icon">
                             <i className="fas fa-external-link-alt"></i>
                           </div>
-                          website!!!!!
+                          website
                         </li>
                       </ul>
                     </div>
@@ -192,7 +203,8 @@ class BusinessPageHeader extends React.Component {
                     <div className="pics-container">
                       <div className="pics-content">
                         <div className="pic">
-                          <img id="first" src="./salad.png" alt="salad"/>
+                          {img1}
+                          {/* <img id="first" src="./salad.png" alt="salad"/> */}
                           {/* <div className="pic-caption">Poke bowls by
                             <a href="https://www.instagram.com/euneats/">
                               <i className="fab fa-instagram"></i>euneats
@@ -201,12 +213,13 @@ class BusinessPageHeader extends React.Component {
                         </div>
 
                         <div className="pic-middle">
-                          <img id="middle" src="./bear-cookie.png" alt="cookie"/>
+                          <img id="middle" src={business.photos[0]} alt="cookie"/>
                           {/* <div className="pic-caption middle-pic-caption">Cookie by euneats</div> */}
                         </div>
 
                         <div className="pic">
-                          <img id="last" src="./buredo.png" alt="buredo"/>
+                          {img3}
+                          {/* <img id="last" src="./buredo.png" alt="buredo"/> */}
                           {/* <div className="pic-caption">Buredo by euneats</div> */}
                         </div>
                       </div>
