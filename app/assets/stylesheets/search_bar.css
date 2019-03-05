@@ -64,9 +64,19 @@ label span {
   border-radius: 0 3px 3px 0;
 }
 
+div.search-submit:hover, div.search-submit:hover button.search-submit{
+  background-color: #be2020;
+}
+
+.search-submit:hover {
+  background-color: #be2020;
+}
+
 button.search-submit {
   border-style: none;
   color: white;
+  padding: 13px 20px;
+  margin: 0;
 }
 
 /* SEARCH ERRORS */

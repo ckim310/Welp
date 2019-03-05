@@ -31,10 +31,18 @@
 }
 
 .search-nav-bar-container .search-submit button {
-  background-color: #bd1f1f;
-  height: 38px;
+  background-color: inherit;
   margin: 0;
-  padding: 0 10px;
+  padding: 7px 13px;
+  border-radius: 0 4px 4px 0;
+}
+
+.search-nav-bar-container div.search-submit {
+  background-color: #bd1f1f;
+}
+
+.search-nav-bar-container .search-submit:hover button.search-submit {
+  background-color: #a71c1c;
 }
 
 .search-nav-bar-container form i {
