@@ -7,14 +7,15 @@ const SubNavBar = (props) => {
         <div className="sub-nav-bar-content">
           <div className="sub-content-container">
             <div className="sub-content-left">
-              <div className="sub-item" id="restaurants">
-                <ul className="restaurants-list">
+              <div className="sub-item" id="businesses">
+                <ul className="sub-item-businesses-list">
                   <li>
                     <a href="#/businesses">
                       <div className="list-icon">
-                        <i className="fas fa-utensils"></i>
+                        {/* <i className="fas fa-utensils"></i> */}
+                        <i className="fas fa-building"></i>
                       </div>
-                      <span>Restaurants</span>
+                      <span>Businesses</span>
                       {/* <div className="arrow">
                         <i className="fas fa-angle-down"></i>
                       </div> */}
@@ -41,7 +42,7 @@ const SubNavBar = (props) => {
                 </ul>
               </div>
               
-              <div className="sub-item" id="home-services">
+              <div className="sub-item" id="christine-sites">
                 <ul className="list">
                   <li>
                     <div className="list-title">
