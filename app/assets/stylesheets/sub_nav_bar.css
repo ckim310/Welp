@@ -61,8 +61,13 @@
   display: block;
 }
 
-.sub-item:hover a:hover {
+.sub-item:hover a:hover,
+.sub-item:hover,
+.sub-item:hover .sub-item-businesses-list li a,
+.sub-item:hover .sub-item-container,
+.sub-item:hover .sub-item-container a {
   color: #0073bb;
+  background-color: #ffffff;
 }
 
 .popup > li {
