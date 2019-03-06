@@ -125,6 +125,10 @@ span#business-name {
   align-items: center;
 }
 
-.review-form-input a{
+.review-form-input a {
   margin: 0 auto;
+}
+
+.review-form-input a:hover {
+  text-decoration: underline;
 }
