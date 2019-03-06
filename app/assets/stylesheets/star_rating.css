@@ -108,7 +108,6 @@
 
 /* star rating show for review form*/
 
-
 #five.show-star {
   background-position: 0 -216px;
 }
@@ -158,6 +157,11 @@
 }
 
 /* star rating hover for review form */
+
+.rating-big:hover {
+  cursor: pointer;
+}
+
 #five.rating-big:hover {
   background-position: 0 -216px;
 }

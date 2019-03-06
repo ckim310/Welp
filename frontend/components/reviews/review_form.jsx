@@ -79,6 +79,10 @@ class ReviewForm extends React.Component {
         return <Redirect to={`/businesses/${businessId}`} />
       }
 
+      if (!business) {
+        return null;
+      }
+
     const errors = this.props.errors.map((err, idx) => {
       return <li className="review-errors-list" key={idx}>{err}</li>
     });
