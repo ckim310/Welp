@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import ReviewForm from './review_form';
 import { createReview, clearReviewErrors } from '../../actions/review_actions';
+import { fetchBusiness } from '../../actions/business_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const businessId = ownProps.match.params.businessId;
@@ -25,6 +26,7 @@ const mapDispatchToProps = dispatch => {
   return {
     action: (businessId, review) => dispatch(createReview(businessId, review)),
     clearReviewErrors: () => dispatch(clearReviewErrors()),
+    fetchBusiness: (id) => dispatch(fetchBusiness(id))
   };
 };
 

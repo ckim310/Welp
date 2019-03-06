@@ -16,6 +16,12 @@ class ReviewForm extends React.Component {
     this.handleRating = this.handleRating.bind(this);
   }
 
+  componentDidMount() {
+    if (this.props.formType === "Post Review") {
+      this.props.fetchBusiness(this.state.business_id);
+    }
+  }
+
   componentWillUnmount() {
     this.props.clearReviewErrors();
   }
@@ -67,10 +73,9 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-    const businessId = this.props.match.params.businessId;
-    const  { business, formType, review } = this.props;
+    const  { business, businessId, formType, review } = this.props;
 
-      if (!business || review.body === null) {
+      if (review.body === null) {
         return <Redirect to={`/businesses/${businessId}`} />
       }
 
@@ -100,7 +105,7 @@ class ReviewForm extends React.Component {
 
             <div className="review-title">
               <h2 className="review-business-name">
-                <Link to={`/businesses/${business.id}`}>
+                <Link to={`/businesses/${this.state.business_id}`}>
                   {business.name}
                 </Link>
               </h2>

@@ -105,54 +105,8 @@
   background-position: 0 -24px;
 }
 
-/* #five.rating-big:hover {
-  background-position: 0 -216px;
-}
 
-#five.rating-big:hover ~ .rating-big {
-  background-position: 0 -216px;
-}
-
-#four.rating-big:hover {
-  background-position: 0 -168px;
-}
-
-#four.rating-big:hover ~#three {
-  background-position: 0 -168px;
-}
-
-#four.rating-big:hover ~#two {
-  background-position: 0 -168px;
-}
-
-#four.rating-big:hover ~#one {
-  background-position: 0 -168px;
-}
-
-#three.rating-big:hover {
-  background-position: 0 -120px;
-}
-
-#three.rating-big:hover ~ #two {
-  background-position: 0 -120px;
-}
-
-#three.rating-big:hover ~ #one {
-  background-position: 0 -120px;
-}
-
-#two.rating-big:hover {
-  background-position: 0 -72px;
-}
-
-#two.rating-big:hover ~ #one{
-  background-position: 0 -72px;
-}
-
-#one.rating-big:hover {
-  background-position: 0 -24px;
-} */
-
+/* star rating show for review form*/
 
 
 #five.show-star {
@@ -200,5 +154,58 @@
 }
 
 #one.show-star {
+  background-position: 0 -24px;
+}
+
+/* star rating hover for review form */
+#five.rating-big:hover {
+  background-position: 0 -216px;
+}
+
+#five.rating-big:hover ~ .rating-big {
+  background-position: 0 -216px;
+}
+
+/* #four.rating-big:hover #five.rating-big {
+  background-position: 0 0;
+} */
+
+#four.rating-big:hover {
+  background-position: 0 -168px;
+}
+
+#four.rating-big:hover ~#three {
+  background-position: 0 -168px;
+}
+
+#four.rating-big:hover ~#two {
+  background-position: 0 -168px;
+}
+
+#four.rating-big:hover ~#one {
+  background-position: 0 -168px;
+}
+
+#three.rating-big:hover {
+  background-position: 0 -120px;
+}
+
+#three.rating-big:hover ~ #two {
+  background-position: 0 -120px;
+}
+
+#three.rating-big:hover ~ #one {
+  background-position: 0 -120px;
+}
+
+#two.rating-big:hover {
+  background-position: 0 -72px;
+}
+
+#two.rating-big:hover ~ #one{
+  background-position: 0 -72px;
+}
+
+#one.rating-big:hover {
   background-position: 0 -24px;
 }
