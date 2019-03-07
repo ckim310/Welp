@@ -75,6 +75,11 @@ h2.review-business-name:hover {
   align-items: center;
 }
 
+.review-form-stars {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 /* Review form body */
 
 .review-body-content textarea {

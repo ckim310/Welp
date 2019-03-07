@@ -11,9 +11,12 @@ class ReviewForm extends React.Component {
       business_id: this.props.businessId,
       rating: this.props.review.rating,
       reviewId: this.props.reviewId,
+      ratingOver: null,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleRating = this.handleRating.bind(this);
+    this.handleMouseOver = this.handleMouseOver.bind(this);
+    this.handleMouseOut = this.handleMouseOut.bind(this);
   }
 
   componentDidMount() {
@@ -47,29 +50,73 @@ class ReviewForm extends React.Component {
         case 'one':
         rating = 1;
         this.setState({ [field]: rating });
+        this.setState({ ["ratingOver"]: rating });
         break;
         case 'two':
         rating = 2;
         this.setState({ [field]: rating });
+        this.setState({ ["ratingOver"]: rating });
         break;
         case 'three':
         rating = 3;
         this.setState({ [field]: rating });
+        this.setState({ ["ratingOver"]: rating });
         break;
         case 'four':
         rating = 4;
         this.setState({ [field]: rating });
+        this.setState({ ["ratingOver"]: rating });
         break;
         case 'five':
         rating = 5;
         this.setState({ [field]: rating });
+        this.setState({ ["ratingOver"]: rating });
         break;
         default:
         rating = 0;
         this.setState({ [field]: rating });
+        this.setState({ ["ratingOver"]: rating });
         break;
       }
     };
+  }
+
+  handleMouseOver(value) {
+    return (e) => {
+      this.setState({ ["ratingOver"]: value});
+    };
+  }
+
+  handleMouseOut(e) {
+    e.preventDefault();
+    this.setState({ ["ratingOver"]: null || this.state.rating });
+  }
+
+  renderRatingText() {
+    let ratingText = 'Select your rating';
+
+    switch (this.state.ratingOver) {
+      case 5:
+        ratingText = "Woohoo! As good as it gets!";
+        break;
+      case 4:
+        ratingText = "Yay! I'm a fan.";
+        break;
+      case 3:
+        ratingText = "A-OK.";
+        break;
+      case 2:
+        ratingText = "Meh. I've experienced better.";
+        break;
+      case 1:
+        ratingText = "Eek! Methinks not.";
+        break;
+      default:
+        ratingText = 'Select your rating';
+        break;
+    }
+
+    return ratingText;
   }
 
   render() {
@@ -82,6 +129,7 @@ class ReviewForm extends React.Component {
       if (!business) {
         return null;
       }
+
 
     const errors = this.props.errors.map((err, idx) => {
       return <li className="review-errors-list" key={idx}>{err}</li>
@@ -120,12 +168,44 @@ class ReviewForm extends React.Component {
                 <div className="review-body-container">
                   <div className="review-body-content">
                     <div className="review-form-rating">
-                      &nbsp; Select your rating
-                      <div className={"rating-big" + (this.state.rating === 5 ? " show-star" : " ")} id="five" value="5" onClick={this.handleRating("rating")}></div>
-                      <div className={"rating-big" + (this.state.rating === 4 ? " show-star" : " ")} id="four" value="4" onClick={this.handleRating("rating")}></div>
-                      <div className={"rating-big" + (this.state.rating === 3 ? " show-star" : " ")} id="three" value="3" onClick={this.handleRating("rating")}></div>
-                      <div className={"rating-big" + (this.state.rating === 2 ? " show-star" : " ")} id="two" value="2" onClick={this.handleRating("rating")}></div>
-                      <div className={"rating-big" + (this.state.rating === 1 ? " show-star" : " ")} id="one" value="1" onClick={this.handleRating("rating")}></div>
+                      <div className="review-form-star-text">&nbsp; {this.renderRatingText()}</div>
+                      <div className="review-form-stars">
+                        <div
+                          className={"rating-big" + (this.state.rating === 5 ? " show-star" : " ") + (this.state.rating === 5 ? " showing-star" : " ")}
+                          id="five"
+                          value="5"
+                          onClick={this.handleRating("rating")}
+                          onMouseOver={this.handleMouseOver(5)}
+                          onMouseOut={this.handleMouseOut}/>
+                        <div
+                          className={"rating-big" + (this.state.rating === 4 ? " show-star" : " ") + (this.state.rating >= 4 ? " showing-star" : " ")}
+                          id="four"
+                          value="4"
+                          onClick={this.handleRating("rating")}
+                          onMouseOver={this.handleMouseOver(4)}
+                          onMouseOut={this.handleMouseOut}/>
+                        <div
+                          className={"rating-big" + (this.state.rating === 3 ? " show-star" : " ") + (this.state.rating >= 3 ? " showing-star" : " ")}
+                          id="three"
+                          value="3"
+                          onClick={this.handleRating("rating")}
+                          onMouseOver={this.handleMouseOver(3)}
+                          onMouseOut={this.handleMouseOut}/>
+                        <div
+                          className={"rating-big" + (this.state.rating === 2 ? " show-star" : " ") + (this.state.rating >= 2 ? " showing-star" : " ")}
+                          id="two"
+                          value="2"
+                          onClick={this.handleRating("rating")}
+                          onMouseOver={this.handleMouseOver(2)}
+                          onMouseOut={this.handleMouseOut}/>
+                        <div
+                          className={"rating-big" + (this.state.rating === 1 ? " show-star" : " ") + (this.state.rating >= 1 ? " showing-star" : " ")}
+                          id="one"
+                          value="1"
+                          onClick={this.handleRating("rating")}
+                          onMouseOver={this.handleMouseOver(1)}
+                          onMouseOut={this.handleMouseOut}/>
+                      </div>
                     </div>
 
                     <textarea
