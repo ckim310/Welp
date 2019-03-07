@@ -170,9 +170,9 @@
   background-position: 0 -216px;
 }
 
-/* #four.rating-big:hover #five.rating-big {
+#four.rating-big:hover .show-star {
   background-position: 0 0;
-} */
+}
 
 #four.rating-big:hover {
   background-position: 0 -168px;

@@ -8,7 +8,6 @@ class BusinessPageHeader extends React.Component {
     super(props);
   }
 
-
   render() {
     const { business, fetchBusiness, reviews } = this.props;
     if (!business) return null;

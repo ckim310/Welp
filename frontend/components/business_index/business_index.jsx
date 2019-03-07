@@ -35,11 +35,9 @@ class BusinessIndex extends React.Component {
             <ul className="businesses-list">
               {businessesLi}
             </ul>
-            {/* <div className="index-map-container"> */}
-              <div className="index-map">
-                <Map />
-              </div>
-            {/* </div> */}
+            <div className="index-map">
+              <Map />
+            </div>
           </div>
         </div>
       </div>
