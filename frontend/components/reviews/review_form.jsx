@@ -11,7 +11,7 @@ class ReviewForm extends React.Component {
       business_id: this.props.businessId,
       rating: this.props.review.rating,
       reviewId: this.props.reviewId,
-      ratingOver: null,
+      ratingOver: this.props.review.rating,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleRating = this.handleRating.bind(this);
@@ -89,11 +89,11 @@ class ReviewForm extends React.Component {
 
   handleMouseOut(e) {
     e.preventDefault();
-    this.setState({ ["ratingOver"]: null || this.state.rating });
+    this.setState({ ["ratingOver"]: this.state.rating });
   }
 
   renderRatingText() {
-    let ratingText = 'Select your rating';
+    let ratingText;
 
     switch (this.state.ratingOver) {
       case 5:
