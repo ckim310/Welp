@@ -64,7 +64,9 @@ const BusinessIndexItem = ({ business, idx }) => {
   <li className="business-index-item">
     <div className="business-index-content-container">
       <div className="business-index-pic">
-        {img}
+        <Link to={`/businesses/${business.id}`}>
+          {img}
+        </Link>
       </div>
 
       <div className="business-information-container">
